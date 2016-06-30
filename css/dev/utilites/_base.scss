@@ -1,0 +1,22 @@
+html {
+	height: 100%;
+}
+body {
+    font-family: $main_font;
+    font-weight: normal;
+    height: 100%;
+    color: $main_color;
+}
+
+label {
+	font-weight: normal;
+}
+img {
+	max-width: 100%;
+}
+a img {
+	border: none;
+}
+button, input, textarea, select {
+	outline: none;
+}
