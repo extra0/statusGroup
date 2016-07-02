@@ -10,5 +10,6 @@
 @include font-face("Roboto", "../fonts/Roboto-Light", 300, normal, $file-formats: ttf);
 @include font-face("Roboto", "../fonts/Roboto-Medium", 500, normal, $file-formats: ttf);
 @include font-face("Roboto", "../fonts/Roboto-LightItalic", 300, italic, $file-formats: ttf);
+@include font-face("Roboto", "../fonts/Roboto-Black", 900, normal, $file-formats: ttf);
 // @import "http://webfonts.ru/import/roboto.css";
 @import "http://webfonts.ru/import/lora.css";

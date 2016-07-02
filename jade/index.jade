@@ -117,6 +117,38 @@ block content
 				// как купить
 				p.title 
 					span Как купить?
+				.buy-steps
+					.row
+						.col-sm-3
+							img.buy-steps__line.first(src="img/first-line.png", alt="line")
+							p.buy-steps__title
+								img.buy-steps__step-count(src="img/one.png", alt="step-img")
+								| Выбрать
+							ul.buy-steps__list
+								li.buy-steps__list-item выберите товар в каталоге
+								li.buy-steps__list-item укажите материал и цвет выбранной модели
+							p.buy-steps__text-muted Выбор материала, влияет<br>на стоимость товара!
+						.col-sm-3
+							p.buy-steps__title.m-t-45
+								img.buy-steps__step-count(src="img/two.png", alt="step-img")
+								| Заказать
+							img.buy-steps__line.second(src="img/second-line.png", alt="line")
+							ul.buy-steps__list
+								li.buy-steps__list-item через форму заказа, на странице выбранного товара
+								li.buy-steps__list-item по телефону:<br><span>(095)</span> 385-01-01; <span>(067)</span> 385-01-01
+						.col-sm-3
+							img.buy-steps__line.last(src="img/last-line.png", alt="line")
+							p.buy-steps__title
+								img.buy-steps__step-count(src="img/three.png", alt="step-img")
+								| Оплатить
+							p.buy-steps__text По факту получения счёта с печатью нашей компании, вы имеете возможность оплатить его любым доступным и удобным для Вас способом.
+						.col-sm-3
+							p.buy-steps__title.m-t-20
+								img.buy-steps__step-count(src="img/four.png", alt="step-img")
+								| Получить
+							ul.buy-steps__list
+								li.buy-steps__list-item самовывоз со склада или центрального офиса
+								li.buy-steps__list-item бесплатная доставка в любой город Украины
 				// конец как купить
 		.row
 			.col-sm-12

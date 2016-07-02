@@ -232,3 +232,75 @@
 		}
 	}
 }
+.buy-steps {
+	margin-bottom: 52px;
+	&__title {
+		text-transform: uppercase;
+		color: #454051;
+		font-size: 20px;
+		font-family: Roboto;
+		font-weight: 900;
+		margin: 0;
+		&.m-t-45 {
+			margin-top: 45px;
+		}
+	}
+	&__text {
+		margin: 0;
+		font-family: Roboto;
+		line-height: 24px;
+		padding-right: 10px;
+		&-muted {
+			margin: 12px 0 0 8px;
+			color: #ababab;
+			font-style: italic;
+			font-family: Roboto;
+		}
+	}
+	&__line {
+		position: relative;
+		&.first {
+			top: -25px;
+			left: 57px;
+			margin-bottom: -17px;
+		}
+		&.second {
+			top: -7px;
+		    left: 50px;
+		    margin-bottom: 2px;
+		}
+		&.last {
+			top: -25px;
+			left: 58px;
+			margin-bottom: -17px;
+		}
+	}
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		&-item {
+			font-family: Roboto;
+			margin-bottom: 3px;
+			position: relative;
+			padding-left: 12px;
+			line-height: 22px;
+			&:before {
+				content: '';
+				@include position(absolute, 11px null null 0);
+				width: 5px;
+				height: 1px;
+				background: #454051;
+			}
+			& * {
+				color: #ababab;
+			}
+		}
+	}
+	&__step-count {
+		display: inline-block;
+		margin: 4px 14px 0 0;
+		position: relative;
+		top: -4px;
+	}
+}
