@@ -6,6 +6,8 @@ body {
     font-weight: normal;
     height: 100%;
     color: $main_color;
+    font-size: 15px;
+    height: 20000px;
 }
 
 label {
@@ -19,4 +21,7 @@ a img {
 }
 button, input, textarea, select {
 	outline: none;
+}
+.container {
+	padding: 0 10px;
 }

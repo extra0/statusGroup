@@ -1,0 +1,25 @@
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+.title {
+	color: #c4c4c4;
+	position: relative;
+	margin: 7px 0 42px 0;
+	font-size: 40px;
+	text-align: center;
+	&:before {
+		content: '';
+		@include position(absolute, 70% null null 0); // было 55% если нада по центру
+		width: 100%;
+		height: 3px;
+		background: #c4c4c4;
+	}
+	& * {
+		color: #c4c4c4;
+		display: inline-block;
+		background: #fff;
+		padding: 4px 28px;
+		position: relative;
+		letter-spacing: 5px;
+	}
+}

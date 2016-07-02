@@ -4,4 +4,123 @@ block append head
 	meta(name="keywords" content="")
 	title Главная страница
 block content
-	p .
+	.container
+		.row
+			.col-sm-12
+				// блок с приемуществами
+				.advantages
+					.advantages__block
+						img.advantages__block-img(src="img/a-img-1.png", alt="advantages")
+						p.advantages__block-text От 24 до 48 часов на доставку
+					.advantages__block
+						img.advantages__block-img(src="img/a-img-2.png", alt="advantages")
+						p.advantages__block-text Более 1000 крутых проектов
+					.advantages__block
+						img.advantages__block-img(src="img/a-img-3.png", alt="advantages")
+						p.advantages__block-text Работаем 20 лет на рынке Украины
+					.advantages__block
+						img.advantages__block-img(src="img/a-img-4.png", alt="advantages")
+						p.advantages__block-text Большой оптовый склад в Киеве
+				// конец блок с приемуществами
+		.row
+			.col-sm-12
+				// секция с категориями продуктов
+				.category-flex.count-block-3
+					- for (i=1; i<=3; i++) {
+						.category-flex__block(style="background: url(../img/content/cat-bg.jpg) 0 0 no-repeat;")
+							p.category-flex__block-title Офисная мебель
+							ul.category-flex__block-menu
+								li.category-flex__block-menu-item
+									a.category-flex__block-menu-link(href="#!") Кабинеты руководителя
+								li.category-flex__block-menu-item
+									a.category-flex__block-menu-link(href="#!") Конференц столы
+								li.category-flex__block-menu-item
+									a.category-flex__block-menu-link(href="#!") Мягкая мебель для офиса
+								li.category-flex__block-menu-item
+									a.category-flex__block-menu-link(href="#!") Оперативная мебель
+								li.category-flex__block-menu-item
+									a.category-flex__block-menu-link(href="#!") Столы для офиса
+								li.category-flex__block-menu-item
+									a.category-flex__block-menu-link(href="#!") Аксессуары для офиса
+								li.category-flex__block-menu-item
+									a.category-flex__block-menu-link(href="#!") Опоры для офисных столов
+					- }
+				// конец секция с категориями продуктов
+		.row
+			.col-sm-10.col-sm-offset-2
+				// SEO с описанием
+				.description__block
+					p.description__block-text Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. 
+				// конец SEO с описанием
+		.row
+			.col-sm-12
+				// блок хитов продаж
+				p.title 
+					span Хиты продаж
+				// конец блок хитов продаж
+				// блок с продуктами
+				.product-section
+					.product-section__block.descr-invers
+						a(href="#!")
+							img.product-section__block-img(src="img/content/img1.jpg", alt="prouct")
+							.product-section__block-title
+								p.product-section__block-name Hayden beige
+								p.product-section__block-category кресло руководителя
+							.product-section__block-price
+								p.product-section__price 24 350
+									span.product-section__price-currency грн
+					.product-section__block
+						a(href="#!")
+							img.product-section__block-img(src="img/content/img2.jpg", alt="prouct")
+							.product-section__block-title
+								p.product-section__block-name Hayden beige Hayden beige
+								p.product-section__block-category кресло руководителя
+							.product-section__badge
+								.product-section__badge-name кожа делюкс
+							.product-section__block-price
+								p.product-section__price 24 350
+									span.product-section__price-currency грн
+					.product-section__block.x-2
+						a(href="#!")
+							img.product-section__block-img(src="img/content/img-large.png", alt="prouct")
+							.product-section__block-title
+								p.product-section__block-name Hayden beige
+								p.product-section__block-category кресло руководителя
+							.product-section__block-price
+								p.product-section__price 99 999
+									span.product-section__price-currency грн
+					.product-section__block.x-2
+						a(href="#!")
+							img.product-section__block-img(src="img/content/img-large.png", alt="prouct")
+							.product-section__block-title
+								p.product-section__block-name Hayden beige
+								p.product-section__block-category кресло руководителя
+							.product-section__block-price
+								p.product-section__price 99 999
+									span.product-section__price-currency грн
+					- for (i=1; i<=6; i++) {
+						.product-section__block
+							a(href="#!")
+								img.product-section__block-img(src="img/content/img2.jpg", alt="prouct")
+								.product-section__block-title
+									p.product-section__block-name Hayden beige
+									p.product-section__block-category кресло руководителя
+								.product-section__badge
+									.product-section__badge-name кожа делюкс
+								.product-section__block-price
+									p.product-section__price #{i * 500}
+										span.product-section__price-currency грн
+					- }
+				// конец блок с продуктами
+		.row
+			.col-sm-12
+				// как купить
+				p.title 
+					span Как купить?
+				// конец как купить
+		.row
+			.col-sm-12
+				// новости кампании
+				p.title 
+					span Новости кампании
+				// конец новости кампании

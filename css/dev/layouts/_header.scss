@@ -1,0 +1,156 @@
+.header {
+	margin-bottom: 20px;
+	&__logo {
+		&-img {
+			min-width: 183px;
+		}
+	}
+	&__top {
+		margin-top: 12px;
+		margin-bottom: 21px;
+	}
+	&__bottom {
+		margin-left: 17px;
+	}
+	&__menu {
+		padding: 0;
+		margin: 0  0px 0 16px;
+		list-style-type: none;
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			&:not(:last-child) {
+				margin-right: 44px;
+			}
+		}
+		&-link {
+			border-bottom: 1px solid transparent;
+			color: #807a7d;
+			&:focus,
+			&:hover {
+				color: #807a7d;
+				text-decoration: none;
+				border-bottom: 1px solid rgba(128,122,125,0.5);
+			}
+			&.current {
+				@include hoverlink;
+			}
+		}
+	}
+	&__work-time {
+		color: #ababab;
+		margin: 0 0 0 48px;
+		font-style: italic;
+	}
+	&__phone {
+		color: #0a1c32;
+		font-size: 25px;
+		margin-top: 8px;
+		font-family: 'Roboto';
+		font-weight: 500;
+		line-height: normal;
+		display: inline-block;
+		&:hover,
+		&:focus {
+			color: #0a1c32;
+			text-decoration: none;
+		}
+		&-block {}
+		&-divider {
+			display: inline-block;
+			vertical-align: top;
+			color: #dcdbdc;
+			font-size: 22px;
+			margin: 5px 10px 0 10px;
+		    line-height: normal;
+		}
+	}
+	&__address {
+		margin: 0;
+		color: #0a1c32;
+		&-block {
+			margin: 0px 0 0 68px;
+		}
+		&-email {
+			color: #5e5e5e;
+			border-bottom: 1px solid #dfdfdf;
+			&:hover,
+			&:focus {
+				@include hoverlink;
+			}
+		}
+	}
+	&__basket {
+		margin: 3px 0 0 17px;
+		&-img {
+			float: left;
+			margin-top: 3px;
+		    display: inline-block;
+		}
+		&-text {
+			color: #353635;
+			margin: -3px -10px 0 42px;
+		}
+		&-btn {
+			color: #5e5e5e;
+			border-bottom: 1px solid #dfdfdf;
+			&:hover,
+			&:focus {
+				@include hoverlink;
+			}
+		}
+	}
+	&-category {
+		margin-top: 15px;
+		&__menu {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			&-link {
+				color: #454051;
+				font-size: 30px;
+				font-weight: 500;
+				font-family: Roboto;
+				text-transform: uppercase;
+				@include transition(all 0.2s ease-in-out);
+				&:hover,
+				&:focus {
+					color: lighten(#454051, 10%);
+					text-decoration: none;
+				}
+			}
+			&-item {
+				display: inline-block;
+				vertical-align: top;
+				&:not(:last-child) {
+					margin-right: 90px;	
+				}
+			}
+		}
+	}
+}
+.search {
+	&__block {
+		position: relative;
+		max-width: 180px;
+		float: right;
+		margin: 10px 0 0 0;
+		&-input {
+			border: none;
+			width: 100%;
+			padding: 5px 30px 5px 10px;
+			border-bottom: 1px solid #454051;
+		}
+		&-submit {
+			background: url(../img/magnifier.png) 0 0 no-repeat;
+			@include position(absolute, 3px 3px null null);
+			border: none;
+			@include transition(all 0.2s ease-in-out);
+			width: 17px;
+			height: 17px;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+}

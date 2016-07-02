@@ -1,0 +1,234 @@
+.advantages {
+	@include display(flex);
+	@include justify-content(space-between);
+	margin-bottom: 35px;
+	&__block {
+		flex-basis: 19%;
+		@include display(flex);
+		@include align-items(center);
+		&-img {
+			float: left;
+			margin-right: 10px;
+		}
+		&-text {
+			font-style: italic;
+			margin: 0;
+		}
+	}
+}
+.category-flex {
+	@include display(flex);
+	@include justify-content(space-between);
+	&.count-block-3 {
+		.category-flex__block {
+			min-height: 472px;
+		}
+	}
+	&.count-block-4 {
+		.category-flex__block {
+			flex-basis: 24%;
+			min-height: 472px;
+		}
+	}
+	&.count-block-5 {
+		@include flex-wrap(wrap);
+		.category-flex__block {
+			flex-basis: 32.2%;
+			min-height: 300px;
+			padding: 15px 22px;
+			&:not(:nth-child(-n+3)) {
+				flex-basis: 49%;
+				min-height: 210px!important;
+				.category-flex__block-menu-item {
+					display: inline-block;
+					vertical-align: top;
+					width: 48%;
+				}
+			}
+			&-menu {
+				&-link {
+					font-size: 16px;
+				}
+			}
+			&-title {
+				font-size: 22px;
+			}
+		}
+	}
+	&.count-block-6 {
+		@include flex-wrap(wrap);
+		.category-flex__block {
+			flex-basis: 32.2%;
+			padding: 15px 22px;
+			min-height: 300px;
+			&-menu {
+				&-link {
+					font-size: 15px;
+				}
+			}
+			&-title {
+				font-size: 20px;
+			}
+		}
+	}
+	&.count-block-7 {
+		@include flex-wrap(wrap);
+		.category-flex__block {
+			flex-basis: 24%;
+			padding: 15px 22px;
+			min-height: 300px;
+			&:not(:nth-child(-n+4)) {
+				flex-basis: 32.2%;
+			}
+			&-menu {
+				&-link {
+					font-size: 15px;
+				}
+			}
+			&-title {
+				font-size: 20px;
+			}
+		}
+	}
+	&.count-block-8 {
+		@include flex-wrap(wrap);
+		.category-flex__block {
+			flex-basis: 24%;
+			padding: 15px 22px;
+			min-height: 300px;
+			&-menu {
+				&-link {
+					font-size: 15px;
+				}
+			}
+			&-title {
+				font-size: 20px;
+			}
+		}
+	}
+	&__block {
+		background: #fafafb;
+		padding: 30px 42px;
+		flex-basis: 32%;
+		margin-bottom: 20px;
+		background-size: cover!important; // под вопросом так как нет нужных фоток
+		&-title {
+			margin: 0 0 24px 0;
+			color: $red;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 27px;
+		}
+		&-menu {
+			list-style-type: none;
+			padding: 0;
+			margin: 0 0 0 19px;
+			&-item {
+				margin-bottom: 13px;
+			}
+			&-link {
+				color: #323334;
+				font-size: 18px;
+				border-bottom: 1px solid #cfcfd0;
+				&:hover,
+				&:focus {
+					@include hoverlink;
+				}
+			}
+		}
+	}
+}
+.description {
+	&__block {
+		margin: 30px 0;
+		&-text {
+			font-size: 32px;
+			margin: 0;
+			font-style: italic;
+			color: #424548;
+		}
+	}
+}
+.product-section {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	margin: 0 -15px 26px -34px;
+	&__block {
+		margin: 0 0 20px 34px;
+		flex-basis: 272px;
+		position: relative;
+		background: #f9f9f9;
+		&.x-2 {
+			flex-basis: 577px;
+		}
+		&.descr-invers {
+			.product-section__block-category,
+			.product-section__block-name {
+				color: #fff;
+				background: rgba(0,0,0, 0.5);
+			}
+			.product-section__price {
+				color: #fff;
+				&-currency {
+					color: #fff;
+				}
+			}
+		}
+		&-title {
+			@include position(absolute, 13px null null 16px);
+		}
+		&-price {
+			@include position(absolute, null null 13px 20px);
+		}
+		&-name {
+			font-weight: 500;
+			font-size: 30px;
+			font-family: Roboto;
+			margin: 0;
+			padding: 3px 4px 4px 4px;
+			color: #353635;
+			line-height: 30px;
+		}
+		&-category {
+			color: #6f6f6f;
+			margin: 2px 0 0 0;
+			font-family: Roboto;
+			padding: 0px 4px 1px 4px;
+			line-height: normal;
+			font-weight: 100;
+		}
+	}
+	&__price {
+		color: #353635;
+		margin: 0;
+		font-size: 30px;
+		line-height: normal;
+		font-family: Roboto;
+		&-currency {
+			color: #353635;
+			font-weight: 300;
+			display: inline-block;
+			margin-left: 6px;
+			font-size: 20px;
+		}
+	}
+	&__badge {
+		@include position(absolute, null null 70px -5px);
+		&-name {
+			color: #fff;
+			margin-bottom: 5px;
+			background: #c1372a;
+			position: relative;
+			font-style: italic;
+			font-size: 20px;
+		    line-height: 20px;
+		    padding: 1px 14px 6px 8px;
+		    &:before {
+		    	@include triangle(10px, #fff, left);
+		    	content: '';
+		    	@include position(absolute, 10px 0 null null);	
+		    }
+		    
+		}
+	}
+}

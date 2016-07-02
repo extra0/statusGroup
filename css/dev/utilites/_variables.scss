@@ -1,4 +1,14 @@
 // ---------------------  Variables
 
-$main_font: '', sans-serif;
-$main_color: #000;
+$main_font: 'Lora', sans-serif;
+$main_color: #323334;
+
+$red: #da4a4a;
+$ruby: #f1cacb;
+
+// mixins
+@mixin hoverlink {
+	text-decoration: none;
+	color: $red;
+	border-bottom: 1px solid $ruby;
+}
