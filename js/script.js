@@ -11,7 +11,7 @@ $(function(){
 		$(this).html(numberWithCommas($(this).html()));
 	});
 
-	// collapse
+	// collapse block
 	$('.js-slide-trigger').on('click', function(){
 		$(this).parent().find('.js-slide-anchor').toggleClass('active');
 	});

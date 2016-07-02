@@ -1,0 +1,30 @@
+.footer {
+	background: #f9f9f9;
+	font-size: 14px;
+	font-family: Roboto;
+	color: #4f4f4f;
+	&.index {
+		margin-top: 95px;
+		background: #fff;
+		padding-bottom: 40px;
+	}
+	&__link {
+		color: #4f4f4f;
+		border-bottom: 1px solid #dcdcdc;
+		&:hover,
+		&:focus {
+			@include hoverlink;
+		}
+	}
+	&__social {
+		margin-top: 9px;
+		&-link {
+			margin-right: 12px;
+			@include transition(all 0.2s ease-in-out);
+			&:hover {
+				opacity: 0.85;
+				text-decoration: none;
+			}
+		}
+	}
+}

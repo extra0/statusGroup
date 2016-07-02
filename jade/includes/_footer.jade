@@ -1,3 +1,33 @@
-footer.footer
-	.container-fluid
+- if (index == true) {
+	footer.footer.index
+		.container
+			.row
+				.col-sm-3
+					p.footer__copyright &copy; 2016 Статус Групп
+				.col-sm-3
+					.footer__social
+						a.footer__social-link(href="#!" rel="nofollow" target="_blank") 
+							img.footer__social-img(src="img/vk.png", alt="social")
+						a.footer__social-link(href="#!" rel="nofollow" target="_blank") 
+							img.footer__social-img(src="img/fb.png", alt="social")
+						a.footer__social-link(href="#!" rel="nofollow" target="_blank") 
+							img.footer__social-img(src="img/tw.png", alt="social")
+						a.footer__social-link(href="#!" rel="nofollow" target="_blank") 
+							img.footer__social-img(src="img/goog.png", alt="social")
+				.col-sm-3
+					p.footer__text Эл.почта: 
+						a.footer__link(href="mailto:info@gstatus.com.ua") info@gstatus.com.ua
+				.col-sm-3
+					p.footer__text.text-right Разработка сайта - студия 
+						a.footer__link(href="http://www.studio-maximus.com/" target="_blank") “Максимус”
+- } else {
+	footer.footer
+		.container
+			.row
+				.col-sm-3
+				.col-sm-3
+				.col-sm-3
+				.col-sm-3
+- }
+	
 include _script
