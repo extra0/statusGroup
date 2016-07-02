@@ -155,4 +155,14 @@ block content
 				// новости кампании
 				p.title 
 					span Новости кампании
+				.news-preview
+					.row
+						- for (i=1;i<=3;i++) {
+							.col-sm-4
+								.news-preview
+									a(href="#!")
+										img.news-preview__img(src="img/content/news-th.jpg", alt="news-preview")
+									p.news-preview__date #{i} марта
+									p.news-preview__text В «Статус Групп» проходят мастер-классы по дизайну
+						- }
 				// конец новости кампании

@@ -244,6 +244,9 @@
 		&.m-t-45 {
 			margin-top: 45px;
 		}
+		&.m-t-20 {
+			margin-top: 20px;
+		}
 	}
 	&__text {
 		margin: 0;
@@ -302,5 +305,26 @@
 		margin: 4px 14px 0 0;
 		position: relative;
 		top: -4px;
+	}
+}
+.news-preview {
+	margin-top: 10px;
+	&__img {
+		float: left;
+	}
+	&__date {
+		margin: 0 0 0 162px;
+	    color: #454051;
+	    font-style: italic;
+	    display: block;
+	    position: relative;
+	    top: -6px;
+	}
+	&__text {
+		margin: 0 0 0 162px;
+		font-family: Roboto;
+		display: block;
+		padding-right: 30px;
+		color: #454051;
 	}
 }
