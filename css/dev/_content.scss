@@ -309,6 +309,7 @@
 }
 .news-preview {
 	margin-top: 10px;
+	margin-bottom: 45px;
 	&__img {
 		float: left;
 	}
@@ -326,5 +327,41 @@
 		display: block;
 		padding-right: 30px;
 		color: #454051;
+	}
+}
+.seo-description {
+	&__title {
+		font-weight: bold;
+		font-size: 24px;
+		color: #424548;
+		font-family: Roboto Condensed;
+		margin: 0;
+		text-transform: uppercase;
+	}
+	&__text {
+		font-family: Roboto;
+		margin: 0 0 11px 0;
+		line-height: 30px;
+	}
+	&__block {
+		margin-left: 20px;
+		max-height: 222px;
+		margin-bottom: 20px;
+		overflow: hidden;
+		@include transition(all 0.2s ease-in-out);
+		&.active {
+			max-height: 2000px;
+		}
+	}
+	&__trigger {
+		color: #848c93;
+		margin-left: 20px;
+		border-bottom: 1px dotted;
+		&:hover,
+		&:focus {
+			color: $red;
+			text-decoration: none;
+			border-bottom: 1px dotted $red;
+		}
 	}
 }
