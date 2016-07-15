@@ -16,6 +16,8 @@
 		padding: 0;
 		margin: 0  0px 0 16px;
 		list-style-type: none;
+		position: relative;
+		z-index: 10;
 		&-item {
 			display: inline-block;
 			vertical-align: top;
@@ -82,6 +84,10 @@
 	}
 	&__basket {
 		margin: 3px 0 0 17px;
+		&-price {
+			margin: 0;
+			display: inline-block;
+		}
 		&-img {
 			float: left;
 			margin-top: 3px;
@@ -102,13 +108,14 @@
 	}
 	&-category {
 		margin-top: 15px;
+		position: relative;
 		&__menu {
 			padding: 0;
 			margin: 0;
 			list-style-type: none;
 			&-link {
 				color: #454051;
-				font-size: 30px;
+				font-size: 26px;
 				font-weight: 500;
 				font-family: Roboto;
 				text-transform: uppercase;
@@ -123,7 +130,7 @@
 				display: inline-block;
 				vertical-align: top;
 				&:not(:last-child) {
-					margin-right: 90px;	
+					margin-right: 40px;	
 				}
 			}
 		}
@@ -132,14 +139,14 @@
 .search {
 	&__block {
 		position: relative;
-		max-width: 180px;
 		float: right;
-		margin: 10px 0 0 0;
 		&-input {
 			border: none;
 			width: 100%;
+			max-width: 180px;
 			padding: 5px 30px 5px 10px;
 			border-bottom: 1px solid #454051;
+			@include transition(all 0.2s ease-in-out);
 		}
 		&-submit {
 			background: url(../img/magnifier.png) 0 0 no-repeat;

@@ -1,32 +1,32 @@
 header.header
 	.container
 		.row
-			.col-sm-2
+			.col-md-2.col-sm-3.col-xxs-12
 				// логотип 
 				a.header__logo(href="/")
 					img.header__logo-img(src="img/logo.png" alt="Site Logo")
 				// конец логотип
-			.col-sm-10
+			.col-md-10.col-sm-9
 				.header__top
 					.row
-						.col-sm-6
+						.col-md-6.col-sm-12
 							// меню 
 							ul.header__menu
 								each item in headerMenu
 									li.header__menu-item
 										a.header__menu-link(href="#!") #{item}
 							// конец меню
-						.col-sm-6
+						.col-md-6.col-sm-12
 							// график работы
 							p.header__work-time С 9<sup>:00</sup> до 20<sup>:00</sup>, каждый день, кроме воскресенья
 							// конец график работы
 				.header__bottom
 					.row
-						.col-sm-5
+						.col-sm-4.col-md-5
 							// блок телефонов
 							.header__phone-block
 								a.header__phone(href="tel:+380503850101") 050-385-01-01
-								span.header__phone-divider /
+								span.header__phone-divider.hidden-sm /
 								a.header__phone(href="tel:+380673850101") 067-385-01-01
 							// конец блок телефонов
 						.col-sm-4
@@ -35,15 +35,15 @@ header.header
 								p.header__address Киев, ул. Семьи Сосниных 3
 								a.header__address-email(href="mailto:#{email}") #{email}
 							// конец блок с адресом
-						.col-sm-3
+						.col-sm-4.col-md-3
 							// блок с корзиной
 							.header__basket
 								img.header__basket-img(src="img/pack.png", alt="Pack")
 								.header__basket-text
 									span.header__basket-count 4
 									|  товара на 
-									span.header__basket-price 12 900
-									|  грн
+									p.header__basket-price 12 900
+										span  грн
 									div
 										a.header__basket-btn(href="#!") Оформить
 							// конец блок с корзиной
@@ -54,7 +54,7 @@ header.header
 					.search__block
 						form(action="#!")
 							input.search__block-input(type="text" required)
-							button.search__block-submit(type="submt")
+							button.search__block-submit(type="submit")
 					// конец форма поиска
 					// меню категорий
 					ul.header-category__menu
@@ -64,6 +64,6 @@ header.header
 							a.header-category__menu-link(href="#!") Офисные кресла
 						li.header-category__menu-item
 							a.header-category__menu-link(href="#!") Стол и стул
+						li.header-category__menu-item
+							a.header-category__menu-link(href="#!") Стол и стул
 					// конец меню категорий
-					
-				

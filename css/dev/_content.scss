@@ -28,6 +28,13 @@
 		.category-flex__block {
 			flex-basis: 24%;
 			min-height: 472px;
+			padding: 22px;
+			&-title {
+				font-size: 24px;
+			}
+			&-menu-link {
+				font-size: 16px;
+			}
 		}
 	}
 	&.count-block-5 {
@@ -154,12 +161,20 @@
 	@include flex-wrap(wrap);
 	margin: 0 -15px 26px -34px;
 	&__block {
-		margin: 0 0 20px 34px;
-		flex-basis: 272px;
+		margin: 0 0 30px 34px;
+		flex-basis: calc(25% - 36px);
 		position: relative;
 		background: #f9f9f9;
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(center);
+		@include transition( 0.2s ease-in-out);
+		&:hover {
+			box-shadow: 0px 0px 15px #ddd;
+			background: darken(#f9f9f9, 10%);
+		}
 		&.x-2 {
-			flex-basis: 577px;
+			flex-basis: calc(50% - 41px);
 		}
 		&.descr-invers {
 			.product-section__block-category,
@@ -310,19 +325,18 @@
 .news-preview {
 	margin-top: 10px;
 	margin-bottom: 45px;
-	&__img {
-		float: left;
-	}
+	// &__img {
+	// 	float: left;
+	// }
 	&__date {
-		margin: 0 0 0 162px;
+		margin: 0;
 	    color: #454051;
 	    font-style: italic;
 	    display: block;
 	    position: relative;
-	    top: -6px;
 	}
 	&__text {
-		margin: 0 0 0 162px;
+		margin: 6px 0 0 0;
 		font-family: Roboto;
 		display: block;
 		padding-right: 30px;
@@ -357,6 +371,7 @@
 		color: #848c93;
 		margin-left: 20px;
 		border-bottom: 1px dotted;
+		display: inline-block;
 		&:hover,
 		&:focus {
 			color: $red;

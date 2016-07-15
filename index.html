@@ -28,14 +28,14 @@
       <header class="header">
         <div class="container">
           <div class="row">
-            <div class="col-sm-2">
+            <div class="col-md-2 col-sm-3 col-xxs-12">
               <!-- логотип --><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo" class="header__logo-img"></a>
               <!-- конец логотип-->
             </div>
-            <div class="col-sm-10">
+            <div class="col-md-10 col-sm-9">
               <div class="header__top">
                 <div class="row">
-                  <div class="col-sm-6">
+                  <div class="col-md-6 col-sm-12">
                     <!-- меню -->
                     <ul class="header__menu">
                       <li class="header__menu-item"><a href="#!" class="header__menu-link">О нас</a></li>
@@ -45,7 +45,7 @@
                     </ul>
                     <!-- конец меню-->
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-md-6 col-sm-12">
                     <!-- график работы-->
                     <p class="header__work-time">С 9<sup>:00</sup> до 20<sup>:00</sup>, каждый день, кроме воскресенья</p>
                     <!-- конец график работы-->
@@ -54,9 +54,9 @@
               </div>
               <div class="header__bottom">
                 <div class="row">
-                  <div class="col-sm-5">
+                  <div class="col-sm-4 col-md-5">
                     <!-- блок телефонов-->
-                    <div class="header__phone-block"><a href="tel:+380503850101" class="header__phone">050-385-01-01</a><span class="header__phone-divider">/</span><a href="tel:+380673850101" class="header__phone">067-385-01-01</a></div>
+                    <div class="header__phone-block"><a href="tel:+380503850101" class="header__phone">050-385-01-01</a><span class="header__phone-divider hidden-sm">/</span><a href="tel:+380673850101" class="header__phone">067-385-01-01</a></div>
                     <!-- конец блок телефонов-->
                   </div>
                   <div class="col-sm-4">
@@ -66,10 +66,11 @@
                     </div>
                     <!-- конец блок с адресом-->
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-4 col-md-3">
                     <!-- блок с корзиной-->
                     <div class="header__basket"><img src="img/pack.png" alt="Pack" class="header__basket-img">
-                      <div class="header__basket-text"><span class="header__basket-count">4</span> товара на <span class="header__basket-price">12 900</span> грн
+                      <div class="header__basket-text"><span class="header__basket-count">4</span> товара на 
+                        <p class="header__basket-price">12 900<span> грн</span></p>
                         <div><a href="#!" class="header__basket-btn">Оформить</a></div>
                       </div>
                     </div>
@@ -86,7 +87,7 @@
                 <div class="search__block">
                   <form action="#!">
                     <input type="text" required class="search__block-input">
-                    <button type="submt" class="search__block-submit"></button>
+                    <button type="submit" class="search__block-submit"></button>
                   </form>
                 </div>
                 <!-- конец форма поиска-->
@@ -94,6 +95,7 @@
                 <ul class="header-category__menu">
                   <li class="header-category__menu-item"><a href="#!" class="header-category__menu-link">Офисная мебель</a></li>
                   <li class="header-category__menu-item"><a href="#!" class="header-category__menu-link">Офисные кресла</a></li>
+                  <li class="header-category__menu-item"><a href="#!" class="header-category__menu-link">Стол и стул</a></li>
                   <li class="header-category__menu-item"><a href="#!" class="header-category__menu-link">Стол и стул</a></li>
                 </ul>
                 <!-- конец меню категорий-->
@@ -125,7 +127,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 hidden-xs">
               <!-- секция с категориями продуктов-->
               <div class="category-flex count-block-3">
                 <div style="background: url(../img/content/cat-bg.jpg) 0 0 no-repeat;" class="category-flex__block">
@@ -169,7 +171,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-10 col-sm-offset-2">
+            <div class="col-md-10 col-md-offset-2 col-sm-12 hidden-xs">
               <!-- SEO с описанием-->
               <div class="description__block">
                 <p class="description__block-text">Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. </p>
@@ -295,7 +297,7 @@
               <p class="title"> <span>Как купить?</span></p>
               <div class="buy-steps">
                 <div class="row">
-                  <div class="col-sm-3"><img src="img/first-line.png" alt="line" class="buy-steps__line first">
+                  <div class="col-md-3 col-sm-6"><img src="img/first-line.png" alt="line" class="buy-steps__line first hidden-xs">
                     <p class="buy-steps__title"><img src="img/one.png" alt="step-img" class="buy-steps__step-count">Выбрать</p>
                     <ul class="buy-steps__list">
                       <li class="buy-steps__list-item">выберите товар в каталоге</li>
@@ -303,18 +305,18 @@
                     </ul>
                     <p class="buy-steps__text-muted">Выбор материала, влияет<br>на стоимость товара!</p>
                   </div>
-                  <div class="col-sm-3">
-                    <p class="buy-steps__title m-t-45"><img src="img/two.png" alt="step-img" class="buy-steps__step-count">Заказать</p><img src="img/second-line.png" alt="line" class="buy-steps__line second">
+                  <div class="col-md-3 col-sm-6">
+                    <p class="buy-steps__title m-t-45"><img src="img/two.png" alt="step-img" class="buy-steps__step-count">Заказать</p><img src="img/second-line.png" alt="line" class="buy-steps__line second hidden-xs">
                     <ul class="buy-steps__list">
                       <li class="buy-steps__list-item">через форму заказа, на странице выбранного товара</li>
                       <li class="buy-steps__list-item">по телефону:<br><span>(095)</span> 385-01-01; <span>(067)</span> 385-01-01</li>
                     </ul>
                   </div>
-                  <div class="col-sm-3"><img src="img/last-line.png" alt="line" class="buy-steps__line last">
+                  <div class="col-md-3 col-sm-6"><img src="img/last-line.png" alt="line" class="buy-steps__line last hidden-xs">
                     <p class="buy-steps__title"><img src="img/three.png" alt="step-img" class="buy-steps__step-count">Оплатить</p>
                     <p class="buy-steps__text">По факту получения счёта с печатью нашей компании, вы имеете возможность оплатить его любым доступным и удобным для Вас способом.</p>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-md-3 col-sm-6">
                     <p class="buy-steps__title m-t-20"><img src="img/four.png" alt="step-img" class="buy-steps__step-count">Получить</p>
                     <ul class="buy-steps__list">
                       <li class="buy-steps__list-item">самовывоз со склада или центрального офиса</li>
@@ -332,22 +334,37 @@
               <p class="title"> <span>Новости кампании</span></p>
               <div class="news-preview">
                 <div class="row">
-                  <div class="col-sm-4">
-                    <div class="news-preview"><a href="#!"><img src="img/content/news-th.jpg" alt="news-preview" class="news-preview__img"></a>
-                      <p class="news-preview__date">1 марта</p>
-                      <p class="news-preview__text">В «Статус Групп» проходят мастер-классы по дизайну</p>
+                  <div class="col-sm-4 col-xs-4 col-xxs-12">
+                    <div class="row">
+                      <div class="col-md-5 col-sm-12">
+                        <div class="news-preview__img-wrap"><a href="#!"><img src="img/content/news-th.jpg" alt="news-preview" class="news-preview__img"></a></div>
+                      </div>
+                      <div class="col-md-7 col-sm-12">
+                        <p class="news-preview__date">1 марта</p>
+                        <p class="news-preview__text">В «Статус Групп» проходят мастер-классы по дизайну</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="news-preview"><a href="#!"><img src="img/content/news-th.jpg" alt="news-preview" class="news-preview__img"></a>
-                      <p class="news-preview__date">2 марта</p>
-                      <p class="news-preview__text">В «Статус Групп» проходят мастер-классы по дизайну</p>
+                  <div class="col-sm-4 col-xs-4 col-xxs-12">
+                    <div class="row">
+                      <div class="col-md-5 col-sm-12">
+                        <div class="news-preview__img-wrap"><a href="#!"><img src="img/content/news-th.jpg" alt="news-preview" class="news-preview__img"></a></div>
+                      </div>
+                      <div class="col-md-7 col-sm-12">
+                        <p class="news-preview__date">2 марта</p>
+                        <p class="news-preview__text">В «Статус Групп» проходят мастер-классы по дизайну</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="news-preview"><a href="#!"><img src="img/content/news-th.jpg" alt="news-preview" class="news-preview__img"></a>
-                      <p class="news-preview__date">3 марта</p>
-                      <p class="news-preview__text">В «Статус Групп» проходят мастер-классы по дизайну</p>
+                  <div class="col-sm-4 col-xs-4 col-xxs-12">
+                    <div class="row">
+                      <div class="col-md-5 col-sm-12">
+                        <div class="news-preview__img-wrap"><a href="#!"><img src="img/content/news-th.jpg" alt="news-preview" class="news-preview__img"></a></div>
+                      </div>
+                      <div class="col-md-7 col-sm-12">
+                        <p class="news-preview__date">3 марта</p>
+                        <p class="news-preview__text">В «Статус Групп» проходят мастер-классы по дизайну</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -360,10 +377,10 @@
               <!-- SEO текст-->
               <div class="seo-description">
                 <div class="row">
-                  <div class="col-sm-3">
+                  <div class="col-md-3 col-sm-4">
                     <h1 class="seo-description__title">Компания Status group - поставщик офисной мебели, кабинетов руководителя, офисных кресел</h1>
                   </div>
-                  <div class="col-sm-9">
+                  <div class="col-md-9 col-sm-8">
                     <div class="seo-description__block js-slide-anchor">
                       <p class="seo-description__text"><strong>Компания Status group - поставщик офисной мебели, кабинетов руководителя, офисных кресел</strong></p>
                       <p class="seo-description__text">Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. Главным отличием компании Статус групп от конкурентов является, то, что у нас вся продукция всегда есть в наличии на нашем оптовом складе. За счёт этого мы производим отгрузку товара покупателю уже в день заказа. Кроме того, для удобства наших клиентов мы построили огромный шоу-рум на более чем 3 000 квадратных метрах, где представлен весь ассортимент нашей продукции. Поэтому выбирать товар вы можете как по электронному каталогу интернет-сайта Status group, так посетив наш шоу-руме в Донецке. Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. Главным отличием компании Статус групп от конкурентов является, то, что у нас вся продукция всегда есть в наличии на нашем оптовом складе. За счёт этого мы производим отгрузку товара покупателю уже в день заказа. Кроме того, для удобства наших клиентов мы построили огромный шоу-рум на более чем 3 000 квадратных метрах, где представлен весь ассортимент нашей продукции. Поэтому выбирать товар вы можете как по электронному каталогу интернет-сайта Status group, так посетив наш шоу-руме в Донецке.</p>
@@ -385,7 +402,7 @@
             <p class="footer__copyright">&copy; 2016 Статус Групп</p>
           </div>
           <div class="col-sm-3">
-            <div class="footer__social"><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/vk.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/fb.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/tw.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/goog.png" alt="social" class="footer__social-img"></a></div>
+            <div class="footer__social"><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/vk.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/fb.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/tw.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/goog.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/goog.png" alt="social" class="footer__social-img"></a></div>
           </div>
           <div class="col-sm-3">
             <p class="footer__text">Эл.почта: <a href="mailto:info@gstatus.com.ua" class="footer__link">info@gstatus.com.ua</a></p>
