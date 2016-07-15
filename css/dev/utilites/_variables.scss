@@ -1,14 +1,25 @@
-// ---------------------  Variables
+// =====================  Variables
 
-$main_font: 'Lora', sans-serif;
-$main_color: #323334;
+$main_font: 'Open Sans', sans-serif;
+$main_color: #424548;
 
+// ===== Fonts
+$mss: 'Microsoft Sans Serif';
+$ar: 'Arial';
+
+
+// ===== Colors
 $red: #da4a4a;
-$ruby: #f1cacb;
+$ruby: #c1372a;
 
-// mixins
+
+// ===== Constants
+$br: 3px;
+
+
+// ===== Mixins
 @mixin hoverlink {
 	text-decoration: none;
 	color: $red;
-	border-bottom: 1px solid $ruby;
+	border-bottom: 1px solid #f0c9ca;
 }

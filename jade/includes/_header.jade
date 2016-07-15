@@ -1,69 +1,61 @@
 header.header
-	.container
-		.row
-			.col-md-2.col-sm-3.col-xxs-12
-				// логотип 
-				a.header__logo(href="/")
-					img.header__logo-img(src="img/logo.png" alt="Site Logo")
-				// конец логотип
-			.col-md-10.col-sm-9
-				.header__top
+	// верхняя часть header
+	.header__top
+		.container
+			.row
+				.col-sm-6
+					// меню
+					ul.header__top-menu-list
+						each item in headerMenu
+							li.header__top-menu-item
+								a.header__top-menu-link(href="#!") #{item}
+					// конец меню
+				.col-sm-6
 					.row
-						.col-md-6.col-sm-12
-							// меню 
-							ul.header__menu
-								each item in headerMenu
-									li.header__menu-item
-										a.header__menu-link(href="#!") #{item}
-							// конец меню
-						.col-md-6.col-sm-12
-							// график работы
-							p.header__work-time С 9<sup>:00</sup> до 20<sup>:00</sup>, каждый день, кроме воскресенья
-							// конец график работы
-				.header__bottom
-					.row
-						.col-sm-4.col-md-5
-							// блок телефонов
-							.header__phone-block
-								a.header__phone(href="tel:+380503850101") 050-385-01-01
-								span.header__phone-divider.hidden-sm /
-								a.header__phone(href="tel:+380673850101") 067-385-01-01
-							// конец блок телефонов
-						.col-sm-4
-							// блок с адресом
-							.header__address-block
-								p.header__address Киев, ул. Семьи Сосниных 3
-								a.header__address-email(href="mailto:#{email}") #{email}
-							// конец блок с адресом
-						.col-sm-4.col-md-3
-							// блок с корзиной
-							.header__basket
-								img.header__basket-img(src="img/pack.png", alt="Pack")
-								.header__basket-text
-									span.header__basket-count 4
-									|  товара на 
-									p.header__basket-price 12 900
-										span  грн
-									div
-										a.header__basket-btn(href="#!") Оформить
-							// конец блок с корзиной
-		.row
-			.col-sm-12
-				.header-category
-					// форма поиска
-					.search__block
-						form(action="#!")
-							input.search__block-input(type="text" required)
-							button.search__block-submit(type="submit")
-					// конец форма поиска
-					// меню категорий
-					ul.header-category__menu
-						li.header-category__menu-item
-							a.header-category__menu-link(href="#!") Офисная мебель
-						li.header-category__menu-item
-							a.header-category__menu-link(href="#!") Офисные кресла
-						li.header-category__menu-item
-							a.header-category__menu-link(href="#!") Стол и стул
-						li.header-category__menu-item
-							a.header-category__menu-link(href="#!") Стол и стул
-					// конец меню категорий
+						.col-sm-6
+							// адрес
+							.header__top-address-block
+								p.header__top-address-text Киев, ул. Семьи Сосниных 3
+								.header__top-address-hide
+									p.header__top-address-text Пн. - Сб.: с 9:00 до 20:00
+									p.header__top-address-text Вс.: 
+										span.color-red Выходной
+							// конец адрес
+						.col-sm-6
+							// телефоны
+							.header__top-phone-block
+								a.header__top-phone(href="tel:+38#{phone1}") #{phone1}
+								a.header__top-phone(href="tel:+38#{phone2}") #{phone2}
+							// конец телефоны
+	// конец верхняя часть header
+	// нижняя часть header
+	.header__bottom
+		.container
+			.row
+				.col-sm-3
+					a(href="/")
+						img(src="img/logo.png", alt="Статус групп")
+				.col-sm-7
+					// меню каталога
+					.header__bottom-menu
+						ul.header__bottom-menu-list
+							li.header__bottom-menu-item
+								a.header__bottom-menu-link(href="#!") Офисная мебель
+							li.header__bottom-menu-item
+								a.header__bottom-menu-link(href="#!") Офисные кресла
+							li.header__bottom-menu-item
+								a.header__bottom-menu-link(href="#!") Стол и стул
+					// конец меню каталога
+				.col-sm-2
+					// блок поиска
+					.header__bottom-search
+						a.header__bottom-search-btn(href="#!") 
+					// конец блок поиска
+					// блок корзины
+					.header__bottom-basket
+						a.header__bottom-basket-img-link(href="#!")
+							span.header__bottom-basket-count 12
+						p.header__bottom-basket-price.js-replace-number 12480 ₴
+						a.header__bottom-basket-link(href="#!") Оформить
+					// конец блок корзины
+	// конец нижняя часть header

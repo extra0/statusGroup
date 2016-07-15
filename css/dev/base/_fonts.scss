@@ -1,16 +1,5 @@
-@include font-face("Lora", "../fonts/Lora-Regular", normal, normal, $file-formats: ttf);
-@include font-face("Lora", "../fonts/Lora-Italic", normal, italic, $file-formats: ttf);
-@include font-face("Lora", "../fonts/Lora-Bold", bold, normal, $file-formats: ttf);
-@include font-face("Lora", "../fonts/Lora-BoldItalic", bold, italic, $file-formats: ttf);
-
-@include font-face("Roboto", "../fonts/Roboto-Regular", normal, normal, $file-formats: ttf);
-@include font-face("Roboto", "../fonts/Roboto-Italic", normal, italic, $file-formats: ttf);
-@include font-face("Roboto", "../fonts/Roboto-Bold", bold, normal, $file-formats: ttf);
-@include font-face("Roboto", "../fonts/Roboto-BoldItalic", bold, italic, $file-formats: ttf);
-@include font-face("Roboto", "../fonts/Roboto-Light", 300, normal, $file-formats: ttf);
-@include font-face("Roboto", "../fonts/Roboto-Medium", 500, normal, $file-formats: ttf);
-@include font-face("Roboto", "../fonts/Roboto-LightItalic", 300, italic, $file-formats: ttf);
-@include font-face("Roboto", "../fonts/Roboto-Black", 900, normal, $file-formats: ttf);
-// @import "http://webfonts.ru/import/roboto.css";
-@import "http://webfonts.ru/import/lora.css";
-@import "http://webfonts.ru/import/robotocondensed.css";
+@include font-face("Open Sans", "../fonts/OpenSans-Regular", normal, normal, $file-formats: ttf woff eot);
+@include font-face("Open Sans", "../fonts/OpenSans-Italic", normal, italic, $file-formats: ttf);
+@include font-face("Open Sans", "../fonts/OpenSans-Bold", bold, normal, $file-formats: ttf woff eot);
+@include font-face("Open Sans", "../fonts/OpenSans-Semibold", 600, normal, $file-formats: ttf);
+@include font-face("Microsoft Sans Serif", "../fonts/micross", normal, normal, $file-formats: ttf);

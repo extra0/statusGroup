@@ -13,8 +13,8 @@
     <!-- OpenGraph-->
     <meta property="og:locale" content="ru_RU">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="заголовок страницы">
+    <meta property="og:description" content="описание страницы">
     <meta property="og:url" content="URL текущей страницы">
     <meta property="og:image" content="ссылка на картинку для страницы">
     <meta property="og:site_name" content="Название сайта">
@@ -26,83 +26,74 @@
   <body>
     <div class="main-wrapper">
       <header class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2 col-sm-3 col-xxs-12">
-              <!-- логотип --><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo" class="header__logo-img"></a>
-              <!-- конец логотип-->
-            </div>
-            <div class="col-md-10 col-sm-9">
-              <div class="header__top">
-                <div class="row">
-                  <div class="col-md-6 col-sm-12">
-                    <!-- меню -->
-                    <ul class="header__menu">
-                      <li class="header__menu-item"><a href="#!" class="header__menu-link">О нас</a></li>
-                      <li class="header__menu-item"><a href="#!" class="header__menu-link">Доставка и оплата</a></li>
-                      <li class="header__menu-item"><a href="#!" class="header__menu-link">Новости</a></li>
-                      <li class="header__menu-item"><a href="#!" class="header__menu-link">Контакты</a></li>
-                    </ul>
-                    <!-- конец меню-->
-                  </div>
-                  <div class="col-md-6 col-sm-12">
-                    <!-- график работы-->
-                    <p class="header__work-time">С 9<sup>:00</sup> до 20<sup>:00</sup>, каждый день, кроме воскресенья</p>
-                    <!-- конец график работы-->
-                  </div>
-                </div>
+        <!-- верхняя часть header-->
+        <div class="header__top">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- меню-->
+                <ul class="header__top-menu-list">
+                  <li class="header__top-menu-item"><a href="#!" class="header__top-menu-link">О нас</a></li>
+                  <li class="header__top-menu-item"><a href="#!" class="header__top-menu-link">Оплата и доставка</a></li>
+                  <li class="header__top-menu-item"><a href="#!" class="header__top-menu-link">Новости</a></li>
+                  <li class="header__top-menu-item"><a href="#!" class="header__top-menu-link">Контакты</a></li>
+                </ul>
+                <!-- конец меню-->
               </div>
-              <div class="header__bottom">
+              <div class="col-sm-6">
                 <div class="row">
-                  <div class="col-sm-4 col-md-5">
-                    <!-- блок телефонов-->
-                    <div class="header__phone-block"><a href="tel:+380503850101" class="header__phone">050-385-01-01</a><span class="header__phone-divider hidden-sm">/</span><a href="tel:+380673850101" class="header__phone">067-385-01-01</a></div>
-                    <!-- конец блок телефонов-->
-                  </div>
-                  <div class="col-sm-4">
-                    <!-- блок с адресом-->
-                    <div class="header__address-block">
-                      <p class="header__address">Киев, ул. Семьи Сосниных 3</p><a href="mailto:info@gstatus.com.ua" class="header__address-email">info@gstatus.com.ua</a>
-                    </div>
-                    <!-- конец блок с адресом-->
-                  </div>
-                  <div class="col-sm-4 col-md-3">
-                    <!-- блок с корзиной-->
-                    <div class="header__basket"><img src="img/pack.png" alt="Pack" class="header__basket-img">
-                      <div class="header__basket-text"><span class="header__basket-count">4</span> товара на 
-                        <p class="header__basket-price">12 900<span> грн</span></p>
-                        <div><a href="#!" class="header__basket-btn">Оформить</a></div>
+                  <div class="col-sm-6">
+                    <!-- адрес-->
+                    <div class="header__top-address-block">
+                      <p class="header__top-address-text">Киев, ул. Семьи Сосниных 3</p>
+                      <div class="header__top-address-hide">
+                        <p class="header__top-address-text">Пн. - Сб.: с 9:00 до 20:00</p>
+                        <p class="header__top-address-text">Вс.: <span class="color-red">Выходной</span></p>
                       </div>
                     </div>
-                    <!-- конец блок с корзиной-->
+                    <!-- конец адрес-->
+                  </div>
+                  <div class="col-sm-6">
+                    <!-- телефоны-->
+                    <div class="header__top-phone-block"><a href="tel:+38067-385-01-01" class="header__top-phone">067-385-01-01</a><a href="tel:+38095-385-01-01" class="header__top-phone">095-385-01-01</a></div>
+                    <!-- конец телефоны-->
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="header-category">
-                <!-- форма поиска-->
-                <div class="search__block">
-                  <form action="#!">
-                    <input type="text" required class="search__block-input">
-                    <button type="submit" class="search__block-submit"></button>
-                  </form>
-                </div>
-                <!-- конец форма поиска-->
-                <!-- меню категорий-->
-                <ul class="header-category__menu">
-                  <li class="header-category__menu-item"><a href="#!" class="header-category__menu-link">Офисная мебель</a></li>
-                  <li class="header-category__menu-item"><a href="#!" class="header-category__menu-link">Офисные кресла</a></li>
-                  <li class="header-category__menu-item"><a href="#!" class="header-category__menu-link">Стол и стул</a></li>
-                  <li class="header-category__menu-item"><a href="#!" class="header-category__menu-link">Стол и стул</a></li>
-                </ul>
-                <!-- конец меню категорий-->
               </div>
             </div>
           </div>
         </div>
+        <!-- конец верхняя часть header-->
+        <!-- нижняя часть header-->
+        <div class="header__bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3"><a href="/"><img src="img/logo.png" alt="Статус групп"></a></div>
+              <div class="col-sm-7">
+                <!-- меню каталога-->
+                <div class="header__bottom-menu">
+                  <ul class="header__bottom-menu-list">
+                    <li class="header__bottom-menu-item"><a href="#!" class="header__bottom-menu-link">Офисная мебель</a></li>
+                    <li class="header__bottom-menu-item"><a href="#!" class="header__bottom-menu-link">Офисные кресла</a></li>
+                    <li class="header__bottom-menu-item"><a href="#!" class="header__bottom-menu-link">Стол и стул</a></li>
+                  </ul>
+                </div>
+                <!-- конец меню каталога-->
+              </div>
+              <div class="col-sm-2">
+                <!-- блок поиска-->
+                <div class="header__bottom-search"><a href="#!" class="header__bottom-search-btn"> </a></div>
+                <!-- конец блок поиска-->
+                <!-- блок корзины-->
+                <div class="header__bottom-basket"><a href="#!" class="header__bottom-basket-img-link"><span class="header__bottom-basket-count">12</span></a>
+                  <p class="header__bottom-basket-price js-replace-number">12480 ₴</p><a href="#!" class="header__bottom-basket-link">Оформить</a>
+                </div>
+                <!-- конец блок корзины-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- конец нижняя часть header-->
       </header>
       <div class="content">
         <div class="container">
