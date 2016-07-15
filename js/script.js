@@ -7,6 +7,8 @@ $(function(){
 	// collapse block
 	$('.js-slide-trigger').on('click', function(){
 		$(this).parent().find('.js-slide-anchor').toggleClass('active');
+		$(this).toggleClass('active');
+		$(this).hasClass('active') ? $(this).html('Скрыть') : $(this).html('Показать еще');
 	});
 
 });

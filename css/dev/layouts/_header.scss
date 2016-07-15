@@ -1,4 +1,37 @@
 .header {
+	&.count-cat-5 {
+		.header__top-address-block {
+			left: -20px;
+		}
+		.header__top-phone-block {
+			left: -35px;
+		}
+		.header__top-search {
+			display: block;
+		}
+		.header__bottom-search {
+			display: none;
+		}
+		.header__bottom-menu-item {
+			padding: 33px 0px 34px 39px;
+		}
+		.header__bottom-menu-link {
+			letter-spacing: 0px;
+			font-size: 14px;
+		}
+		.header__bottom-menu {
+			margin-right: -70px;
+		}
+	}
+	&.count-cat-4 {
+		.header__bottom-menu-item {
+			padding: 33px 0px 33px 37px;
+		}
+		.header__bottom-menu-link {
+			letter-spacing: 2px;
+			font-size: 15px;
+		}
+	}
 	&__top {
 		background: #f6f8f9;
 		border-bottom: 1px solid #f2f2f2;
@@ -56,6 +89,7 @@
 						border-top: none;
 						opacity: 1;
 						z-index: 8;
+						box-shadow: 0 1px 2px rgba(0,0,0,.1);
 					}
 					&:before {
 						background-position: -534px -10px;
@@ -113,12 +147,21 @@
 				}
 			}
 		}
+		// поиск 
+		&-search {
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			background: url(../img/sprite.png) -567px -10px no-repeat;
+			display: none;
+			@include position(absolute, 3px 20px null null);
+		}
 	}
 	&__bottom {
 		position: relative;
 		z-index: 4;
 		border-bottom: 1px solid #f2f2f2;
-		margin-bottom: 40px;
+		margin-bottom: 39px;
 		// меню каталога
 		&-menu {
 			margin-left: -117px;
@@ -158,8 +201,12 @@
 				height: 30px;
 				position: relative;
 				float: left;
+				opacity: 0.85;
 				@include transition(all 0.2s ease-in-out);
 				@include position(absolute, 6px null null -47px);
+				&:hover {
+					opacity: 1;
+				}
 			}
 			&-count {
 				border: 2px solid #fff;
@@ -185,9 +232,11 @@
 				letter-spacing: 1px;
 				font-size: 11px;
 				border-bottom: 1px dotted;
+				@include transition(all 0.2s ease-in-out);
 				&:hover {
-					color: #7a7d80;
-					@include hoverlink;
+					color: #323334;
+					border-bottom: 1px dotted #323334;
+					text-decoration: none;
 				}
 			}
 		}
@@ -200,8 +249,13 @@
 				display: inline-block;
 				width: 28px;
 				height: 28px;
+				opacity: 0.85;
 				background: url(../img/sprite.png) -486px -10px no-repeat;
 				@include position(absolute, 0 null null 0);
+				@include transition(all 0.2s ease-in-out);
+				&:hover {
+					opacity: 1;
+				}
 			}
 		}
 	}

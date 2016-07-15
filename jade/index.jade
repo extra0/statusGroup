@@ -4,7 +4,6 @@ block append head
 	meta(name="keywords" content="")
 	title Главная страница
 block content
-	- index = true;
 	.container
 		.row
 			.col-sm-12
@@ -12,23 +11,23 @@ block content
 				.advantages
 					.advantages__block
 						img.advantages__block-img(src="img/a-img-1.png", alt="advantages")
-						p.advantages__block-text От 24 до 48 часов на доставку
+						p.advantages__block-text От заказа до вашей двери не более 48 часов!
 					.advantages__block
 						img.advantages__block-img(src="img/a-img-2.png", alt="advantages")
-						p.advantages__block-text Более 1000 крутых проектов
+						p.advantages__block-text Более 1000 крутых проектов!
 					.advantages__block
 						img.advantages__block-img(src="img/a-img-3.png", alt="advantages")
 						p.advantages__block-text Работаем 20 лет на рынке Украины
 					.advantages__block
 						img.advantages__block-img(src="img/a-img-4.png", alt="advantages")
-						p.advantages__block-text Большой оптовый склад в Киеве
+						p.advantages__block-text Большой оптовый склад в Киеве!
 				// конец блок с приемуществами
 		.row
 			.col-sm-12.hidden-xs
 				// секция с категориями продуктов
 				.category-flex.count-block-3
 					- for (i=1; i<=3; i++) {
-						.category-flex__block(style="background: url(../img/content/cat-bg.jpg) 0 0 no-repeat;")
+						.category-flex__block(style="background: url(../img/content/cat-bg.jpg) center right no-repeat;")
 							p.category-flex__block-title Офисная мебель
 							ul.category-flex__block-menu
 								li.category-flex__block-menu-item
@@ -48,12 +47,6 @@ block content
 					- }
 				// конец секция с категориями продуктов
 		.row
-			.col-md-10.col-md-offset-2.col-sm-12.hidden-xs
-				// SEO с описанием
-				.description__block
-					p.description__block-text Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. 
-				// конец SEO с описанием
-		.row
 			.col-sm-12
 				// блок хитов продаж
 				p.title 
@@ -61,56 +54,42 @@ block content
 				// конец блок хитов продаж
 				// блок с продуктами
 				.product-section
-					.product-section__block.descr-invers
-						a(href="#!")
-							img.product-section__block-img(src="img/content/img1.jpg", alt="prouct")
-							.product-section__block-title
-								p.product-section__block-name Hayden beige
-								p.product-section__block-category кресло руководителя
-							.product-section__block-price
-								p.product-section__price 24 350
-									span.product-section__price-currency грн
-					.product-section__block
-						a(href="#!")
-							img.product-section__block-img(src="img/content/img2.jpg", alt="prouct")
-							.product-section__block-title
-								p.product-section__block-name Hayden beige Hayden beige
-								p.product-section__block-category кресло руководителя
-							.product-section__badge
-								.product-section__badge-name кожа делюкс
-							.product-section__block-price
-								p.product-section__price 24 350
-									span.product-section__price-currency грн
-					.product-section__block.x-2
-						a(href="#!")
-							img.product-section__block-img(src="img/content/img-large.png", alt="prouct")
-							.product-section__block-title
-								p.product-section__block-name Hayden beige
-								p.product-section__block-category кресло руководителя
-							.product-section__block-price
-								p.product-section__price 99 999
-									span.product-section__price-currency грн
-					.product-section__block.x-2
-						a(href="#!")
-							img.product-section__block-img(src="img/content/img-large.png", alt="prouct")
-							.product-section__block-title
-								p.product-section__block-name Hayden beige
-								p.product-section__block-category кресло руководителя
-							.product-section__block-price
-								p.product-section__price 99 999
-									span.product-section__price-currency грн
-					- for (i=1; i<=6; i++) {
+					- for (i=1; i<=5; i++) {
 						.product-section__block
-							a(href="#!")
-								img.product-section__block-img(src="img/content/img2.jpg", alt="prouct")
-								.product-section__block-title
-									p.product-section__block-name Hayden beige
-									p.product-section__block-category кресло руководителя
-								.product-section__badge
-									.product-section__badge-name кожа делюкс
-								.product-section__block-price
-									p.product-section__price #{i * 500}
-										span.product-section__price-currency грн
+							a.product-section__block-link(href="#!")
+								.product-section__block-img-wrap
+									img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
+								.product-section__block-description
+									p.product-section__block-name Cody black
+									.product-section__block-price
+										span.product-section__block-price-old.js-replace-number #{i*10521}
+										span.product-section__block-price-current.js-replace-number #{i*5521} ₴
+									- if (i == 1) {
+										p.product-section__block-status.in-have в наличии
+									- } else if (i == 2) {
+										p.product-section__block-status.waiting ожидается
+									- } else {
+										p.product-section__block-status.in-product под заказ
+									- }
+					-}
+					- for (i=1; i<=2; i++) {
+						.product-section__block.x-2
+							a.product-section__block-link(href="#!")
+								.product-section__block-img-wrap
+									img.product-section__block-img(src="img/content/img-large.png", alt="product")
+								.product-section__block-description
+									p.product-section__block-name Cody black
+									.product-section__block-price
+										span.product-section__block-price-old.js-replace-number #{i*10521}
+										span.product-section__block-price-current.js-replace-number #{i*5521} ₴
+									p.product-section__block-status.in-have в наличии
+								.product-section__block-badge
+									div
+										span.product-section__block-badge-name Новинка
+									div
+										span.product-section__block-badge-name Италия
+									div
+										span.product-section__block-badge-name Акция
 					- }
 				// конец блок с продуктами
 		.row
@@ -155,23 +134,24 @@ block content
 			.col-sm-12
 				// новости кампании
 				p.title 
-					span Новости кампании
+					span Новости	
 				.news-preview
 					.row
 						- for (i=1;i<=3;i++) {
 							.col-sm-4.col-xs-4.col-xxs-12
-								.row
-									.col-md-5.col-sm-12
-										.news-preview__img-wrap
-											a(href="#!")
-												img.news-preview__img(src="img/content/news-th.jpg", alt="news-preview")
-									.col-md-7.col-sm-12
-										p.news-preview__date #{i} марта
-										p.news-preview__text В «Статус Групп» проходят мастер-классы по дизайну
+								.news-preview__block
+									.news-preview__block-img-wrap
+										a(href="#!")
+											img.news-preview__block-img(src="img/content/news-th.jpg", alt="news-preview")
+									.news-preview__block-description
+										p.news-preview__block-text В «Статус Групп» проходят мастер-классы по дизайну
+										p.news-preview__block-date #{i} марта 2016
 						- }
 				// конец новости кампании
 		.row
 			.col-sm-12
+				p.title 
+					span O Статус Групп
 				// SEO текст
 				.seo-description
 					.row
@@ -179,8 +159,6 @@ block content
 							h1.seo-description__title Компания Status group - поставщик офисной мебели, кабинетов руководителя, офисных кресел
 						.col-md-9.col-sm-8
 							.seo-description__block.js-slide-anchor
-								p.seo-description__text
-									strong Компания Status group - поставщик офисной мебели, кабинетов руководителя, офисных кресел
-								p.seo-description__text Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. Главным отличием компании Статус групп от конкурентов является, то, что у нас вся продукция всегда есть в наличии на нашем оптовом складе. За счёт этого мы производим отгрузку товара покупателю уже в день заказа. Кроме того, для удобства наших клиентов мы построили огромный шоу-рум на более чем 3 000 квадратных метрах, где представлен весь ассортимент нашей продукции. Поэтому выбирать товар вы можете как по электронному каталогу интернет-сайта Status group, так посетив наш шоу-руме в Донецке. Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. Главным отличием компании Статус групп от конкурентов является, то, что у нас вся продукция всегда есть в наличии на нашем оптовом складе. За счёт этого мы производим отгрузку товара покупателю уже в день заказа. Кроме того, для удобства наших клиентов мы построили огромный шоу-рум на более чем 3 000 квадратных метрах, где представлен весь ассортимент нашей продукции. Поэтому выбирать товар вы можете как по электронному каталогу интернет-сайта Status group, так посетив наш шоу-руме в Донецке.
+								p.seo-description__text Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. Главным отличием компании Статус групп от конкурентов является, то, что у нас вся продукция всегда есть в наличии на нашем оптовом складе. За счёт этого мы производим отгрузку товара покупателю уже в день заказа. Кроме того, для удобства наших клиентов мы построили огромный шоу-рум на более чем 3 000 квадратных метрах, где представлен весь ассортимент нашей продукции. Поэтому выбирать товар вы можете как по электронному каталогу интернет-сайта Status group, так посетив наш шоу-руме в Донецке. Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. Главным отличием компании Статус групп от конкурентов является, то, что у нас вся продукция всегда есть в наличии на нашем оптовом складе. За счёт этого мы производим отгрузку товара покупателю уже в день заказа. Кроме того, для удобства наших клиентов мы построили огромный шоу-рум на более чем 3 000 квадратных метрах, где представлен весь ассортимент нашей продукции. Поэтому выбирать товар вы можете как по электронному каталогу интернет-сайта Status group, так посетив наш шоу-руме в Донецке. 
 							a.seo-description__trigger.js-slide-trigger(href="javascript:void(0);") Показать еще
 				// конец SEO текст

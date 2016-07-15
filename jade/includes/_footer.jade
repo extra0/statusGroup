@@ -1,10 +1,36 @@
-- if (index == true) {
-	footer.footer.index
-		.container
-			.row
-				.col-sm-3
-					p.footer__copyright &copy; 2016 Статус Групп
-				.col-sm-3
+footer.footer
+	.container
+		.footer__top
+			.footer__top-flex
+				.footer__top-flex-block
+					p.footer__top-flex-title.menu Меню
+					ul.footer__top-menu
+						li.footer__top-menu-item
+							a.footer__top-menu-link(href="#!") О нас
+						li.footer__top-menu-item
+							a.footer__top-menu-link(href="#!") Контакты
+						li.footer__top-menu-item
+							a.footer__top-menu-link(href="#!") Доставка и оплата
+						li.footer__top-menu-item
+							a.footer__top-menu-link(href="#!") Карта сайта
+						li.footer__top-menu-item
+							a.footer__top-menu-link(href="#!") Новости
+				.footer__top-flex-block
+					p.footer__top-flex-title.catalog Каталог
+					ul.footer__top-menu
+						li.footer__top-menu-item.full-width
+							a.footer__top-menu-link(href="#!") Офисная мебель
+						li.footer__top-menu-item.full-width
+							a.footer__top-menu-link(href="#!") Офисные кресла
+						li.footer__top-menu-item.full-width
+							a.footer__top-menu-link(href="#!") Мебель для дома
+				.footer__top-flex-block
+					p.footer__top-flex-title.info Мы
+					p.footer__top-flex-text.address Киев, ул. Семьи Сосниных 3
+					p.footer__top-flex-text.phone (067) 385-01-01, (095) 385-01-01
+					a.footer__top-flex-text.email(href="mailto:#{email}") #{email}
+				.footer__top-flex-block
+					p.footer__top-flex-title.social Соц. сети
 					.footer__social
 						a.footer__social-link(href="#!" rel="nofollow" target="_blank") 
 							img.footer__social-img(src="img/vk.png", alt="social")
@@ -14,22 +40,9 @@
 							img.footer__social-img(src="img/tw.png", alt="social")
 						a.footer__social-link(href="#!" rel="nofollow" target="_blank") 
 							img.footer__social-img(src="img/goog.png", alt="social")
-						a.footer__social-link(href="#!" rel="nofollow" target="_blank") 
-							img.footer__social-img(src="img/goog.png", alt="social")
-				.col-sm-3
-					p.footer__text Эл.почта: 
-						a.footer__link(href="mailto:info@gstatus.com.ua") info@gstatus.com.ua
-				.col-sm-3
-					p.footer__text.text-right Разработка сайта - студия 
-						a.footer__link(href="http://www.studio-maximus.com/" target="_blank") “Максимус”
-- } else {
-	footer.footer
-		.container
-			.row
-				.col-sm-3
-				.col-sm-3
-				.col-sm-3
-				.col-sm-3
-- }
-	
+		.footer__bottom
+			p.footer__text.col-sm-6 Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. 
+			p.footer__copyright.text-center.col-sm-2 &copy; 2016 Статус Групп
+			p.footer__text.text-right.col-sm-4 Разработка сайта - студия 
+					a.footer__link(href="http://www.studio-maximus.com/" target="_blank") “Максимус”
 include _script
