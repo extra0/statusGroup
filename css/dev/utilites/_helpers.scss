@@ -4,6 +4,12 @@
 
 // отступы
 .m-0 {margin: 0;}
+.m-t-10 {margin-top: 10px;}
+.m-t-20 {margin-top: 20px;}
+.m-t-30 {margin-top: 30px;}
+.m-b-10 {margin-bottom: 10px;}
+.m-b-20 {margin-bottom: 20px;}
+.m-b-30 {margin-bottom: 30px;}
 
 .p-0 {padding: 0;}
 
@@ -34,6 +40,19 @@
 		position: relative;
 		letter-spacing: 2px;
 	}
+	&-bg-gray {
+		& * {
+			background: #fcfcfc;
+		}
+	}
+}
+
+.subtitle {
+	color: #4f4f4f;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 1px;
+	margin: 0 0 20px;
 }
 
 // универсальная кнопка
@@ -62,8 +81,49 @@
 		text-decoration: none;
 	}
 	// эффект вдавливания
-	&:active {
-		border-bottom: 0px solid transparent;
-		top: 2px;
+	// &:active {
+	// 	border-bottom: 0px solid transparent;
+	// 	top: 2px;
+	// }
+	&-block {
+		display: block;
+		width: 100%;
 	}
+}
+
+// форма
+.form {
+	&-group {
+		margin-bottom: 16px;
+	}
+	&-label {
+		display: block;
+		color: #9fa0a1;
+		font-size: 14px;
+		margin-bottom: 4px;
+		font-family: $mss;
+	}
+	&-control {
+		width: 100%;
+		border: 1px solid #dddddd;
+		padding: 13px 17px;
+		// height: 50px;
+		color: #000;
+		font-size: 16px;
+		resize: none;
+		@include transition(all 0.2s ease-in-out);
+		&:focus {
+			border: 1px solid $ruby;
+		}
+		&.error {
+			border: 1px solid #f20;
+		}
+	}
+}
+// панель
+.border-panel {
+	border: 1px solid #ddd;
+	padding: 33px 37px;
+	height: 100%;
+	background: #fff;
 }

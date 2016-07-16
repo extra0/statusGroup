@@ -1,4 +1,5 @@
 .header {
+	margin-bottom: 22px;
 	&.count-cat-5 {
 		.header__top-address-block {
 			left: -20px;
@@ -162,7 +163,6 @@
 		position: relative;
 		z-index: 4;
 		border-bottom: 1px solid #f2f2f2;
-		margin-bottom: 39px;
 		// меню каталога
 		&-menu {
 			margin-left: -117px;
@@ -244,6 +244,7 @@
 				font-size: 11px;
 				border-bottom: 1px dotted;
 				@include transition(all 0.2s ease-in-out);
+				&:focus,
 				&:hover {
 					color: #323334;
 					border-bottom: 1px dotted #323334;

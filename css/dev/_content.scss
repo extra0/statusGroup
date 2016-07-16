@@ -4,6 +4,7 @@
 	border: 1px solid #eeeeee;
 	margin-bottom: 41px;
 	padding: 30px 29px;
+	margin-top: 17px;
 	&__block {
 		flex-basis: 23%;
 		@include display(flex);
@@ -506,3 +507,235 @@
 	}
 }
 // конец 404 страница
+
+// хлебные крошки 
+.breadcrumbs {
+	margin-bottom: 56px;
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			&:not(:first-child) {
+				padding-left: 15px;
+				&:before {
+					content: '/';
+					color: #7a7d80;
+					@include position(absolute, 0 null null 4px);
+				}
+			}
+		}
+		&-link {
+			color: #7a7d80;
+			font-family: $mss;
+			letter-spacing: -0.75px;
+			font-size: 13px;
+			border-bottom: 1px solid transparent;
+			@include transition(all 0.2s ease-in-out);
+			&:not(.current) {
+				&:hover,
+				&:focus {
+					color: #323334;
+					border-bottom: 1px solid #acadad;
+					text-decoration: none;
+				}
+			}
+			&.current {
+				color: #bfbdbe;
+			}
+		}
+	}
+}
+// конец хлебные крошки 
+
+// css на странице контактов
+.contact {
+	// график работы 
+	&__work-day {
+		padding: 0;
+		margin: 41px 0 0 0;
+		list-style-type: none;
+		@include display(flex);
+		@include justify-content(space-between);
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			width: 60px;
+			text-align: center;
+			padding-bottom: 10px;
+			&.current {
+				background: $ruby;
+				.contact__work-day-title {
+					border-bottom: 2px solid $ruby;
+					background: #fff;
+					color: $ruby;
+				}
+				.contact__work-day-time {
+					color: #fff;
+				}
+			}
+		}
+		&-title {
+			display: block;
+			color: #b1b1b2;
+			border-bottom: 2px solid #f2f2f2;
+			padding: 0 0 13px 0;
+			margin: 0;
+			margin-bottom: 1em;
+		}
+		&-time {
+			display: block;
+			font-size: 16px;
+			color: #424548;
+			margin-bottom: 5px;
+			font-family: $mss;
+			&.not-work {
+				color: #ececec;
+				margin-top: 30px;
+			}
+		}
+	}
+	// конец график работы
+	&__block {
+		font-size: 16px;
+		&-text {
+			margin: -11px 0 28px 0;
+			letter-spacing: -0.4px;
+		}
+		&-info {
+			font-size: 18px;
+			color: #424548;
+			margin: 0 0 15px 28px;
+			position: relative;
+			@include transition(all 0.2s ease-in-out);
+			&:before {
+				content: '';
+				width: 17px;
+				height: 17px;
+				@include position(absolute, 4px null null -28px);
+				background: url(../img/sprite.png) no-repeat;
+			}
+			&.phone {
+				&:before {
+					background-position: -166px -126px;
+				}
+			}
+			&.address {
+				&:before {
+					background-position: -165px -100px;
+				}
+			}
+			&.email {
+				border-bottom: 1px solid #dedede;
+				&:before {
+					background-position: -166px -151px;
+				}
+				&:focus,
+				&:hover {
+					color: #424548;
+					border-bottom: 1px solid #919191;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&__flex {
+		&-section {
+			margin: 0 -15px;
+			@include display(flex);
+			@include justify-content(space-between);
+			@include flex-wrap(wrap);
+		}
+	}
+}
+
+// главная карта в контактах 
+.map {
+	&__section {
+		margin: 80px 0;
+		&-wrap {
+			height: 575px;
+			width: 100%;
+			pointer-events: none;
+			position: relative;
+			&:before {
+				content: '';
+				@include position(absolute, 0 null null 0);
+				// background: url(../img/map-bg.png) 0 0 no-repeat;
+				width: 100%;
+				height: 644px;
+				margin: 0 auto;
+				opacity: 0.7;
+				z-index: 2;
+			}
+		}
+		&-main-stage {
+			pointer-events: auto;
+		}
+	}
+}
+.map,
+.map__section-main-stage,
+#myMap {
+	width: 100%;
+	height: 100%;
+}
+// конец главная карта в контактах 
+
+// диллеры 
+.dillers {
+	padding: 50px 0;
+	margin-bottom: -95px;
+	background: #fcfcfc;
+	&__map {
+		width: 100%;
+		height: 370px;
+	}
+	&__tab-nav {
+		&-list {
+			list-style-type: none;
+			padding: 0;
+			margin: 0 0 0 15px;
+		}
+		&-item {
+			display: block;
+			vertical-align: top;
+			&:not(:last-child) {
+				border-bottom: 1px dotted #d9d9d9;	
+			}
+		}
+		&-link {
+			color: #454051;
+			padding: 10px 0;
+			display: block;
+			font-size: 16px;
+			position: relative;
+			&.current,
+			&:hover,
+			&:focus {
+				color: #fff;
+				text-decoration: none;
+				background: $ruby;
+				margin-left: -15px;
+				padding-left: 15px;
+				&:before {
+					content: '';
+					@include position(absolute, 0 -21px 0 null);
+					@include triangle(42px, $ruby, right)
+				}
+			}
+		}
+	}
+	&__tab {
+		&-block {
+			display: none;
+			&.current {
+				display: block;
+			}
+		}
+	}
+}
+// конец диллеры 

@@ -14,12 +14,26 @@ $(function() {
 		$(this).toggleClass('active');
 		$(this).hasClass('active') ? $(this).html('Скрыть') : $(this).html('Показать еще');
 	});
-
+	
 
 	// кастомный скролл
 	$(".js-custom-scroll").mCustomScrollbar();
 
 
+	// логика работы табов 
+	$('.js-tab-nav a').each(function(i){$(this).attr('data-index', i)});
+	$('.js-tab-content > div').each(function(i){$(this).attr('data-index', i)});
+	$('.js-tab-nav a').on('click', function(){
+		$('.js-tab-nav a, .js-tab-content > div').removeClass('current');
+		$(this).addClass('current');
+		$('.js-tab-content > div[data-index='+ $(this).attr('data-index') +']').addClass('current');
+	});
+
+
+	// определяем текущий день и активируем нужный день в графике работы
+	var date = new Date(),
+		cDay = date.getDay();
+		cDay !=0 ? $('.contact__work-day-item:nth-child('+ cDay +')').addClass('current') : $('.contact__work-day-item:last-child').addClass('current');
 
 	// обработка поиска
 	$('.js-search-trigger').on('click', function() {

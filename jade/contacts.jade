@@ -1,0 +1,205 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Контакты
+block content
+	.container
+		.row
+			.col-sm-12.col-xs-12
+				// хлебные крошки
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__list-item
+							a.breadcrumbs__list-link(href="#!") Главная
+						li.breadcrumbs__list-item
+							span.breadcrumbs__list-link.current Контакты
+				// конец хлебные крошки
+		.row
+			.col-sm-12
+				.contact__flex-section
+					// блок с адресом главного офиса
+					.col-sm-7
+						.border-panel
+							.contact__block
+								p.subtitle Центральный офис Status Group
+								p.contact__block-text Выставочный центр и оптовый склад
+								p.contact__block-info.address Киев, ул. Семьи Сосниных 3
+								p.contact__block-info.phone (067) 385-01-01, (095) 385-01-01
+								a.contact__block-info.email(href="mailto:#{email}") #{email}
+							block workgraph
+								ul.contact__work-day
+									li.contact__work-day-item
+										p.contact__work-day-title Пн
+										span.contact__work-day-time 09:00
+										span.contact__work-day-time 17:00
+									li.contact__work-day-item
+										p.contact__work-day-title Вт
+										span.contact__work-day-time 09:00
+										span.contact__work-day-time 17:00
+									li.contact__work-day-item
+										p.contact__work-day-title Ср
+										span.contact__work-day-time 09:00
+										span.contact__work-day-time 17:00
+									li.contact__work-day-item
+										p.contact__work-day-title Чт
+										span.contact__work-day-time 09:00
+										span.contact__work-day-time 17:00
+									li.contact__work-day-item
+										p.contact__work-day-title Пт
+										span.contact__work-day-time 09:00
+										span.contact__work-day-time 17:00
+									li.contact__work-day-item
+										p.contact__work-day-title Сб
+										span.contact__work-day-time 09:00
+										span.contact__work-day-time 17:00
+									li.contact__work-day-item
+										p.contact__work-day-title Вс
+										span.contact__work-day-time.not-work X
+					// конец блок с адресом главного офиса
+					// форма обратной связи
+					.col-sm-5
+						.border-panel
+							p.subtitle Обратная Связь
+							form(action="#!")
+								.form-group
+									label.form-label Имя
+									input.form-control(type="text" placeholder="Введите имя" required)
+								.form-group
+									label.form-label Email
+									input.form-control(type="text" placeholder="Введите email" required)
+								.form-group
+									label.form-label Сообщение
+									textarea.form-control(rows="4" placeholder="Ваше сообщение" required)
+								.form-group
+									button.btn.btn-block(type="submit") Отправить
+					// конец форма обратной связи
+		.row
+			.col-sm-12
+				// блок с картой
+				.map__section
+					.map__section-wrap
+						// скрипт главной карты
+						script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+						script.
+							ymaps.ready(function() {
+								var myMap = new ymaps.Map('myMap', {
+									center: [50.42950840, 30.39870763],
+									zoom: 16,
+									controls: []
+								}, {
+									searchControlProvider: 'yandex#search'
+								}),
+								myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+									balloonContent: 'Киев, ул. Семьи Сосниных 3'
+								}, {
+									iconLayout: 'default#image',
+									iconImageHref: 'img/marker.png',
+									iconImageSize: [25, 33],
+									iconImageOffset: [-10, -33]
+								});
+								myMap.behaviors.disable('scrollZoom');
+								myMap.geoObjects.add(myPlacemark);
+							});
+						// конец скрипт главной карты
+						.map__section-main-stage
+							#myMap
+				// конец блок с картой
+	// блок диллеров
+	.dillers
+		.container
+			p.title.title-bg-gray
+				span Наши дилеры
+			br
+			.row
+				.col-sm-3.col-lg-2.col-md-3
+					.dillers__tab-nav
+						ul.dillers__tab-nav-list.js-tab-nav
+							li.dillers__tab-nav-item
+								a.dillers__tab-nav-link.current(href="javascript:void(0);") Киев
+							li.dillers__tab-nav-item
+								a.dillers__tab-nav-link(href="javascript:void(0);") Запорожье
+							li.dillers__tab-nav-item
+								a.dillers__tab-nav-link(href="javascript:void(0);") Одесса
+							li.dillers__tab-nav-item
+								a.dillers__tab-nav-link(href="javascript:void(0);") Мариуполь
+							li.dillers__tab-nav-item
+								a.dillers__tab-nav-link(href="javascript:void(0);") Николаев
+							li.dillers__tab-nav-item
+								a.dillers__tab-nav-link(href="javascript:void(0);") Харьков
+							li.dillers__tab-nav-item
+								a.dillers__tab-nav-link(href="javascript:void(0);") Луганск
+				.col-sm-9.col-lg-10
+					.dillers__tab-section.js-tab-content
+						.dillers__tab-block.current
+							script.
+								ymaps.ready(function() {
+									var myMap = new ymaps.Map('myMap-10', {
+										center: [50.42950840, 30.39870763],
+										zoom: 16,
+										controls: []
+									}, {
+										searchControlProvider: 'yandex#search'
+									}),
+									myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+										balloonContent: 'Киев, ул. Семьи Сосниных 3'
+									}, {
+										iconLayout: 'default#image',
+										iconImageHref: 'img/marker.png',
+										iconImageSize: [25, 33],
+										iconImageOffset: [-10, -33]
+									});
+									myMap.behaviors.disable('scrollZoom');
+									myMap.geoObjects.add(myPlacemark);
+								});
+							.border-panel.m-b-30
+								.row
+									.col-sm-7
+										.contact__block
+											p.subtitle ТЦ “Оскар”
+											p.contact__block-text Выставочный центр и оптовый склад
+											p.contact__block-info.address Киев, ул. Семьи Сосниных 3
+											p.contact__block-info.phone (067) 385-01-01, (095) 385-01-01
+											a.contact__block-info.email(href="mailto:#{email}") #{email}
+										block workgraph
+									.col-sm-5
+										.dillers__map
+											.map(id="myMap-10")
+						.dillers__tab-block
+							- for (i=1; i<=3; i++) {
+								script.
+									ymaps.ready(function() {
+										var myMap = new ymaps.Map('myMap-#{i}', {
+											center: [50.42950840, 30.39870763],
+											zoom: 16,
+											controls: []
+										}, {
+											searchControlProvider: 'yandex#search'
+										}),
+										myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+											balloonContent: 'Киев, ул. Семьи Сосниных 3'
+										}, {
+											iconLayout: 'default#image',
+											iconImageHref: 'img/marker.png',
+											iconImageSize: [25, 33],
+											iconImageOffset: [-10, -33]
+										});
+										myMap.behaviors.disable('scrollZoom');
+										myMap.geoObjects.add(myPlacemark);
+									});
+								.border-panel.m-b-30
+									.row
+										.col-sm-7
+											.contact__block
+												p.subtitle ТЦ “Оскар”
+												p.contact__block-text Выставочный центр и оптовый склад
+												p.contact__block-info.address Киев, ул. Семьи Сосниных 3
+												p.contact__block-info.phone (067) 385-01-01, (095) 385-01-01
+												a.contact__block-info.email(href="mailto:#{email}") #{email}
+											block workgraph
+										.col-sm-5
+											.dillers__map
+												.map(id="myMap-#{i}")
+							- }
+							
+	// конец блок диллеров

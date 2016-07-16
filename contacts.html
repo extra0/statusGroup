@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <!-- main stylesheet-->
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <!-- jQuery-->
+    <script src="js/jquery.js"></script>
+    <!-- OpenGraph-->
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="заголовок страницы">
+    <meta property="og:description" content="описание страницы">
+    <meta property="og:url" content="URL текущей страницы">
+    <meta property="og:image" content="ссылка на картинку для страницы">
+    <meta property="og:site_name" content="Название сайта">
+    <!-- End OpenGraph-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Контакты</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- компонент поиска-->
+      <div id="morphsearch" class="morphsearch">
+        <div class="container">
+          <form class="morphsearch-form">
+            <input type="search" placeholder="Поиск ..." class="morphsearch-input">
+            <button type="submit" class="morphsearch-submit">Search</button>
+          </form>
+          <div class="morphsearch-content">
+            <div class="dummy-column">
+              <!-- блок осутствия резульатов
+              <div class="morphsearch-empty__block">
+                <div class="morphsearch-empty__block-img"></div>
+                <div>
+                  <p class="morphsearch-empty__block-title">Ничего... Пусто... Ноль...</p>
+                  <p class="morphsearch-empty__block-text">Ничего не найдено. </p>
+                </div>
+              </div>
+              -->
+            </div>
+          </div>
+        </div><span class="morphsearch-close"></span>
+      </div>
+      <!-- конец компонент поиска-->
+      <header class="header">
+        <!-- верхняя часть header-->
+        <div class="header__top">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- меню-->
+                <ul class="header__top-menu-list">
+                  <li class="header__top-menu-item"><a href="#!" class="header__top-menu-link">О нас</a></li>
+                  <li class="header__top-menu-item"><a href="#!" class="header__top-menu-link">Оплата и доставка</a></li>
+                  <li class="header__top-menu-item"><a href="#!" class="header__top-menu-link">Новости</a></li>
+                  <li class="header__top-menu-item"><a href="#!" class="header__top-menu-link">Контакты</a></li>
+                </ul>
+                <!-- конец меню-->
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <!-- адрес-->
+                    <div class="header__top-address-block">
+                      <p class="header__top-address-text">Киев, ул. Семьи Сосниных 3</p>
+                      <div class="header__top-address-hide">
+                        <p class="header__top-address-text">Пн. - Сб.: с 9:00 до 20:00</p>
+                        <p class="header__top-address-text">Вс.: <span class="color-red">Выходной</span></p>
+                      </div>
+                    </div>
+                    <!-- конец адрес-->
+                  </div>
+                  <div class="col-sm-6">
+                    <!-- телефоны-->
+                    <div class="header__top-phone-block"><a href="tel:+38067-385-01-01" class="header__top-phone">067-385-01-01</a><a href="tel:+38095-385-01-01" class="header__top-phone">095-385-01-01</a></div>
+                    <!-- конец телефоны-->
+                    <!-- поиск-->
+                    <button type="button" class="header__top-search js-search-trigger"></button>
+                    <!-- конец -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- конец верхняя часть header-->
+        <!-- нижняя часть header-->
+        <div class="header__bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3"><a href="/"><img src="img/logo.png" alt="Статус групп"></a></div>
+              <div class="col-sm-7">
+                <!-- меню каталога-->
+                <div class="header__bottom-menu">
+                  <ul class="header__bottom-menu-list">
+                    <li class="header__bottom-menu-item"><a href="#!" class="header__bottom-menu-link">Офисная мебель</a>
+                      <div style="background:#f5f7f9 url(../img/content/drop-bg.jpg) center right no-repeat;" class="header__dropdown-block">
+                        <ul class="header__dropdown-menu">
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="header__bottom-menu-item"><a href="#!" class="header__bottom-menu-link">Офисные кресла</a>
+                      <div style="background:#f5f7f9 url(../img/content/drop-bg2.jpg) center right no-repeat;" class="header__dropdown-block">
+                        <ul class="header__dropdown-menu">
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="header__bottom-menu-item"><a href="#!" class="header__bottom-menu-link">Стол и стул</a>
+                      <div style="background:#f5f7f9 url(../img/content/drop-bg.jpg) center right no-repeat;" class="header__dropdown-block">
+                        <ul class="header__dropdown-menu">
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                          <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- конец меню каталога-->
+              </div>
+              <div class="col-sm-2">
+                <!-- блок поиска-->
+                <div class="header__bottom-search">
+                  <button type="button" class="header__bottom-search-btn js-search-trigger"></button>
+                </div>
+                <!-- конец блок поиска-->
+                <!-- блок корзины-->
+                <div class="header__bottom-basket"><a href="#!" class="header__bottom-basket-img-link"><span class="header__bottom-basket-count">12</span></a>
+                  <p class="header__bottom-basket-price js-replace-number">12480 ₴</p><a href="#!" class="header__bottom-basket-link">Оформить</a>
+                </div>
+                <!-- конец блок корзины-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- конец нижняя часть header-->
+      </header>
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-xs-12">
+              <!-- хлебные крошки-->
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__list-item"><a href="#!" class="breadcrumbs__list-link">Главная</a></li>
+                  <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link current">Контакты</span></li>
+                </ul>
+              </div>
+              <!-- конец хлебные крошки-->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="contact__flex-section">
+                <!-- блок с адресом главного офиса-->
+                <div class="col-sm-7">
+                  <div class="border-panel">
+                    <div class="contact__block">
+                      <p class="subtitle">Центральный офис Status Group</p>
+                      <p class="contact__block-text">Выставочный центр и оптовый склад</p>
+                      <p class="contact__block-info address">Киев, ул. Семьи Сосниных 3</p>
+                      <p class="contact__block-info phone">(067) 385-01-01, (095) 385-01-01</p><a href="mailto:info@gstatus.com.ua" class="contact__block-info email">info@gstatus.com.ua</a>
+                    </div>
+                    <ul class="contact__work-day">
+                      <li class="contact__work-day-item">
+                        <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                      </li>
+                      <li class="contact__work-day-item">
+                        <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                      </li>
+                      <li class="contact__work-day-item">
+                        <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                      </li>
+                      <li class="contact__work-day-item">
+                        <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                      </li>
+                      <li class="contact__work-day-item">
+                        <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                      </li>
+                      <li class="contact__work-day-item">
+                        <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                      </li>
+                      <li class="contact__work-day-item">
+                        <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- конец блок с адресом главного офиса-->
+                <!-- форма обратной связи-->
+                <div class="col-sm-5">
+                  <div class="border-panel">
+                    <p class="subtitle">Обратная Связь</p>
+                    <form action="#!">
+                      <div class="form-group">
+                        <label class="form-label">Имя</label>
+                        <input type="text" placeholder="Введите имя" required class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="text" placeholder="Введите email" required class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Сообщение</label>
+                        <textarea rows="4" placeholder="Ваше сообщение" required class="form-control"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-block">Отправить</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- конец форма обратной связи-->
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <!-- блок с картой-->
+              <div class="map__section">
+                <div class="map__section-wrap">
+                  <!-- скрипт главной карты-->
+                  <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+                  <script>
+                    ymaps.ready(function() {
+                    	var myMap = new ymaps.Map('myMap', {
+                    		center: [50.42950840, 30.39870763],
+                    		zoom: 16,
+                    		controls: []
+                    	}, {
+                    		searchControlProvider: 'yandex#search'
+                    	}),
+                    	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                    		balloonContent: 'Киев, ул. Семьи Сосниных 3'
+                    	}, {
+                    		iconLayout: 'default#image',
+                    		iconImageHref: 'img/marker.png',
+                    		iconImageSize: [25, 33],
+                    		iconImageOffset: [-10, -33]
+                    	});
+                    	myMap.behaviors.disable('scrollZoom');
+                    	myMap.geoObjects.add(myPlacemark);
+                    });
+                  </script>
+                  <!-- конец скрипт главной карты-->
+                  <div class="map__section-main-stage">
+                    <div id="myMap"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- конец блок с картой-->
+            </div>
+          </div>
+        </div>
+        <!-- блок диллеров-->
+        <div class="dillers">
+          <div class="container">
+            <p class="title title-bg-gray"><span>Наши дилеры</span></p><br>
+            <div class="row">
+              <div class="col-sm-3 col-lg-2 col-md-3">
+                <div class="dillers__tab-nav">
+                  <ul class="dillers__tab-nav-list js-tab-nav">
+                    <li class="dillers__tab-nav-item"><a href="javascript:void(0);" class="dillers__tab-nav-link current">Киев</a></li>
+                    <li class="dillers__tab-nav-item"><a href="javascript:void(0);" class="dillers__tab-nav-link">Запорожье</a></li>
+                    <li class="dillers__tab-nav-item"><a href="javascript:void(0);" class="dillers__tab-nav-link">Одесса</a></li>
+                    <li class="dillers__tab-nav-item"><a href="javascript:void(0);" class="dillers__tab-nav-link">Мариуполь</a></li>
+                    <li class="dillers__tab-nav-item"><a href="javascript:void(0);" class="dillers__tab-nav-link">Николаев</a></li>
+                    <li class="dillers__tab-nav-item"><a href="javascript:void(0);" class="dillers__tab-nav-link">Харьков</a></li>
+                    <li class="dillers__tab-nav-item"><a href="javascript:void(0);" class="dillers__tab-nav-link">Луганск</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-9 col-lg-10">
+                <div class="dillers__tab-section js-tab-content">
+                  <div class="dillers__tab-block current">
+                    <script>
+                      ymaps.ready(function() {
+                      	var myMap = new ymaps.Map('myMap-10', {
+                      		center: [50.42950840, 30.39870763],
+                      		zoom: 16,
+                      		controls: []
+                      	}, {
+                      		searchControlProvider: 'yandex#search'
+                      	}),
+                      	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                      		balloonContent: 'Киев, ул. Семьи Сосниных 3'
+                      	}, {
+                      		iconLayout: 'default#image',
+                      		iconImageHref: 'img/marker.png',
+                      		iconImageSize: [25, 33],
+                      		iconImageOffset: [-10, -33]
+                      	});
+                      	myMap.behaviors.disable('scrollZoom');
+                      	myMap.geoObjects.add(myPlacemark);
+                      });
+                    </script>
+                    <div class="border-panel m-b-30">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="contact__block">
+                            <p class="subtitle">ТЦ “Оскар”</p>
+                            <p class="contact__block-text">Выставочный центр и оптовый склад</p>
+                            <p class="contact__block-info address">Киев, ул. Семьи Сосниных 3</p>
+                            <p class="contact__block-info phone">(067) 385-01-01, (095) 385-01-01</p><a href="mailto:info@gstatus.com.ua" class="contact__block-info email">info@gstatus.com.ua</a>
+                          </div>
+                          <ul class="contact__work-day">
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="dillers__map">
+                            <div id="myMap-10" class="map"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dillers__tab-block">
+                    <script>
+                      ymaps.ready(function() {
+                      	var myMap = new ymaps.Map('myMap-1', {
+                      		center: [50.42950840, 30.39870763],
+                      		zoom: 16,
+                      		controls: []
+                      	}, {
+                      		searchControlProvider: 'yandex#search'
+                      	}),
+                      	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                      		balloonContent: 'Киев, ул. Семьи Сосниных 3'
+                      	}, {
+                      		iconLayout: 'default#image',
+                      		iconImageHref: 'img/marker.png',
+                      		iconImageSize: [25, 33],
+                      		iconImageOffset: [-10, -33]
+                      	});
+                      	myMap.behaviors.disable('scrollZoom');
+                      	myMap.geoObjects.add(myPlacemark);
+                      });
+                    </script>
+                    <div class="border-panel m-b-30">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="contact__block">
+                            <p class="subtitle">ТЦ “Оскар”</p>
+                            <p class="contact__block-text">Выставочный центр и оптовый склад</p>
+                            <p class="contact__block-info address">Киев, ул. Семьи Сосниных 3</p>
+                            <p class="contact__block-info phone">(067) 385-01-01, (095) 385-01-01</p><a href="mailto:info@gstatus.com.ua" class="contact__block-info email">info@gstatus.com.ua</a>
+                          </div>
+                          <ul class="contact__work-day">
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="dillers__map">
+                            <div id="myMap-1" class="map"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <script>
+                      ymaps.ready(function() {
+                      	var myMap = new ymaps.Map('myMap-2', {
+                      		center: [50.42950840, 30.39870763],
+                      		zoom: 16,
+                      		controls: []
+                      	}, {
+                      		searchControlProvider: 'yandex#search'
+                      	}),
+                      	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                      		balloonContent: 'Киев, ул. Семьи Сосниных 3'
+                      	}, {
+                      		iconLayout: 'default#image',
+                      		iconImageHref: 'img/marker.png',
+                      		iconImageSize: [25, 33],
+                      		iconImageOffset: [-10, -33]
+                      	});
+                      	myMap.behaviors.disable('scrollZoom');
+                      	myMap.geoObjects.add(myPlacemark);
+                      });
+                    </script>
+                    <div class="border-panel m-b-30">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="contact__block">
+                            <p class="subtitle">ТЦ “Оскар”</p>
+                            <p class="contact__block-text">Выставочный центр и оптовый склад</p>
+                            <p class="contact__block-info address">Киев, ул. Семьи Сосниных 3</p>
+                            <p class="contact__block-info phone">(067) 385-01-01, (095) 385-01-01</p><a href="mailto:info@gstatus.com.ua" class="contact__block-info email">info@gstatus.com.ua</a>
+                          </div>
+                          <ul class="contact__work-day">
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="dillers__map">
+                            <div id="myMap-2" class="map"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <script>
+                      ymaps.ready(function() {
+                      	var myMap = new ymaps.Map('myMap-3', {
+                      		center: [50.42950840, 30.39870763],
+                      		zoom: 16,
+                      		controls: []
+                      	}, {
+                      		searchControlProvider: 'yandex#search'
+                      	}),
+                      	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                      		balloonContent: 'Киев, ул. Семьи Сосниных 3'
+                      	}, {
+                      		iconLayout: 'default#image',
+                      		iconImageHref: 'img/marker.png',
+                      		iconImageSize: [25, 33],
+                      		iconImageOffset: [-10, -33]
+                      	});
+                      	myMap.behaviors.disable('scrollZoom');
+                      	myMap.geoObjects.add(myPlacemark);
+                      });
+                    </script>
+                    <div class="border-panel m-b-30">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="contact__block">
+                            <p class="subtitle">ТЦ “Оскар”</p>
+                            <p class="contact__block-text">Выставочный центр и оптовый склад</p>
+                            <p class="contact__block-info address">Киев, ул. Семьи Сосниных 3</p>
+                            <p class="contact__block-info phone">(067) 385-01-01, (095) 385-01-01</p><a href="mailto:info@gstatus.com.ua" class="contact__block-info email">info@gstatus.com.ua</a>
+                          </div>
+                          <ul class="contact__work-day">
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                            </li>
+                            <li class="contact__work-day-item">
+                              <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="dillers__map">
+                            <div id="myMap-3" class="map"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- конец блок диллеров-->
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__top-flex">
+            <div class="footer__top-flex-block">
+              <p class="footer__top-flex-title menu">Меню</p>
+              <ul class="footer__top-menu">
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">О нас</a></li>
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">Контакты</a></li>
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">Доставка и оплата</a></li>
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">Карта сайта</a></li>
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">Новости</a></li>
+              </ul>
+            </div>
+            <div class="footer__top-flex-block">
+              <p class="footer__top-flex-title catalog">Каталог</p>
+              <ul class="footer__top-menu">
+                <li class="footer__top-menu-item full-width"><a href="#!" class="footer__top-menu-link">Офисная мебель</a></li>
+                <li class="footer__top-menu-item full-width"><a href="#!" class="footer__top-menu-link">Офисные кресла</a></li>
+                <li class="footer__top-menu-item full-width"><a href="#!" class="footer__top-menu-link">Мебель для дома</a></li>
+              </ul>
+            </div>
+            <div class="footer__top-flex-block">
+              <p class="footer__top-flex-title info">Мы</p>
+              <p class="footer__top-flex-text address">Киев, ул. Семьи Сосниных 3</p>
+              <p class="footer__top-flex-text phone">(067) 385-01-01, (095) 385-01-01</p><a href="mailto:info@gstatus.com.ua" class="footer__top-flex-text email">info@gstatus.com.ua</a>
+            </div>
+            <div class="footer__top-flex-block">
+              <p class="footer__top-flex-title social">Соц. сети</p>
+              <div class="footer__social"><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/vk.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/fb.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/tw.png" alt="social" class="footer__social-img"></a><a href="#!" rel="nofollow" target="_blank" class="footer__social-link"> <img src="img/goog.png" alt="social" class="footer__social-img"></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__text col-sm-6">Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. </p>
+          <p class="footer__copyright text-center col-sm-2">&copy; 2016 Статус Групп</p>
+          <p class="footer__text text-right col-sm-4">Разработка сайта - студия <a href="http://www.studio-maximus.com/" target="_blank" class="footer__link">“Максимус”</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
