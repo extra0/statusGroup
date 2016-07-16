@@ -1,0 +1,43 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Карта сайта
+block content
+	.container
+		.row
+			.col-sm-12.col-xs-12
+				// хлебные крошки
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__list-item
+							a.breadcrumbs__list-link(href="#!") Главная
+						li.breadcrumbs__list-item
+							span.breadcrumbs__list-link.current Карта сайта
+				// конец хлебные крошки
+		h2.title
+			span Карта сайта
+		.row
+			.col-sm-12
+				.sitemap__block
+					.row
+						- for (i=1;i<=3;i++)  {
+							.col-sm-4
+								p.subtitle Офисная мебель
+								ul.sitemap__block-list
+									- for (k=1;k<=3;k++)  {
+										li.sitemap__block-list-item
+											a.sitemap__block-list-link(href="#!") Мебель (133362)
+										li.sitemap__block-list-item
+											a.sitemap__block-list-link(href="#!") Мебель для гостиной (50702)
+										li.sitemap__block-list-item
+											a.sitemap__block-list-link(href="#!") Мебель для спальни (27154)
+											ul.sitemap__block-list
+												li.sitemap__block-list-item
+													a.sitemap__block-list-link(href="#!") Мебель (133362)
+												li.sitemap__block-list-item
+													a.sitemap__block-list-link(href="#!") Мебель для гостиной (50702)
+												li.sitemap__block-list-item
+													a.sitemap__block-list-link(href="#!") Мебель для спальни (27154)
+									-}
+						- }
