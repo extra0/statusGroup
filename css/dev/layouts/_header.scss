@@ -151,6 +151,7 @@
 		&-search {
 			width: 16px;
 			height: 16px;
+			border: none;
 			display: inline-block;
 			background: url(../img/sprite.png) -567px -10px no-repeat;
 			display: none;
@@ -174,7 +175,17 @@
 			}
 			&-item {
 				display: inline-block;
+				position: relative;
 				padding: 31px 0px 31px 41px;
+				&:hover {
+					.header__dropdown-block {
+						max-height: 2000px;
+						padding: 25px 0 45px 0;
+					}
+					.header__bottom-menu-link {
+						color: $ruby;
+					}
+				}
 			}
 			&-link {
 				text-transform: uppercase;
@@ -184,7 +195,7 @@
 				font-weight: bold;
 				color: #454051;
 				&:hover {
-					color: #454051;
+					color: $ruby;
 					text-decoration: none;
 				}
 			}
@@ -247,6 +258,7 @@
 			display: inline-block;
 			&-btn {
 				display: inline-block;
+				border: none;
 				width: 28px;
 				height: 28px;
 				opacity: 0.85;
@@ -255,6 +267,48 @@
 				@include transition(all 0.2s ease-in-out);
 				&:hover {
 					opacity: 1;
+				}
+			}
+		}
+	}
+	&__dropdown {
+		&-block {
+			@include position(absolute, 88px null null 0);
+			width: 615px;
+			box-shadow:0 1px 2px rgba(0,0,0,.1);
+			max-height: 0;
+			overflow: hidden;
+			@include transition(all 0.2s ease-in-out);
+		}
+		&-menu {
+			list-style-type: none;
+			padding: 0;
+			margin: 0px 0 0 44px;
+			&-item {
+				width: 265px;
+				&:not(:last-child) {
+					border-bottom: 1px dotted #d4d6d7;
+				}
+			}
+			&-link {
+				color: #454051;
+				letter-spacing: 1.7px;
+				font-size: 16px;
+				padding: 10px 0;
+				display: block;
+				position: relative;
+				&:focus,
+				&:hover {
+					color: #fff;
+					text-decoration: none;
+					background: $ruby;
+					margin-left: -44px;
+					padding-left: 44px;
+					&:before {
+						content: '';
+						@include position(absolute, 0 -21px 0 null);
+						@include triangle(42px, $ruby, right)
+					}
 				}
 			}
 		}

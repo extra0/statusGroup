@@ -53,44 +53,45 @@ block content
 					span Хиты продаж
 				// конец блок хитов продаж
 				// блок с продуктами
-				.product-section
-					- for (i=1; i<=5; i++) {
-						.product-section__block
-							a.product-section__block-link(href="#!")
-								.product-section__block-img-wrap
-									img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
-								.product-section__block-description
-									p.product-section__block-name Cody black
-									.product-section__block-price
-										span.product-section__block-price-old.js-replace-number #{i*10521}
-										span.product-section__block-price-current.js-replace-number #{i*5521} ₴
-									- if (i == 1) {
+				block product
+					.product-section
+						- for (i=1; i<=5; i++) {
+							.product-section__block
+								a.product-section__block-link(href="#!")
+									.product-section__block-img-wrap
+										img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
+									.product-section__block-description
+										p.product-section__block-name Cody black
+										.product-section__block-price
+											span.product-section__block-price-old.js-replace-number #{i*10521}
+											span.product-section__block-price-current.js-replace-number #{i*5521} ₴
+										- if (i == 1) {
+											p.product-section__block-status.in-have в наличии
+										- } else if (i == 2) {
+											p.product-section__block-status.waiting ожидается
+										- } else {
+											p.product-section__block-status.in-product под заказ
+										- }
+						-}
+						- for (i=1; i<=2; i++) {
+							.product-section__block.x-2
+								a.product-section__block-link(href="#!")
+									.product-section__block-img-wrap
+										img.product-section__block-img(src="img/content/img-large.png", alt="product")
+									.product-section__block-description
+										p.product-section__block-name Cody black
+										.product-section__block-price
+											span.product-section__block-price-old.js-replace-number #{i*10521}
+											span.product-section__block-price-current.js-replace-number #{i*5521} ₴
 										p.product-section__block-status.in-have в наличии
-									- } else if (i == 2) {
-										p.product-section__block-status.waiting ожидается
-									- } else {
-										p.product-section__block-status.in-product под заказ
-									- }
-					-}
-					- for (i=1; i<=2; i++) {
-						.product-section__block.x-2
-							a.product-section__block-link(href="#!")
-								.product-section__block-img-wrap
-									img.product-section__block-img(src="img/content/img-large.png", alt="product")
-								.product-section__block-description
-									p.product-section__block-name Cody black
-									.product-section__block-price
-										span.product-section__block-price-old.js-replace-number #{i*10521}
-										span.product-section__block-price-current.js-replace-number #{i*5521} ₴
-									p.product-section__block-status.in-have в наличии
-								.product-section__block-badge
-									div
-										span.product-section__block-badge-name Новинка
-									div
-										span.product-section__block-badge-name Италия
-									div
-										span.product-section__block-badge-name Акция
-					- }
+									.product-section__block-badge
+										div
+											span.product-section__block-badge-name Новинка
+										div
+											span.product-section__block-badge-name Италия
+										div
+											span.product-section__block-badge-name Акция
+						- }
 				// конец блок с продуктами
 		.row
 			.col-sm-12
