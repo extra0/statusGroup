@@ -768,3 +768,26 @@
 	}
 }
 // конец доставка
+
+// текстовые превьюшки
+.preview {
+	&__block {
+		border: 1px solid #eee;
+		padding: 51px 8% 86px 8%;
+		margin-bottom: 41px;
+		&-text {
+			text-align: justify;
+			margin: 0 0 10px;
+			font-size: 16px;
+			line-height: 30px;
+		}
+		&-btn {
+			padding: 25px 70px;
+			&-wrap {
+				margin-top: 54px;
+				text-align: center;
+			}
+		}
+	}
+}
+// конец текстовые превьюшки

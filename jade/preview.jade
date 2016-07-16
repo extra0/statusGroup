@@ -1,0 +1,67 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Кресла руководителя в Киеве
+block content
+	.container
+		.row
+			.col-sm-12.col-xs-12
+				// хлебные крошки
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__list-item
+							a.breadcrumbs__list-link(href="#!") Главная
+						li.breadcrumbs__list-item
+							span.breadcrumbs__list-link.current Кресла руководителя в Киеве
+				// конец хлебные крошки
+		h2.title
+			span Кресла руководителя в Киеве
+		.row
+			.col-sm-12
+				.preview__block
+					p.preview__block-text К примеру, рабочее место для удобной письменной работы выделено вставкой из эко кожи. В столешнице предусмотрено отверстие для маскировки кабелей офисной техники. Тумбу-помощник и мобильную тумбу можно установить с правой или с левой стороны письменного стола. За распашными дверцами и в нишах тумбы-помощника достаточно места для размещения офисной техники и расходных материалов. Выдвижной ящик мобильной тумбы гарнитура Chopen black закрывается на ключ. Основание стола и боковые части тумб отделаны эко кожей черного цвета – так дизайнерам удалось подчеркнуть статусность представленного гарнитура и придать ему более эстетичный вид. Все предметы мебели набора Chopen black изготовлены из высококачественного импортного МДФ. Глянцевый блеск панелям придает многослойное лаковое покрытие.
+					.preview__block-btn-wrap
+						a.btn.preview__block-btn(href="#!") Перейти в каталог
+		h2.title
+			span Лучшие предложения
+		.row
+			.col-sm-12
+				.product-section
+					- for (i=1; i<=1; i++) {
+						.product-section__block
+							a.product-section__block-link(href="#!")
+								.product-section__block-img-wrap
+									img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
+								.product-section__block-description
+									p.product-section__block-name Cody black
+									.product-section__block-price
+										span.product-section__block-price-old.js-replace-number #{i*10521}
+										span.product-section__block-price-current.js-replace-number #{i*5521} ₴
+									- if (i == 1) {
+										p.product-section__block-status.in-have в наличии
+									- } else if (i == 2) {
+										p.product-section__block-status.waiting ожидается
+									- } else {
+										p.product-section__block-status.in-product под заказ
+									- }
+					-}
+					- for (i=1; i<=2; i++) {
+						.product-section__block.x-2
+							a.product-section__block-link(href="#!")
+								.product-section__block-img-wrap
+									img.product-section__block-img(src="img/content/img-large.png", alt="product")
+								.product-section__block-description
+									p.product-section__block-name Cody black
+									.product-section__block-price
+										span.product-section__block-price-old.js-replace-number #{i*10521}
+										span.product-section__block-price-current.js-replace-number #{i*5521} ₴
+									p.product-section__block-status.in-have в наличии
+								.product-section__block-badge
+									div
+										span.product-section__block-badge-name Новинка
+									div
+										span.product-section__block-badge-name Италия
+									div
+										span.product-section__block-badge-name Акция
+					- }
