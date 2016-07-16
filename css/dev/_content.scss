@@ -457,3 +457,42 @@
 		}
 	}
 }
+// конец CSS для главной
+
+// 404 страница
+.error-page {
+	text-align: center;
+	margin: 37px auto 96px;
+	max-width: 700px;
+	position: relative;
+	&__img {
+		float: right;
+		margin: 81px 0 0 -46px;
+		position: relative;
+		left: -35px;
+	}
+	&__number {
+		color: #e1e1e1;
+		font-weight: bold;
+		margin: 0;
+		font-size: 250px;
+		line-height: normal;
+	}
+	&__title {
+		color: #454051;
+		font-size: 20px;
+		margin: 0 0 18px 0;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+	&__text {
+		font-size: 16px;
+		margin: 0 0 40px 0;
+		font-family: $mss;
+		&-block {
+			text-align: right;
+			margin: -41px 326px 0 0;
+		}
+	}
+}
+// конец 404 страница

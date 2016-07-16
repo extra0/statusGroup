@@ -1,8 +1,17 @@
+// направление текста
 .text-center {text-align: center;}
 .text-right {text-align: right;}
 
+// отступы
+.m-0 {margin: 0;}
+
+.p-0 {padding: 0;}
+
+
+// цвет текста
 .color-red {color: $red;}
 
+// заголовок
 .title {
 	color: #454051;
 	position: relative;
@@ -24,5 +33,36 @@
 		padding: 4px 14px;
 		position: relative;
 		letter-spacing: 2px;
+	}
+}
+
+// универсальная кнопка
+.btn {
+	border: none;
+	background: none;
+	outline: none;
+	@include transition(all 0.2s ease-in-out);
+	color: #fff;
+	letter-spacing: 2px;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: $br;
+	background: $ruby;
+	box-shadow: 0 2px 0 #9f2d23;
+	text-transform: uppercase;
+	border-bottom: 2px solid #a02e23;
+	padding: 15px 27px;
+	position: relative;
+	top: 0;
+	&:focus,
+	&:hover {
+		color: #fff;
+		background: #d53f30;
+		text-decoration: none;
+	}
+	// эффект вдавливания
+	&:active {
+		border-bottom: 0px solid transparent;
+		top: 2px;
 	}
 }
