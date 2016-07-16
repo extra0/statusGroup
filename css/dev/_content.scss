@@ -374,9 +374,19 @@
 	}
 	&__step-count {
 		display: inline-block;
-		margin: 4px 14px 0 0;
+		margin: 0 14px 0 0;
 		position: relative;
-		top: -4px;
+		background: url('../img/sprite.png') no-repeat -201px -45px;
+		width: 42px;
+		height: 42px;
+		display: inline-block;
+		color: #fff;
+		font-family: $pt;
+		font-weight: bold;
+		font-size: 22px;
+		text-align: center;
+		padding: 5px 5px 5px 6px;
+		margin-bottom: 4px;
 	}
 }
 .news-preview {

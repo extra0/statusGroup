@@ -15,8 +15,11 @@ $(function() {
 		$(this).hasClass('active') ? $(this).html('Скрыть') : $(this).html('Показать еще');
 	});
 
+
 	// кастомный скролл
 	$(".js-custom-scroll").mCustomScrollbar();
+
+
 
 	// обработка поиска
 	$('.js-search-trigger').on('click', function() {
