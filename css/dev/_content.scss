@@ -413,11 +413,11 @@
 		}
 		&-date {
 			position: relative;
-			padding-left: 20px;
+			padding-left: 25px;
 			margin: 0;
 			&:before {
 				content: '';
-				@include position(absolute, 0 null null 0);
+				@include position(absolute, 1px null null 0);
 				width: 16px;
 				height: 17px;
 				background: url(../img/sprite.png) -603px -10px no-repeat;
@@ -829,3 +829,190 @@
 	}
 }
 // конец карта сайта
+
+
+// пагинация 
+.pagination {
+	text-align: center;
+	margin: 40px 0;
+	&__list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 8px;
+		}
+		&-link {
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			color: #454051;
+			font-size: 20px;
+			font-family: $mss;
+			display: block;
+			padding-top: 5px;
+			border: 1px solid #f3f0f0;
+			@include transition(all 0.2s ease-in-out);
+			&.current,
+			&:hover,
+			&:focus {
+				background: $ruby;
+				border-color: $ruby;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+		&-devider {
+			display: block;
+			vertical-align: top;
+			margin: 0 5px;
+			color: #b1b0b5;
+			font-size: 20px;
+			font-family: $mss;
+		}
+	}
+}
+// конец пагинация 
+
+// список новостей
+.news-list {
+	&__block {
+		border: 1px solid #eee;
+		padding: 40px;
+		margin-bottom: 30px;
+		@include transition(all 0.2s ease-in-out);
+		a {
+			color: inherit;
+		}
+		&:hover {
+			border-color: $ruby;
+		}
+		&-img {
+			margin-bottom: 35px;
+		}
+		&-title {
+			color: #424548;
+			font-size: 20px;
+			margin: 0 0 15px 0;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+		&-text {
+			font-size: 16px;
+			font-family: $mss;
+			line-height: 26px;
+			margin: 0 0 21px;
+		}
+		&-date {
+			position: relative;
+			padding-left: 25px;
+			margin: 0;
+			&:before {
+				content: '';
+				@include position(absolute, 1px null null 0);
+				width: 16px;
+				height: 17px;
+				background: url(../img/sprite.png) -603px -10px no-repeat;
+			}
+		}
+	}
+}
+// конец список новостей
+
+// сайтбар в новостях
+.sidebar {
+	// меню сайдбара
+	&__menu {
+		border: 1px solid #eee;
+		padding: 25px;
+		margin-bottom: 30px;
+		&-list {
+			padding: 0;
+			margin: -7px 10px 0 0;
+			list-style-type: none;
+			&-item {
+				&:not(:last-child) {
+					border-bottom: 1px dotted #d9d9d9;
+				}
+			}
+			&-link {
+				@extend .dillers__tab-nav-link;
+			    font-size: 14px;
+			    letter-spacing: 0.6px;
+			    padding: 11px 0;
+			    &:hover,
+			    &.current,
+			    &:focus {
+			    	margin-left: -26px;
+			    	padding-left: 26px;
+			    }
+			}
+		}
+	}
+	// конец меню сайтбара
+
+	// преимущество 
+	&__advantage {
+		background: url(../img/g-border.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+		padding: 19px 19px 15px 19px;
+		margin-bottom: 30px;
+		&-img {
+			float: left;
+		}
+		&-title {
+			color: #323334;
+			vertical-align: top;
+			line-height: 25px;
+			margin: -5px 0 9px 86px;
+		}
+		&-text {
+			margin: 0;
+			clear: both;
+			color: #6f6f6f;
+			font-family: $mss;
+		}
+	}
+	// конец преимущество 
+
+	// шоурум
+	&__showroom {
+		border: 1px solid $ruby;
+		padding: 19px 19px 16px 19px;
+		@include clearfix;
+		&-title {
+			font-size: 46px;
+			color: $ruby;
+			margin: 0 0 9px;
+			line-height: 33px;
+			font-weight: bold;
+			letter-spacing: 2px;
+			&-val {
+				color: #323334;
+			}
+			sup {
+				font-size: 50%;
+			    top: -20px;
+			}
+		}
+		&-undertitle {
+			margin: 0 0 14px;
+			font-size: 18px;
+			color: $ruby;
+			font-family: $mss;
+		}
+		&-img {
+			float: left;
+		}
+		&-text {
+			font-family: $mss;
+			font-size: 20px;
+			margin: 17px 0 0 99px;
+			color: #424548;
+			line-height: 26px;
+		}
+	}
+	// конец шоурум
+}
