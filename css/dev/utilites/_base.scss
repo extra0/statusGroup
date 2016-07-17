@@ -29,3 +29,11 @@ button, input, textarea, select {
 	overflow: hidden;
 	padding-bottom: 25px;
 }
+table:not([class]) {
+	width: 100%;
+	margin: 10px 0;
+	td, th {
+		padding: 2px 5px;
+		border: 1px solid #343434;
+	}
+}

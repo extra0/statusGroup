@@ -1060,3 +1060,138 @@
 	}
 }
 // конец страница новости 
+
+// блок о нас 
+.about {
+	margin-top: -23px;
+	margin-bottom: 60px;
+	&__bg {
+		display: block;
+		margin: auto;
+	}
+	&__block {
+		border: 1px solid #eee;
+		padding: 21px 35px 28px 35px;
+		background: #fff;
+		max-width: 815px;
+		margin: -196px auto 81px auto;
+		&-title {
+			font-size: 50px;
+			margin: 0 0 5px;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+		&-text {
+			font-family: $mss;
+			line-height: 30px;
+			font-size: 16px;
+			margin: 0;
+			text-align: justify;
+		}
+	}
+	&__showroom {
+		&-title {
+			color: $ruby;
+			margin: 0 0 23px;
+			line-height: normal;
+			font-size: 120px;
+			font-weight: bold;
+			line-height: 85px;
+			span {
+				color: #323334;
+			}
+		}
+		&-undertitle {
+			margin: 0 0 16px;
+			font-family: $mss;
+			font-size: 30px;
+			letter-spacing: -0.6px;
+		}
+		&-text {
+			margin: 0 -40px 32px 0;
+			font-family: $mss;
+			font-size: 16px;
+			line-height: 30px;
+		}
+		&-note {
+			font-size: 20px;
+			margin: 24px 0 0 -10px;
+			color: #424548;
+			font-family: $mss;
+			line-height: 30px;
+		}
+	}
+}
+// конец блок о нас 
+
+// причины с нами работать 
+.cause {
+	&__block {
+		background: #f8fafb url(../img/about-img.png) center left no-repeat;
+		padding: 22px 0;
+		&-title {
+			margin: 40px 0 33px 0;
+			text-align: center;
+			font-weight: bold;
+			font-size: 50px;
+			letter-spacing: 2px;
+		}
+		&-list {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+		}
+		&-item {
+			position: relative;
+			margin-bottom: 47px;
+			&-count {
+				@extend .buy-steps__step-count;
+				margin: 0;
+				@include position(absolute, -4px null null -46px);
+			}
+			&-title {
+				margin: 0 0 19px 16px;
+				font-size: 20px;
+				font-weight: bold;
+				color: #424548;
+				letter-spacing: 1px;
+			}
+			&-text {
+				margin: 0 0 20px 15px;
+				line-height: 30px;
+				text-align: justify;
+				font-size: 18px;
+				letter-spacing: -1px;
+			}
+		}
+	}
+}
+// конец причины с нами работать 
+
+// дополнительне приемущества 
+.ext-advantage {
+	padding: 72px 0px 32px 0px;
+	&__block {
+		margin-bottom: 30px;
+	}
+	&__img {
+		position: relative;
+		top: 9px;
+		left: 15px;
+	}
+	&__title {
+		font-size: 30px;
+		color: #454051;
+		margin: 0 0 10px;
+		letter-spacing: 1px;
+		font-weight: bold;
+	}
+	&__text {
+		color: #000;
+		font-size: 16px;
+		text-align: justify;
+		margin: 0;
+		line-height: 30px;
+	}
+}
+// конец дополнительне приемущества 
