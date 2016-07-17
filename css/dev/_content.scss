@@ -885,6 +885,16 @@
 		@include transition(all 0.2s ease-in-out);
 		a {
 			color: inherit;
+			&:focus,
+			&:hover {
+				text-decoration: none;
+				.subtitle {
+					color: $ruby;
+				}
+			}
+			.subtitle {
+				@include transition(all 0.2s ease-in-out);
+			}
 		}
 		&:hover {
 			border-color: $ruby;
@@ -1016,3 +1026,37 @@
 	}
 	// конец шоурум
 }
+
+
+// страница новости 
+.news-detail {
+	border: 1px solid #eee;
+	padding: 28px 40px;
+	font-size: 16px;
+	font-family: $mss;
+	text-align: justify;
+	margin-bottom: 50px;
+	& * {
+		line-height: 25px;
+	}
+	img {
+		margin-bottom: 20px;
+	}
+	&__title {
+		font-size: 30px;
+		font-family: $main_font;
+		font-weight: bold;
+		margin: 0 0 11px 0;
+		line-height: normal;
+		letter-spacing: 1.6px;
+	}
+	&__date {
+		@extend .news-list__block-date;
+		margin: 0 0 26px;
+		line-height: normal;
+	}
+	&__img {
+		margin-bottom: 22px;
+	}
+}
+// конец страница новости 
