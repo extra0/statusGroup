@@ -120,6 +120,129 @@
 			border: 1px solid #f20;
 		}
 	}
+	&-radio {
+		display: none;
+		&:checked + label {
+			&:before {
+				border-color: $ruby;
+			}
+			&:after {
+				background: $ruby;
+			}
+		}
+		&-label {
+			position: relative;
+			cursor: pointer;
+			padding-left: 33px;
+			display: inline-block;
+			margin-bottom: 6px;
+			&:before {
+				content: '';
+				@include position(absolute, -2px null null 0);
+				border: 1px solid #dddddd;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+			}
+			&:after {
+				content: '';
+				@include position(absolute, 5px null null 7px);
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #ddd;
+			}
+		}
+	}
+	&-checkbox {
+		display: none;
+		&:checked + label {
+			&:before {
+				border-color: $ruby;
+			}
+			&:after {
+				background: $ruby;
+			}
+		}
+		&-label {
+			position: relative;
+			cursor: pointer;
+			padding-left: 33px;
+			display: inline-block;
+			margin-bottom: 6px;
+			&:before {
+				content: '';
+				@include position(absolute, -2px null null 0);
+				border: 1px solid #dddddd;
+				width: 24px;
+				height: 24px;
+				border-radius: $br;
+			}
+			&:after {
+				content: '';
+				@include position(absolute, 3px null null 5px);
+				width: 14px;
+				height: 14px;
+				border-radius: $br;
+				background: #ddd;
+			}
+		}
+	}
+	&-input-counter {
+		position: relative;
+		&__label {
+			@include position(absolute, 13px null null 51px);
+			color: #9fa0a1;
+			font-size: 16px;
+			font-family: $mss;
+		}
+		&__changer {
+			background: none;
+			border: none;
+			width: 25px;
+			height: 25px;
+			position: relative;
+			&:hover {
+				&.up {
+					&:before {
+						@include triangle(10px, $ruby, up);
+					}
+				}
+				&.down {
+					&:before {
+						@include triangle(10px, $ruby, down);
+					}
+				}
+			}
+			&.up {
+				@include position(absolute, 0 8px null null);
+				&:before {
+					content: '';
+					@include position(absolute, 14px 8px null null);
+					@include triangle(10px, #ddd, up);
+					@include transition(all 0.2s ease-in-out);
+				}
+			}
+			&.down {
+				@include position(absolute, null 8px 0 null);
+				&:before {
+					content: '';
+					@include position(absolute, null 8px 14px null);
+					@include triangle(10px, #ddd, down);
+					@include transition(all 0.2s ease-in-out);
+				}
+			}
+		}
+		&__input {
+			color: #000;
+			font-size: 16px;
+			font-family: $mss;
+			padding: 0 65px 0 20px;
+			width: 113px;
+			height: 50px;
+			border: 1px solid #ddd;
+		}
+	}
 }
 // панель
 .border-panel {
@@ -127,4 +250,13 @@
 	padding: 33px 37px;
 	height: 100%;
 	background: #fff;
+}
+
+
+// flexbox css
+.flex-section {
+	margin: 0 -15px;
+	@include display(flex);
+	@include justify-content(space-between);
+	@include flex-wrap(wrap);
 }
