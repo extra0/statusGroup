@@ -1,5 +1,20 @@
 $(function() {
 
+	// фенсибокс
+	$('.js-fancybox').fancybox({
+		prevEffect	: 'none',
+		nextEffect	: 'none',
+		helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			thumbs	: {
+				width	: 80,
+				height	: 80
+			}
+		}
+	});
+
 	// разделяем числа на разряды
 	function numberWithCommas(x) {
 		return x.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1,");
@@ -27,6 +42,19 @@ $(function() {
 		$('.js-tab-nav a, .js-tab-content > div').removeClass('current');
 		$(this).addClass('current');
 		$('.js-tab-content > div[data-index='+ $(this).attr('data-index') +']').addClass('current');
+	});
+
+	// tooltip init
+	$('.js-tooltip').mouseenter(function(){
+		$(this).parent().append('<span class="tooltip-content">' + $(this).attr('data-title') + '</span>');
+		$('.tooltip-content').fadeIn(400);
+	});
+
+	$('.js-tooltip').mouseleave(function(){
+		$('.tooltip-content').fadeOut(400);
+		setTimeout(function(){
+			$('.tooltip-content').remove();
+		},300);
 	});
 
 
@@ -85,7 +113,6 @@ $(function() {
 			$('.morphsearch').removeClass('active');
 		}
 	});
-
 
 
 	// --------- КОРЗИНА
@@ -165,5 +192,62 @@ $(function() {
 	});
 
 	cart();
+
+
+
+	// ======= Выбор материала обивки
+	$('.js-material').on('click', function(){
+		$('.js-material').removeClass('current'); 
+		$(this).addClass('current'); // подсвечиаем активный материал 
+
+		$('.js-material-price').html($(this).attr('data-price')); // заносим цену материала в попап
+		$('[name="material-name"]').val($(this).next().html()); // заносим название материала в скрытый инпут
+		$('[name="material-price"]').val($(this).attr('data-price') + ' ₴'); // заносим цену материала в скрытый инпут
+
+		$('.js-material-input input').val($(this).next().html()); // заносим название выбранного материала в псевдо селект
+		$('.js-material-input .form-pseudo-select-material-wrap').attr('style', 'background: url(../'+$(this).attr('src')+')'); // заносим название выбранного материала в псевдо селект
+
+		pPice();
+
+	});
+
+
+	// ======= Выбор каркаса
+	$('.js-frame').on('click', function(){
+		$('.js-frame').removeClass('current'); 
+		$(this).addClass('current'); // подсвечиаем активный материал 
+
+		$('.js-frame-price').html($(this).attr('data-price')); // заносим цену материала в попап
+		$('[name="frame-name"]').val($(this).next().html()); // заносим название материала в скрытый инпут
+		$('[name="frame-price"]').val($(this).attr('data-price') + ' ₴'); // заносим цену материала в скрытый инпут
+
+		$('.js-frame-input input').val($(this).next().html()); // заносим название выбранного материала в псевдо селект
+		$('.js-frame-input .form-pseudo-select-material-wrap').attr('style', 'background: url(../'+$(this).attr('src')+')'); // заносим название выбранного материала в псевдо селект
+
+		pPice();
+	});
+
+	$('.md-button').click(function(){
+		$('.md-close').trigger('click');
+	});
+
+
+	// расчет общей цены после выбора материалов
+	function pPice() {
+		var sum = 0,
+			tSum = 0;
+
+		$('.product__tab-content-block-prop-list-img.current').each(function(){
+			tSum += parseInt($(this).attr('data-price'));
+		});
+
+
+		sum = parseInt($('.product__price-current').attr('data-price')) + parseInt(tSum);
+
+		$('.product__price-current').html(numberWithCommas(sum + ' ₴'));
+		$('[name="total-price"]').val(sum + ' ₴');
+	}
+
+	pPice();
 
 });

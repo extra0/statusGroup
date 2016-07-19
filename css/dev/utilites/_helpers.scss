@@ -7,6 +7,7 @@
 .m-t-10 {margin-top: 10px;}
 .m-t-20 {margin-top: 20px;}
 .m-t-30 {margin-top: 30px;}
+.m-b-5 {margin-bottom: 5px;}
 .m-b-10 {margin-bottom: 10px;}
 .m-b-20 {margin-bottom: 20px;}
 .m-b-30 {margin-bottom: 30px;}
@@ -243,6 +244,53 @@
 			border: 1px solid #ddd;
 		}
 	}
+	&-pseudo {
+		&-select {
+			padding: 13px 27px 13px 49px;
+			cursor: pointer;
+			&:hover {
+				border-color: $ruby!important;
+			}
+			&:focus {
+				border-color: #ddd;
+			}
+			&.dashed {
+				border: 1px dashed #ddd;
+			}
+			&-block {
+				position: relative;
+				cursor: pointer;
+				&:before {
+					content: '';
+					@include position(absolute, 22px 17px null null);
+					@include triangle(8px, #ddd, right)
+					@include transition(all 0.2s ease-in-out);
+				}
+				&:hover {
+					.form-pseudo-select,
+					.form-pseudo-select-material-wrap {
+						border-color: $ruby;
+					}
+					&:before {
+						@include triangle(8px, $ruby, right)
+					}
+				}
+			}
+			&-material-wrap {
+				width: 30px;
+				height: 30px;
+				display: block;
+				border: 1px solid #ddd;
+				background: #fff;
+				background-size: cover!important;
+				@include position(absolute, 11px null null 11px);
+				@include transition(all 0.2s ease-in-out);
+				&.dashed {
+					border: 1px dashed #ddd;
+				}
+			}
+		}
+	}
 }
 // панель
 .border-panel {
@@ -260,3 +308,33 @@
 	@include justify-content(space-between);
 	@include flex-wrap(wrap);
 }
+
+
+
+// tooltip
+.tooltip-content {
+	@include position(absolute, 35px null null -50px);
+	width: 250px;
+	border-radius: $br;
+	border: 1px solid #ededed;
+	background-color: #fff;
+	z-index: 10;
+	font-family: $mss;
+	font-size: 14px;
+	padding: 14px;
+	display: none;
+	&:before {
+		content: '';
+		@include position(absolute, -11px 0 null 0);
+		background: url('../img/sprite.png') no-repeat -255px -43px;
+		width: 21px;
+		height: 13px;
+		margin: 0 auto;
+	}
+}
+
+// css для яндекс share 
+.ya-share2__container_size_m .ya-share2__item {
+	margin-right: 10px;
+}
+//  конец css для яндекс share 
