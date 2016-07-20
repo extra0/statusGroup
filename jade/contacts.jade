@@ -8,51 +8,57 @@ block content
 		.row
 			.col-sm-12.col-xs-12
 				// хлебные крошки
-				.breadcrumbs
+				.breadcrumbs(xmlns:v="http://rdf.data-vocabulary.org/#")
 					ul.breadcrumbs__list
-						li.breadcrumbs__list-item
-							a.breadcrumbs__list-link(href="#!") Главная
-						li.breadcrumbs__list-item
-							span.breadcrumbs__list-link.current Контакты
+						li.breadcrumbs__list-item(typeof="v:Breadcrumb")
+							a.breadcrumbs__list-link(href="#!" rel="v:url" property="v:title") Главная
+						li.breadcrumbs__list-item(typeof="v:Breadcrumb")
+							a.breadcrumbs__list-link.current(href="#!" rel="v:url" property="v:title") Контакты
 				// конец хлебные крошки
 		.row
 			.col-sm-12
 				.flex-section
 					// блок с адресом главного офиса
 					.col-sm-7
-						.border-panel
+						.border-panel(itemscope itemtype="http://schema.org/Organization")
 							.contact__block
-								p.subtitle Центральный офис Status Group
+								p.subtitle Центральный офис <span itemprop="name">Status Group</span>
 								p.contact__block-text Выставочный центр и оптовый склад
-								p.contact__block-info.address Киев, ул. Семьи Сосниных 3
-								p.contact__block-info.phone (067) 385-01-01, (095) 385-01-01
-								a.contact__block-info.email(href="mailto:#{email}") #{email}
+								p.contact__block-info.address(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+									span(itemprop="postalCode") 02000 
+									span(itemprop="addressLocality") Киев, 
+									span(itemprop="streetAddress") ул. Семьи Сосниных 3
+								p.contact__block-info.phone 
+									span(itemprop="telephone") (067) 385-01-01, 
+									span(itemprop="telephone") (095) 385-01-01
+									time(itemprop="openingHours" datetime="Mо-Sa, 09:00−20:00")
+								a.contact__block-info.email(href="mailto:#{email}" itemprop="email") #{email}
 							block workgraph
 								ul.contact__work-day
 									li.contact__work-day-item
 										p.contact__work-day-title Пн
 										span.contact__work-day-time 09:00
-										span.contact__work-day-time 17:00
+										span.contact__work-day-time 20:00
 									li.contact__work-day-item
 										p.contact__work-day-title Вт
 										span.contact__work-day-time 09:00
-										span.contact__work-day-time 17:00
+										span.contact__work-day-time 20:00
 									li.contact__work-day-item
 										p.contact__work-day-title Ср
 										span.contact__work-day-time 09:00
-										span.contact__work-day-time 17:00
+										span.contact__work-day-time 20:00
 									li.contact__work-day-item
 										p.contact__work-day-title Чт
 										span.contact__work-day-time 09:00
-										span.contact__work-day-time 17:00
+										span.contact__work-day-time 20:00
 									li.contact__work-day-item
 										p.contact__work-day-title Пт
 										span.contact__work-day-time 09:00
-										span.contact__work-day-time 17:00
+										span.contact__work-day-time 20:00
 									li.contact__work-day-item
 										p.contact__work-day-title Сб
 										span.contact__work-day-time 09:00
-										span.contact__work-day-time 17:00
+										span.contact__work-day-time 20:00
 									li.contact__work-day-item
 										p.contact__work-day-title Вс
 										span.contact__work-day-time.not-work X
