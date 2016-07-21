@@ -641,7 +641,7 @@
           <div class="row">
             <div class="col-sm-3">
               <!-- фильтр-->
-              <div class="border-panel">
+              <div class="filter__sidebar">
                 <p class="subtitle">Фильтр</p>
                 <div class="form-group">
                   <label class="form-label">Обивка</label>
@@ -655,10 +655,82 @@
                     <input type="text" placeholder="Выбрать" required readonly data-modal="modal-frame" class="form-control form-pseudo-select dashed md-trigger">
                   </div>
                 </div>
+                <div class="form-group">
+                  <label class="form-label">Цена</label>
+                  <div class="filter__price-range-block js-range-parent">
+                    <input type="text" range-min value="2000 ₴" maxlength="5" class="filter__price-range-block-input js-only-numbers">
+                    <input type="text" range-max value="6000 ₴" maxlength="5" class="filter__price-range-block-input js-only-numbers">
+                    <div class="filter__price-range js-range"></div>
+                  </div>
+                </div><br>
+                <div class="form-group">
+                  <input id="in-stock" type="checkbox" class="form-checkbox">
+                  <label for="in-stock" class="form-checkbox-label custom-img">Есть на складе</label>
+                </div>
               </div>
               <!-- конец фильтр-->
+              <!-- каталог меню сайтбара-->
+              <div class="sidebar__menu m-b-30">
+                <p class="subtitle">Офисная мебль</p>
+                <ul class="sidebar__menu-list">
+                  <li class="sidebar__menu-list-item"><span class="sidebar__menu-list-link current">Кабинеты руководителя</span></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Конференц столы</a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Оперативная мебель</a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Столы для офиса </a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Аксессуары для офиса</a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Опоры для офисных столов</a></li>
+                </ul>
+                <p class="subtitle">Офисная мебль</p>
+                <ul class="sidebar__menu-list">
+                  <li class="sidebar__menu-list-item"><span class="sidebar__menu-list-link">Кабинеты руководителя</span></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Конференц столы</a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Оперативная мебель</a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Столы для офиса </a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Аксессуары для офиса</a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Опоры для офисных столов</a></li>
+                </ul>
+                <p class="subtitle">Офисная мебль</p>
+                <ul class="sidebar__menu-list">
+                  <li class="sidebar__menu-list-item"><span class="sidebar__menu-list-link">Кабинеты руководителя</span></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Конференц столы</a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Оперативная мебель</a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Столы для офиса </a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Аксессуары для офиса</a></li>
+                  <li class="sidebar__menu-list-item"><a href="#!" class="sidebar__menu-list-link">Опоры для офисных столов</a></li>
+                </ul>
+              </div>
+              <!-- конец каталог меню сайтбара-->
+              <!-- теги-->
+              <div class="sidebar__tags-section">
+                <p class="subtitle">Теги</p>
+                <div class="sidebar__tags-block">
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Тип</span><a href="#!" class="sidebar__tags-link">Мебель</a><a href="#!" class="sidebar__tags-link">Офисная</a></div>
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Стоимость</span><a href="#!" class="sidebar__tags-link">До 5000 грн.</a></div>
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Тип</span><a href="#!" class="sidebar__tags-link">Мебель</a><a href="#!" class="sidebar__tags-link">Офисная</a></div>
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Стоимость</span><a href="#!" class="sidebar__tags-link">До 5000 грн.</a></div>
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Тип</span><a href="#!" class="sidebar__tags-link">Мебель</a><a href="#!" class="sidebar__tags-link">Офисная</a></div>
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Стоимость</span><a href="#!" class="sidebar__tags-link">До 5000 грн.</a></div>
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Тип</span><a href="#!" class="sidebar__tags-link">Мебель</a><a href="#!" class="sidebar__tags-link">Офисная</a></div>
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Стоимость</span><a href="#!" class="sidebar__tags-link">До 5000 грн.</a></div>
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Тип</span><a href="#!" class="sidebar__tags-link">Мебель</a><a href="#!" class="sidebar__tags-link">Офисная</a></div>
+                  <div class="sidebar__tags-row"><span class="sidebar__tags-link current">Стоимость</span><a href="#!" class="sidebar__tags-link">До 5000 грн.</a></div>
+                </div><a href="javascript:void(0)" class="sidebar__tags-block-trigger js-tag-slide">Развернуть</a>
+              </div>
+              <!-- конец теги-->
             </div>
             <div class="col-sm-9">
+              <!-- фильтр-->
+              <div class="filter__block">
+                <div class="filter__block-result">
+                  <p class="filter__block-text">Всего</p><span class="filter__block-count">23 товара</span>
+                </div>
+                <div class="filter__block-sorting">
+                  <p class="filter__block-text">Показать</p><span class="filter__block-sorting-current js-drop-trigger">Без фильтра</span>
+                  <div class="filter__block-sorting-list js-drop-target"><span class="filter__block-sorting-val js-drop-val">Новые</span><span class="filter__block-sorting-val js-drop-val">Старые</span><span class="filter__block-sorting-val js-drop-val">Цена по возрастанию</span><span class="filter__block-sorting-val js-drop-val">Цена по убыванию</span></div>
+                </div>
+              </div>
+              <!-- конец фильтра-->
+              <!-- каталог товаров-->
               <div class="product-section filter-edit">
                 <div class="product-section__block"><a href="#!" class="product-section__block-link">
                     <div class="product-section__block-img-wrap"><img src="img/content/img1.jpg" alt="product" class="product-section__block-img"></div>
@@ -751,6 +823,16 @@
                       <div><span class="product-section__block-badge-name">Акция</span></div>
                     </div></a></div>
               </div>
+              <!-- конец каталог товаров-->
+              <!-- seo текст-->
+              <div class="seo-text">
+                <p class="product__tab-content-block-title">Конференц кресло CA1316C bm</p>
+                <p>Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании.</p>
+                <p>При изготовлении офисного кресла использована эко кожа и массив древесины, – такие материалы сегодня считаются самыми лучшими в производстве мебели премиум класса. Эко кожа обладает множеством преимуществ перед натуральной кожей, к примеру, простотой в уходе, стойкостью к истиранию и растяжениям. </p>
+                <p>Каркас конференц кресла, выполненный в виде боковых трапеций и перекладин, на которые опирается сиденье, изготовлен из массива древесины, благодаря чему изделие может «похвастаться» не только высокой прочностью, но и престижным видом.</p>
+                <p class="product__tab-content-block-seo-text">Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, Донецк, Харьков, Днепропетровск, Луганск, <a href="#!">Одесса</a> и другие города Украины</p>
+              </div>
+              <!-- конец seo текст-->
             </div>
           </div>
         </div>

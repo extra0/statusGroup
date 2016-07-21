@@ -164,6 +164,14 @@
 			&:after {
 				background: $ruby;
 			}
+			&.custom-img {
+				&:after {
+					display: none;
+				}
+				&:before {
+					background-position: -48px -143px;
+				}
+			}
 		}
 		&-label {
 			position: relative;
@@ -186,6 +194,18 @@
 				height: 14px;
 				border-radius: $br;
 				background: #ddd;
+			}
+			&.custom-img {
+				&:after {
+					display: none;
+				}
+				&:before {
+					background: url('../img/sprite.png') no-repeat -48px -114px;
+					width: 24px;
+					height: 24px;
+					border-radius: 0px;
+					border: none;
+				}
 			}
 		}
 	}

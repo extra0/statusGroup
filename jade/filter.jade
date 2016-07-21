@@ -14,7 +14,7 @@ block content
 		.row
 			.col-sm-3
 				// фильтр
-				.border-panel
+				.filter__sidebar
 					p.subtitle Фильтр
 					.form-group
 						label.form-label Обивка
@@ -26,8 +26,67 @@ block content
 						.form-pseudo-select-block.js-frame-input
 							span.form-pseudo-select-material-wrap.dashed
 							input.form-control.form-pseudo-select.dashed.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-frame")
+					.form-group
+						label.form-label Цена
+						.filter__price-range-block.js-range-parent
+							input.filter__price-range-block-input.js-only-numbers(type="text" range-min value="2000 ₴" maxlength="5")
+							input.filter__price-range-block-input.js-only-numbers(type="text" range-max value="6000 ₴" maxlength="5")
+							.filter__price-range.js-range
+					br
+					.form-group
+						input.form-checkbox#in-stock(type="checkbox")
+						label.form-checkbox-label.custom-img(for="in-stock") Есть на складе
 				// конец фильтр
+				// каталог меню сайтбара
+				.sidebar__menu.m-b-30
+					- for (i=1; i<=3; i++) {
+						p.subtitle Офисная мебль
+						ul.sidebar__menu-list
+							li.sidebar__menu-list-item
+								span.sidebar__menu-list-link(class="#{(i==1) ? 'current' : '' }") Кабинеты руководителя
+							li.sidebar__menu-list-item
+								a.sidebar__menu-list-link(href="#!") Конференц столы
+							li.sidebar__menu-list-item
+								a.sidebar__menu-list-link(href="#!") Оперативная мебель
+							li.sidebar__menu-list-item
+								a.sidebar__menu-list-link(href="#!") Столы для офиса 
+							li.sidebar__menu-list-item
+								a.sidebar__menu-list-link(href="#!") Аксессуары для офиса
+							li.sidebar__menu-list-item
+								a.sidebar__menu-list-link(href="#!") Опоры для офисных столов
+					-}
+				// конец каталог меню сайтбара
+				// теги
+				.sidebar__tags-section
+					p.subtitle Теги
+					.sidebar__tags-block
+						- for (i=1; i<=5; i++) {
+							.sidebar__tags-row
+								span.sidebar__tags-link.current Тип
+								a.sidebar__tags-link(href="#!") Мебель
+								a.sidebar__tags-link(href="#!") Офисная
+							.sidebar__tags-row
+								span.sidebar__tags-link.current Стоимость
+								a.sidebar__tags-link(href="#!") До 5000 грн.
+						- }
+					a.sidebar__tags-block-trigger.js-tag-slide(href="javascript:void(0)") Развернуть
+				// конец теги
 			.col-sm-9
+				// фильтр
+				.filter__block
+					.filter__block-result
+						p.filter__block-text Всего
+						span.filter__block-count 23 товара
+					.filter__block-sorting
+						p.filter__block-text Показать
+						span.filter__block-sorting-current.js-drop-trigger Без фильтра
+						.filter__block-sorting-list.js-drop-target
+							span.filter__block-sorting-val.js-drop-val Новые
+							span.filter__block-sorting-val.js-drop-val Старые
+							span.filter__block-sorting-val.js-drop-val Цена по возрастанию
+							span.filter__block-sorting-val.js-drop-val Цена по убыванию
+				// конец фильтра
+				// каталог товаров
 				.product-section.filter-edit
 					- for (i=1; i<=6; i++) {
 						.product-section__block
@@ -66,3 +125,12 @@ block content
 									div
 										span.product-section__block-badge-name Акция
 					- }
+				// конец каталог товаров
+				// seo текст
+				.seo-text
+					p.product__tab-content-block-title Конференц кресло CA1316C bm
+					p Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании.
+					p При изготовлении офисного кресла использована эко кожа и массив древесины, – такие материалы сегодня считаются самыми лучшими в производстве мебели премиум класса. Эко кожа обладает множеством преимуществ перед натуральной кожей, к примеру, простотой в уходе, стойкостью к истиранию и растяжениям. 
+					p Каркас конференц кресла, выполненный в виде боковых трапеций и перекладин, на которые опирается сиденье, изготовлен из массива древесины, благодаря чему изделие может «похвастаться» не только высокой прочностью, но и престижным видом.
+					p.product__tab-content-block-seo-text Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, Донецк, Харьков, Днепропетровск, Луганск, <a href="#!">Одесса</a> и другие города Украины
+				// конец seo текст

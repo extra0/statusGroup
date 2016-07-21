@@ -29,7 +29,40 @@ $(function() {
 		$(this).toggleClass('active');
 		$(this).hasClass('active') ? $(this).html('Скрыть') : $(this).html('Показать еще');
 	});
-	
+
+	// только цифры в инпутах
+	$('.js-only-numbers').bind("change keyup input click", function() {
+		if (this.value.match(/[^0-9\.]/g, '')) {
+			this.value = this.value.replace(/[^0-9]/g, '');
+		}
+	});
+
+
+	// слайдер цены
+	var min = $('[range-min]'),
+		max = $('[range-max]');
+
+	$(".js-range").slider({
+		range: true,
+		min: 1,
+		max: 10000,
+		step: 1,
+		values: [2000, 6000],
+		slide: function(event, ui) {
+			$(this).parents('.js-range-parent').find(min).val(ui.values[0] + ' ₴');
+			$(this).parents('.js-range-parent').find(max).val(ui.values[1] + ' ₴');
+		}
+	});
+
+	min.on('keyup', function() {
+		$(this).parents('.js-range-parent').find('.js-range').slider("values", 0, $(this).val());
+	});
+
+	max.on('keyup', function() {
+		$(this).parents('.js-range-parent').find('.js-range').slider("values", 1, $(this).val());
+	});
+
+	$('.filter__price-range-block-input').on('blur', function() {$(this).val($(this).val() + ' ₴');});
 
 	// кастомный скролл
 	$(".js-custom-scroll").mCustomScrollbar();
@@ -57,6 +90,46 @@ $(function() {
 		},300);
 	});
 
+
+	// оформление псевдо селекта
+	var trigger = $('.js-drop-trigger'),
+		targetList = $('.js-drop-target'),
+		targetVal = $('.js-drop-val');
+
+	trigger.on('click', function(){
+		$(this).next().slideToggle(300);
+		$(this).addClass('active');
+	});
+	targetVal.on('click', function(){
+		targetVal.removeClass('active');
+		$(this).addClass('active');
+		targetList.slideToggle(300);
+		trigger.html($(this).html());
+		trigger.removeClass('active');
+	});
+
+	// закрываем сортировку по клику вне области
+	$(document).mouseup(function(e) {
+		if (targetList.has(e.target).length === 0 && trigger.has(e.target).length === 0) {
+			targetList.slideUp(300);
+			targetList.removeClass('active');
+			trigger.removeClass('active');
+		}
+	});
+
+	// разворачиваем облако тегов
+	$('.js-tag-slide').on('click', function(){
+		if ($(this).hasClass('active')) {
+			$('.sidebar__tags-section').removeClass('active');
+			$(this).html('Развернуть');	
+			$(this).removeClass('active');
+		} else {
+			$(this).addClass('active');
+			$('.sidebar__tags-section').addClass('active');
+			$(this).html('Свернуть');
+		}
+		
+	});
 
 	// определяем текущий день и активируем нужный день в графике работы
 	var date = new Date(),
