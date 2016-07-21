@@ -164,10 +164,11 @@
           <div class="row">
             <div class="col-sm-12 col-xs-12">
               <!-- хлебные крошки-->
-              <div class="breadcrumbs">
+              <div xmlns:v="http://rdf.data-vocabulary.org/#" class="breadcrumbs">
                 <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__list-item"><a href="#!" class="breadcrumbs__list-link">Главная</a></li>
-                  <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link current">Контакты</span></li>
+                  <li typeof="v:Breadcrumb" class="breadcrumbs__list-item"><a href="#!" rel="v:url" property="v:title" class="breadcrumbs__list-link">Главная</a></li>
+                  <li typeof="v:Breadcrumb" class="breadcrumbs__list-item"><a href="#!" rel="v:url" property="v:title" class="breadcrumbs__list-link">Не активный пункт</a></li>
+                  <li typeof="v:Breadcrumb" class="breadcrumbs__list-item"><a href="#!" rel="v:url" property="v:title" class="breadcrumbs__list-link current">Активный пункт</a></li>
                 </ul>
               </div>
               <!-- конец хлебные крошки-->
@@ -178,31 +179,33 @@
               <div class="flex-section">
                 <!-- блок с адресом главного офиса-->
                 <div class="col-sm-7">
-                  <div class="border-panel">
+                  <div itemscope itemtype="http://schema.org/Organization" class="border-panel">
                     <div class="contact__block">
-                      <p class="subtitle">Центральный офис Status Group</p>
+                      <p class="subtitle">Центральный офис <span itemprop="name">Status Group</span></p>
                       <p class="contact__block-text">Выставочный центр и оптовый склад</p>
-                      <p class="contact__block-info address">Киев, ул. Семьи Сосниных 3</p>
-                      <p class="contact__block-info phone">(067) 385-01-01, (095) 385-01-01</p><a href="mailto:info@gstatus.com.ua" class="contact__block-info email">info@gstatus.com.ua</a>
+                      <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="contact__block-info address"><span itemprop="postalCode">02000 </span><span itemprop="addressLocality">Киев, </span><span itemprop="streetAddress">ул. Семьи Сосниных 3</span></p>
+                      <p class="contact__block-info phone"> <span itemprop="telephone">(067) 385-01-01, </span><span itemprop="telephone">(095) 385-01-01</span>
+                        <time itemprop="openingHours" datetime="Mо-Sa, 09:00−20:00"></time>
+                      </p><a href="mailto:info@gstatus.com.ua" itemprop="email" class="contact__block-info email">info@gstatus.com.ua</a>
                     </div>
                     <ul class="contact__work-day">
                       <li class="contact__work-day-item">
-                        <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                        <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                       </li>
                       <li class="contact__work-day-item">
-                        <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                        <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                       </li>
                       <li class="contact__work-day-item">
-                        <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                        <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                       </li>
                       <li class="contact__work-day-item">
-                        <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                        <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                       </li>
                       <li class="contact__work-day-item">
-                        <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                        <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                       </li>
                       <li class="contact__work-day-item">
-                        <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                        <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                       </li>
                       <li class="contact__work-day-item">
                         <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>
@@ -329,22 +332,22 @@
                           </div>
                           <ul class="contact__work-day">
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
                               <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>
@@ -392,22 +395,22 @@
                           </div>
                           <ul class="contact__work-day">
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
                               <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>
@@ -453,22 +456,22 @@
                           </div>
                           <ul class="contact__work-day">
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
                               <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>
@@ -514,22 +517,22 @@
                           </div>
                           <ul class="contact__work-day">
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Пн</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Вт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Ср</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Чт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Пт</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
-                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">17:00</span>
+                              <p class="contact__work-day-title">Сб</p><span class="contact__work-day-time">09:00</span><span class="contact__work-day-time">20:00</span>
                             </li>
                             <li class="contact__work-day-item">
                               <p class="contact__work-day-title">Вс</p><span class="contact__work-day-time not-work">X</span>

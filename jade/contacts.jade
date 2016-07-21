@@ -8,12 +8,7 @@ block content
 		.row
 			.col-sm-12.col-xs-12
 				// хлебные крошки
-				.breadcrumbs(xmlns:v="http://rdf.data-vocabulary.org/#")
-					ul.breadcrumbs__list
-						li.breadcrumbs__list-item(typeof="v:Breadcrumb")
-							a.breadcrumbs__list-link(href="#!" rel="v:url" property="v:title") Главная
-						li.breadcrumbs__list-item(typeof="v:Breadcrumb")
-							a.breadcrumbs__list-link.current(href="#!" rel="v:url" property="v:title") Контакты
+				include includes/components/_breadcrumbs
 				// конец хлебные крошки
 		.row
 			.col-sm-12

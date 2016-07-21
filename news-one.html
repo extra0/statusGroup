@@ -164,11 +164,11 @@
           <div class="row">
             <div class="col-sm-12 col-xs-12">
               <!-- хлебные крошки-->
-              <div class="breadcrumbs">
+              <div xmlns:v="http://rdf.data-vocabulary.org/#" class="breadcrumbs">
                 <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__list-item"><a href="#!" class="breadcrumbs__list-link">Главная</a></li>
-                  <li class="breadcrumbs__list-item"><a href="#!" class="breadcrumbs__list-link">Новости</a></li>
-                  <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link current">Выставка в смольном</span></li>
+                  <li typeof="v:Breadcrumb" class="breadcrumbs__list-item"><a href="#!" rel="v:url" property="v:title" class="breadcrumbs__list-link">Главная</a></li>
+                  <li typeof="v:Breadcrumb" class="breadcrumbs__list-item"><a href="#!" rel="v:url" property="v:title" class="breadcrumbs__list-link">Не активный пункт</a></li>
+                  <li typeof="v:Breadcrumb" class="breadcrumbs__list-item"><a href="#!" rel="v:url" property="v:title" class="breadcrumbs__list-link current">Активный пункт</a></li>
                 </ul>
               </div>
               <!-- конец хлебные крошки-->
@@ -206,49 +206,54 @@
             <!-- контент-->
             <div class="col-sm-9">
               <!-- новость-->
-              <div class="news-detail">
-                <p class="news-detail__title">Выставка в смольном</p>
-                <p class="news-detail__date">14 июля 2016</p><img src="img/content/news-preview.jpg" alt="img preview" class="news-detail__img">
-                <p>Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании множеством преимуществ перед.</p>
-                <table>
-                  <tr>
-                    <th>001</th>
-                    <th>002</th>
-                  </tr>
-                  <tr>
-                    <td>001</td>
-                    <td>002</td>
-                  </tr>
-                  <tr>
-                    <td>001</td>
-                    <td>002</td>
-                  </tr>
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque assumenda voluptate pariatur, fuga debitis explicabo esse quam eligendi omnis voluptates voluptatem asperiores, dignissimos, vero, ducimus ipsum eaque quis possimus.</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit consequatur facilis dignissimos voluptatibus accusamus totam quo blanditiis sequi, accusantium dolore aut beatae reprehenderit maxime non a labore quas! Labore, saepe.</td>
-                  </tr>
-                </table>
-                <p>Интернет-магазин «Megaroom» радует новинками тех, кто в конце июня все еще на Украине вместо зарубежного побережья! В большей степени новинки будут приятны тем, кто решил посвятить свой летний отпуск обновлению кухни или гостиной. В большей степени новинки будут приятны тем.</p>
-                <ol>
-                  <li>0001</li>
-                  <li>0002</li>
-                  <li>0003</li>
-                  <li>0004</li>
-                  <li>0005</li>
-                  <li>0006</li>
-                </ol>
-                <p>Предлагаем ознакомиться с кухонными новинками на «Megaroom» - раскладными стульями украинского производителя «Silla». Такой стул является воплощением прочности, тонкого вкуса и удобства использования. При создании этого стула используются лишь натуральные материалы: основание выполнено из массива бука, а сиденье – из влагостойкой фанеры высшего качества. Интернет-магазин «Megaroom» радует новинками тех, кто в конце июня все еще на Украине вместо зарубежного побережья! В большей степени новинки будут приятны тем, кто решил посвятить свой летний отпуск обновлению кухни или гостиной. В большей степени новинки будут приятны тем.</p>
-                <ul>
-                  <li>0001</li>
-                  <li>0002</li>
-                  <li>0003</li>
-                  <li>0004</li>
-                  <li>0005</li>
-                  <li>0006</li>
-                </ul>
-                <p>Предлагаем ознакомиться с кухонными новинками на «Megaroom» - раскладными стульями украинского производителя «Silla». Такой стул является воплощением прочности, тонкого вкуса и удобства использования. При создании этого стула используются лишь натуральные материалы: основание выполнено из массива бука, а сиденье – из влагостойкой фанеры высшего качества.</p><img src="img/content/d-img.jpg" alt="img">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel odio repellendus illum nostrum sit eos. Soluta adipisci suscipit quis incidunt, nihil iusto vero vel blanditiis a? Laborum voluptatum quae ex!</p>
-              </div>
+              <article itemscope itemtype="http://schema.org/Article">
+                <div class="news-detail">
+                  <h1 itemprop="name" class="news-detail__title">Выставка в смольном</h1>
+                  <meta itemprop="inLanguage" content="ru">
+                  <p class="news-detail__date">14 июля 2016</p><img src="img/content/news-preview.jpg" alt="img preview" class="news-detail__img">
+                  <section itemprop="articleBody">
+                    <p>Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании множеством преимуществ перед.</p>
+                    <table>
+                      <tr>
+                        <th>001</th>
+                        <th>002</th>
+                      </tr>
+                      <tr>
+                        <td>001</td>
+                        <td>002</td>
+                      </tr>
+                      <tr>
+                        <td>001</td>
+                        <td>002</td>
+                      </tr>
+                      <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque assumenda voluptate pariatur, fuga debitis explicabo esse quam eligendi omnis voluptates voluptatem asperiores, dignissimos, vero, ducimus ipsum eaque quis possimus.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit consequatur facilis dignissimos voluptatibus accusamus totam quo blanditiis sequi, accusantium dolore aut beatae reprehenderit maxime non a labore quas! Labore, saepe.</td>
+                      </tr>
+                    </table>
+                    <p>Интернет-магазин «Megaroom» радует новинками тех, кто в конце июня все еще на Украине вместо зарубежного побережья! В большей степени новинки будут приятны тем, кто решил посвятить свой летний отпуск обновлению кухни или гостиной. В большей степени новинки будут приятны тем.</p>
+                    <ol>
+                      <li>0001</li>
+                      <li>0002</li>
+                      <li>0003</li>
+                      <li>0004</li>
+                      <li>0005</li>
+                      <li>0006</li>
+                    </ol>
+                    <p>Предлагаем ознакомиться с кухонными новинками на «Megaroom» - раскладными стульями украинского производителя «Silla». Такой стул является воплощением прочности, тонкого вкуса и удобства использования. При создании этого стула используются лишь натуральные материалы: основание выполнено из массива бука, а сиденье – из влагостойкой фанеры высшего качества. Интернет-магазин «Megaroom» радует новинками тех, кто в конце июня все еще на Украине вместо зарубежного побережья! В большей степени новинки будут приятны тем, кто решил посвятить свой летний отпуск обновлению кухни или гостиной. В большей степени новинки будут приятны тем.</p>
+                    <ul>
+                      <li>0001</li>
+                      <li>0002</li>
+                      <li>0003</li>
+                      <li>0004</li>
+                      <li>0005</li>
+                      <li>0006</li>
+                    </ul>
+                    <p>Предлагаем ознакомиться с кухонными новинками на «Megaroom» - раскладными стульями украинского производителя «Silla». Такой стул является воплощением прочности, тонкого вкуса и удобства использования. При создании этого стула используются лишь натуральные материалы: основание выполнено из массива бука, а сиденье – из влагостойкой фанеры высшего качества.</p><img src="img/content/d-img.jpg" alt="img">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel odio repellendus illum nostrum sit eos. Soluta adipisci suscipit quis incidunt, nihil iusto vero vel blanditiis a? Laborum voluptatum quae ex!</p>
+                  </section>
+                </div>
+              </article>
               <!-- конец новости-->
               <h2 class="title"><span>Другие новости</span></h2>
               <!-- список других новостей-->

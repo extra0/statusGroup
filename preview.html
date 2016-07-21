@@ -164,10 +164,11 @@
           <div class="row">
             <div class="col-sm-12 col-xs-12">
               <!-- хлебные крошки-->
-              <div class="breadcrumbs">
+              <div xmlns:v="http://rdf.data-vocabulary.org/#" class="breadcrumbs">
                 <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__list-item"><a href="#!" class="breadcrumbs__list-link">Главная</a></li>
-                  <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-link current">Кресла руководителя в Киеве</span></li>
+                  <li typeof="v:Breadcrumb" class="breadcrumbs__list-item"><a href="#!" rel="v:url" property="v:title" class="breadcrumbs__list-link">Главная</a></li>
+                  <li typeof="v:Breadcrumb" class="breadcrumbs__list-item"><a href="#!" rel="v:url" property="v:title" class="breadcrumbs__list-link">Не активный пункт</a></li>
+                  <li typeof="v:Breadcrumb" class="breadcrumbs__list-item"><a href="#!" rel="v:url" property="v:title" class="breadcrumbs__list-link current">Активный пункт</a></li>
                 </ul>
               </div>
               <!-- конец хлебные крошки-->

@@ -176,6 +176,14 @@
 	@include display(flex);
 	@include flex-wrap(wrap);
 	margin: 0 0 30px -40px;
+	&.filter-edit {
+		.product-section__block {
+			flex-basis: 30%;
+			&.x-2 {
+				flex-basis: 46.4%;
+			}
+		}
+	}
 	&__block {
 		border: 1px solid #ddd;
 		border-radius: $br;
@@ -551,6 +559,11 @@
 			}
 			&.current {
 				color: #bfbdbe;
+				cursor: default;
+				&:focus,
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
