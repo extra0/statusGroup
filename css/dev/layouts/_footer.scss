@@ -89,6 +89,9 @@
 					&:before {
 						background-position: -237px -10px;
 					}
+					* {
+						display: inline-block;
+					}
 				}
 				&.email {
 					color: inherit;

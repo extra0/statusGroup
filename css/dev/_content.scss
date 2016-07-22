@@ -734,8 +734,12 @@
 				padding-left: 15px;
 				&:before {
 					content: '';
-					@include position(absolute, 0 -21px 0 null);
-					@include triangle(42px, $ruby, right)
+					@include position(absolute, 0 -16px 0 null);
+					// @include triangle(42px, $ruby, right)
+					background: url('../img/menu-arrow.png') no-repeat 0 0;
+					width: 17px;
+					height: 100%;
+					background-size: 100% 100%;
 				}
 			}
 		}
