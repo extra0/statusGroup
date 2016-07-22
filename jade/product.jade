@@ -17,7 +17,7 @@ block content
 				span Fury Lux
 			.row
 				// изображение товар
-				.col-sm-8
+				.col-md-8.col-sm-7
 					// блок с превью
 					.product__thumb
 						- for (i=1; i<=4; i++) {
@@ -55,7 +55,7 @@ block content
 					// конец блок с приемуществами
 				// конец изображение товар
 				// блок с доп выборами
-				.col-sm-4
+				.col-md-4.col-sm-5
 					.product__params(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
 						form(action="#!")
 							.row
@@ -77,13 +77,13 @@ block content
 									input.form-control.form-pseudo-select.dashed.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-frame")
 							// блок с ценой
 							.row
-								.col-lg-7.col-sm-6
+								.col-lg-7.col-md-6.col-sm-12
 									p.product__price-old.js-replace-number 17480 ₴
 									p.product__price-current.js-replace-number(data-price="12480")  
 									// Сюда заносим цену актуальную (это для SEO)
 									meta(itemprop="price" content="12480.00")
 									meta(itemprop="priceCurrency" content="UAH")
-								.col-lg-5.col-sm-6
+								.col-lg-5.col-md-6.col-sm-12
 									.form-group
 										label.form-label Количество
 										.form-input-counter(item-parent)
@@ -181,7 +181,7 @@ block content
 					.product__tab-content-block
 						.border-panel
 							.row
-								.col-sm-8
+								.col-md-8.col-sm-7
 									p.subtitle Отзывы покупателей о Fury Lux
 									p Отзывов еще нет. Оставьте отзыв первым!!!
 									- for (i=1; i<=4; i++) {
@@ -191,7 +191,7 @@ block content
 											p.product__tab-content-block-testimonial-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non provident facere libero dolor incidunt eligendi, delectus corporis praesentium autem sed.
 											//- a.product__tab-content-block-testimonial-link(href="#!") Ответить
 									-}
-								.col-sm-4
+								.col-md-4.col-sm-5
 									p.subtitle Оставить отзыв
 									form(action="#!")
 										.form-group

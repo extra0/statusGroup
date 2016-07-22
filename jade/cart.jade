@@ -16,29 +16,29 @@ block content
 		.cart__table
 			.cart__table-header
 				.row
-					.col-sm-5
+					.col-md-5.col-sm-3
 						p.cart__table-header-title Товар
 					.col-sm-3
 						p.cart__table-header-title Материал
-					.col-sm-3
+					.col-md-3.col-sm-5
 						.row
 							.col-sm-6
 								p.cart__table-header-title Количество
 							.col-sm-6
 								p.cart__table-header-title Цена
 					.col-sm-1
-						p.cart__table-header-title Удалить
+						p.cart__table-header-title.t-del Удалить
 			.cart__table-body
 				- for (k=1; k<=3; k++) {
 					// информация 1 товара
 					.cart__table-body-item(item-parent)
 						.row
-							.col-sm-5
+							.col-md-5.col-sm-3
 								.row
-									.col-sm-3
+									.col-md-3.col-sm-12
 										a(href="#!")
 											img.cart__table-body-img(src="img/content/cart-img.jpg", alt="Item")
-									.col-sm-9
+									.col-md-9.col-sm-12
 										a.cart__table-body-prod-link(href="#!")
 											p.cart__table-body-prod-name Fury Arch Grande
 										p.cart__table-body-prod-articul АР098С1
@@ -49,7 +49,7 @@ block content
 										img.cart__table-body-prod-material-img(src="img/content/material.jpg", alt="material")
 										span.cart__table-body-prod-material-name Люкс кожа 
 								- }
-							.col-sm-3
+							.col-md-3.col-sm-5
 								.row
 									.col-sm-6
 										.cart__table-body-prod-counter
@@ -68,9 +68,9 @@ block content
 				.cart__table-body-total-block
 					.row
 						.col-sm-4.col-sm-offset-8
-							.col-sm-9
+							.col-md-9.col-sm-12
 								.row
-									.col-sm-12.col-sm-offset-6
+									.col-sm-12.col-md-offset-6.col-sm-offset-1
 										p.cart__table-body-total-text Итого
 										p.cart__table-body-total-price.js-replace-number
 											span.js-replace-number(item-total) 12480
@@ -124,12 +124,12 @@ block content
 								label.form-radio-label(for="pay-2") На карту Приват Банка
 						.cart__form-footer
 							.row
-								.col-sm-5
+								.col-md-5.col-sm-12
 									p.cart__form-footer-text Итого
 									p.cart__form-footer-total-price
 										span.js-replace-number(item-total) 12480
 										span.cart__form-footer-total-price-currency ₴ 
-								.col-sm-7
+								.col-md-7.col-sm-12
 									.cart__form-footer-btn-wrap
 										button.btn.cart__form-footer-btn(type="submit") Оформить
 					// конец блок с доп параметрами и ценой

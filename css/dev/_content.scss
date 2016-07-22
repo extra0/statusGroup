@@ -681,6 +681,7 @@
 				height: 500px;
 				margin: 0 auto;
 				z-index: 2;
+				background-size: 100% 100%;
 			}
 		}
 		&-main-stage {
@@ -1957,7 +1958,7 @@
 		&-input {
 			border: none;
 			background: none;
-			width: 49%;
+			width: 48%;
 			margin-top: 11px;
 			font-size: 16px;
 			font-family: $mss;

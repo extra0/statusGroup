@@ -7,16 +7,16 @@ header.header
 	.header__top
 		.container
 			.row
-				.col-sm-6
+				.col-md-6.col-sm-7
 					// меню
 					ul.header__top-menu-list
 						each item in headerMenu
 							li.header__top-menu-item
 								a.header__top-menu-link(href="#!") #{item}
 					// конец меню
-				.col-sm-6
+				.col-md-6.col-sm-5
 					.row
-						.col-sm-6
+						.col-sm-6.hidden-sm
 							// адрес
 							.header__top-address-block
 								p.header__top-address-text Киев, ул. Семьи Сосниных 3
@@ -25,7 +25,7 @@ header.header
 									p.header__top-address-text Вс.: 
 										span.color-red Выходной
 							// конец адрес
-						.col-sm-6
+						.col-sm-12.col-md-6
 							// телефоны
 							.header__top-phone-block
 								a.header__top-phone(href="tel:+38#{phone1}") #{phone1}
@@ -39,10 +39,10 @@ header.header
 	.header__bottom
 		.container
 			.row
-				.col-sm-3
+				.col-md-3.col-sm-2
 					a(href="/")
 						img(src="img/logo.png", alt="Статус групп")
-				.col-sm-7
+				.col-md-7.col-sm-8
 					// меню каталога
 					.header__bottom-menu
 						ul.header__bottom-menu-list
@@ -81,7 +81,7 @@ header.header
 					.header__bottom-basket
 						a.header__bottom-basket-img-link(href="#!")
 							span.header__bottom-basket-count 12
-						p.header__bottom-basket-price.js-replace-number 12480 ₴
-						a.header__bottom-basket-link(href="#!") Оформить
+						p.header__bottom-basket-price.js-replace-number.hidden-sm 12480 ₴
+						a.header__bottom-basket-link.hidden-sm(href="#!") Оформить
 					// конец блок корзины
 	// конец нижняя часть header

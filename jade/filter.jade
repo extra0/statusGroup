@@ -12,7 +12,7 @@ block content
 				include includes/components/_breadcrumbs
 				// конец хлебные крошки
 		.row
-			.col-sm-3
+			.col-md-3.col-sm-4
 				// фильтр
 				.filter__sidebar
 					p.subtitle Фильтр
@@ -57,7 +57,7 @@ block content
 					-}
 				// конец каталог меню сайтбара
 				// теги
-				.sidebar__tags-section
+				.sidebar__tags-section.hidden-xs.hidden-sm
 					p.subtitle Теги
 					.sidebar__tags-block
 						- for (i=1; i<=5; i++) {
@@ -71,7 +71,7 @@ block content
 						- }
 					a.sidebar__tags-block-trigger.js-tag-slide(href="javascript:void(0)") Развернуть
 				// конец теги
-			.col-sm-9
+			.col-md-9.col-sm-8
 				// фильтр
 				.filter__block
 					.filter__block-result

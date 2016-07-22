@@ -14,7 +14,7 @@ block content
 			.col-sm-12
 				.flex-section
 					// блок с адресом главного офиса
-					.col-sm-7
+					.col-md-7.col-sm-12
 						.border-panel(itemscope itemtype="http://schema.org/Organization")
 							.contact__block
 								p.subtitle Центральный офис <span itemprop="name">Status Group</span>
@@ -59,7 +59,7 @@ block content
 										span.contact__work-day-time.not-work X
 					// конец блок с адресом главного офиса
 					// форма обратной связи
-					.col-sm-5
+					.col-md-5.col-sm-12
 						.border-panel
 							p.subtitle Обратная Связь
 							form(action="#!")
@@ -155,7 +155,7 @@ block content
 								});
 							.border-panel.m-b-30
 								.row
-									.col-sm-7
+									.col-md-7.col-sm-12
 										.contact__block
 											p.subtitle ТЦ “Оскар”
 											p.contact__block-text Выставочный центр и оптовый склад
@@ -163,7 +163,7 @@ block content
 											p.contact__block-info.phone (067) 385-01-01, (095) 385-01-01
 											a.contact__block-info.email(href="mailto:#{email}") #{email}
 										block workgraph
-									.col-sm-5
+									.col-md-5.col-sm-12
 										.dillers__map
 											.map(id="myMap-10")
 						.dillers__tab-block
@@ -190,7 +190,7 @@ block content
 									});
 								.border-panel.m-b-30
 									.row
-										.col-sm-7
+										.col-md-7.col-sm-12
 											.contact__block
 												p.subtitle ТЦ “Оскар”
 												p.contact__block-text Выставочный центр и оптовый склад
@@ -198,7 +198,7 @@ block content
 												p.contact__block-info.phone (067) 385-01-01, (095) 385-01-01
 												a.contact__block-info.email(href="mailto:#{email}") #{email}
 											block workgraph
-										.col-sm-5
+										.col-md-5.col-sm-12
 											.dillers__map
 												.map(id="myMap-#{i}")
 							- }
