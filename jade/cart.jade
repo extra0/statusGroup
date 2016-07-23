@@ -14,7 +14,7 @@ block content
 			span Оформление заказа
 		// таблица с заказом
 		.cart__table
-			.cart__table-header
+			.cart__table-header.hidden-xs
 				.row
 					.col-md-5.col-sm-3
 						p.cart__table-header-title Товар
@@ -33,9 +33,10 @@ block content
 					// информация 1 товара
 					.cart__table-body-item(item-parent)
 						.row
-							.col-md-5.col-sm-3
+							.col-md-5.col-sm-3.col-xs-6.col-xxs-12
 								.row
 									.col-md-3.col-sm-12
+										p.cart__table-header-title.visible-xs Товар
 										a(href="#!")
 											img.cart__table-body-img(src="img/content/cart-img.jpg", alt="Item")
 									.col-md-9.col-sm-12
@@ -43,25 +44,29 @@ block content
 											p.cart__table-body-prod-name Fury Arch Grande
 										p.cart__table-body-prod-articul АР098С1
 
-							.col-sm-3
+							.col-sm-3.col-xs-6.col-xxs-12
+								p.cart__table-header-title.visible-xs Материал
 								- for (i=1;i<=2; i++) {
 									.cart__table-body-prod-material-wrap
 										img.cart__table-body-prod-material-img(src="img/content/material.jpg", alt="material")
 										span.cart__table-body-prod-material-name Люкс кожа 
 								- }
-							.col-md-3.col-sm-5
+							.col-md-3.col-sm-5.col-xs-12
 								.row
-									.col-sm-6
+									.col-sm-6.col-xs-6.col-xxs-12
 										.cart__table-body-prod-counter
+											p.cart__table-header-title.visible-xs Количество
 											.form-input-counter
 												label.form-input-counter__label шт
 												button.form-input-counter__changer.up(data-val="1" item-changer)
 												input.form-input-counter__input.js-only-number(type="text" value="1" maxlength="3" item-max-val="#{i}" item-val item-total-cost)
 												button.form-input-counter__changer.down(data-val="-1" item-changer)
-									.col-sm-6
+									.col-sm-6.col-xs-6.col-xxs-12
+										p.cart__table-header-title.visible-xs Цена
 										p.cart__table-body-prod-price.js-replace-number(item-cost="#{k*12100}") #{k*12100} ₴
-							.col-sm-1.text-center
+							.col-sm-1.col-xs-12.text-center
 								button.cart__table-body-prod-delete.js-item-delete(type="button" item-delete)
+									span.visible-xs Удалить
 					// конец информация 1 товара
 				- }
 				// итоговая сумма по таблице
@@ -81,7 +86,7 @@ block content
 			span Личные данные
 		form(action="#")
 			.flex-section
-				.col-sm-6
+				.col-sm-6.col-xs-6.col-xxs-12
 					// инфоблок
 					.border-panel
 						.form-group
@@ -100,7 +105,7 @@ block content
 							label.form-label Комментарий
 							textarea.form-control(rows="3" placeholder="Ваше сообщение" required)
 					// конец инфоблок
-				.col-sm-6
+				.col-sm-6.col-xs-6.col-xxs-12
 					// блок с доп параметрами и ценой
 					.border-panel
 						.cart__form-body

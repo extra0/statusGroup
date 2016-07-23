@@ -180,7 +180,7 @@
           <h2 class="title"><span>Оформление заказа</span></h2>
           <!-- таблица с заказом-->
           <div class="cart__table">
-            <div class="cart__table-header">
+            <div class="cart__table-header hidden-xs">
               <div class="row">
                 <div class="col-md-5 col-sm-3">
                   <p class="cart__table-header-title">Товар</p>
@@ -207,23 +207,27 @@
               <!-- информация 1 товара-->
               <div item-parent class="cart__table-body-item">
                 <div class="row">
-                  <div class="col-md-5 col-sm-3">
+                  <div class="col-md-5 col-sm-3 col-xs-6 col-xxs-12">
                     <div class="row">
-                      <div class="col-md-3 col-sm-12"><a href="#!"><img src="img/content/cart-img.jpg" alt="Item" class="cart__table-body-img"></a></div>
+                      <div class="col-md-3 col-sm-12">
+                        <p class="cart__table-header-title visible-xs">Товар</p><a href="#!"><img src="img/content/cart-img.jpg" alt="Item" class="cart__table-body-img"></a>
+                      </div>
                       <div class="col-md-9 col-sm-12"><a href="#!" class="cart__table-body-prod-link">
                           <p class="cart__table-body-prod-name">Fury Arch Grande</p></a>
                         <p class="cart__table-body-prod-articul">АР098С1</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-3 col-xs-6 col-xxs-12">
+                    <p class="cart__table-header-title visible-xs">Материал</p>
                     <div class="cart__table-body-prod-material-wrap"><img src="img/content/material.jpg" alt="material" class="cart__table-body-prod-material-img"><span class="cart__table-body-prod-material-name">Люкс кожа </span></div>
                     <div class="cart__table-body-prod-material-wrap"><img src="img/content/material.jpg" alt="material" class="cart__table-body-prod-material-img"><span class="cart__table-body-prod-material-name">Люкс кожа </span></div>
                   </div>
-                  <div class="col-md-3 col-sm-5">
+                  <div class="col-md-3 col-sm-5 col-xs-12">
                     <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 col-xs-6 col-xxs-12">
                         <div class="cart__table-body-prod-counter">
+                          <p class="cart__table-header-title visible-xs">Количество</p>
                           <div class="form-input-counter">
                             <label class="form-input-counter__label">шт</label>
                             <button data-val="1" item-changer class="form-input-counter__changer up"></button>
@@ -232,13 +236,14 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 col-xs-6 col-xxs-12">
+                        <p class="cart__table-header-title visible-xs">Цена</p>
                         <p item-cost="12100" class="cart__table-body-prod-price js-replace-number">12100 ₴</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-1 text-center">
-                    <button type="button" item-delete class="cart__table-body-prod-delete js-item-delete"></button>
+                  <div class="col-sm-1 col-xs-12 text-center">
+                    <button type="button" item-delete class="cart__table-body-prod-delete js-item-delete"><span class="visible-xs">Удалить</span></button>
                   </div>
                 </div>
               </div>
@@ -246,23 +251,27 @@
               <!-- информация 1 товара-->
               <div item-parent class="cart__table-body-item">
                 <div class="row">
-                  <div class="col-md-5 col-sm-3">
+                  <div class="col-md-5 col-sm-3 col-xs-6 col-xxs-12">
                     <div class="row">
-                      <div class="col-md-3 col-sm-12"><a href="#!"><img src="img/content/cart-img.jpg" alt="Item" class="cart__table-body-img"></a></div>
+                      <div class="col-md-3 col-sm-12">
+                        <p class="cart__table-header-title visible-xs">Товар</p><a href="#!"><img src="img/content/cart-img.jpg" alt="Item" class="cart__table-body-img"></a>
+                      </div>
                       <div class="col-md-9 col-sm-12"><a href="#!" class="cart__table-body-prod-link">
                           <p class="cart__table-body-prod-name">Fury Arch Grande</p></a>
                         <p class="cart__table-body-prod-articul">АР098С1</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-3 col-xs-6 col-xxs-12">
+                    <p class="cart__table-header-title visible-xs">Материал</p>
                     <div class="cart__table-body-prod-material-wrap"><img src="img/content/material.jpg" alt="material" class="cart__table-body-prod-material-img"><span class="cart__table-body-prod-material-name">Люкс кожа </span></div>
                     <div class="cart__table-body-prod-material-wrap"><img src="img/content/material.jpg" alt="material" class="cart__table-body-prod-material-img"><span class="cart__table-body-prod-material-name">Люкс кожа </span></div>
                   </div>
-                  <div class="col-md-3 col-sm-5">
+                  <div class="col-md-3 col-sm-5 col-xs-12">
                     <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 col-xs-6 col-xxs-12">
                         <div class="cart__table-body-prod-counter">
+                          <p class="cart__table-header-title visible-xs">Количество</p>
                           <div class="form-input-counter">
                             <label class="form-input-counter__label">шт</label>
                             <button data-val="1" item-changer class="form-input-counter__changer up"></button>
@@ -271,13 +280,14 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 col-xs-6 col-xxs-12">
+                        <p class="cart__table-header-title visible-xs">Цена</p>
                         <p item-cost="24200" class="cart__table-body-prod-price js-replace-number">24200 ₴</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-1 text-center">
-                    <button type="button" item-delete class="cart__table-body-prod-delete js-item-delete"></button>
+                  <div class="col-sm-1 col-xs-12 text-center">
+                    <button type="button" item-delete class="cart__table-body-prod-delete js-item-delete"><span class="visible-xs">Удалить</span></button>
                   </div>
                 </div>
               </div>
@@ -285,23 +295,27 @@
               <!-- информация 1 товара-->
               <div item-parent class="cart__table-body-item">
                 <div class="row">
-                  <div class="col-md-5 col-sm-3">
+                  <div class="col-md-5 col-sm-3 col-xs-6 col-xxs-12">
                     <div class="row">
-                      <div class="col-md-3 col-sm-12"><a href="#!"><img src="img/content/cart-img.jpg" alt="Item" class="cart__table-body-img"></a></div>
+                      <div class="col-md-3 col-sm-12">
+                        <p class="cart__table-header-title visible-xs">Товар</p><a href="#!"><img src="img/content/cart-img.jpg" alt="Item" class="cart__table-body-img"></a>
+                      </div>
                       <div class="col-md-9 col-sm-12"><a href="#!" class="cart__table-body-prod-link">
                           <p class="cart__table-body-prod-name">Fury Arch Grande</p></a>
                         <p class="cart__table-body-prod-articul">АР098С1</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-3">
+                  <div class="col-sm-3 col-xs-6 col-xxs-12">
+                    <p class="cart__table-header-title visible-xs">Материал</p>
                     <div class="cart__table-body-prod-material-wrap"><img src="img/content/material.jpg" alt="material" class="cart__table-body-prod-material-img"><span class="cart__table-body-prod-material-name">Люкс кожа </span></div>
                     <div class="cart__table-body-prod-material-wrap"><img src="img/content/material.jpg" alt="material" class="cart__table-body-prod-material-img"><span class="cart__table-body-prod-material-name">Люкс кожа </span></div>
                   </div>
-                  <div class="col-md-3 col-sm-5">
+                  <div class="col-md-3 col-sm-5 col-xs-12">
                     <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 col-xs-6 col-xxs-12">
                         <div class="cart__table-body-prod-counter">
+                          <p class="cart__table-header-title visible-xs">Количество</p>
                           <div class="form-input-counter">
                             <label class="form-input-counter__label">шт</label>
                             <button data-val="1" item-changer class="form-input-counter__changer up"></button>
@@ -310,13 +324,14 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm-6 col-xs-6 col-xxs-12">
+                        <p class="cart__table-header-title visible-xs">Цена</p>
                         <p item-cost="36300" class="cart__table-body-prod-price js-replace-number">36300 ₴</p>
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-1 text-center">
-                    <button type="button" item-delete class="cart__table-body-prod-delete js-item-delete"></button>
+                  <div class="col-sm-1 col-xs-12 text-center">
+                    <button type="button" item-delete class="cart__table-body-prod-delete js-item-delete"><span class="visible-xs">Удалить</span></button>
                   </div>
                 </div>
               </div>
@@ -343,7 +358,7 @@
           <h2 class="title"><span>Личные данные</span></h2>
           <form action="#">
             <div class="flex-section">
-              <div class="col-sm-6">
+              <div class="col-sm-6 col-xs-6 col-xxs-12">
                 <!-- инфоблок-->
                 <div class="border-panel">
                   <div class="form-group">
@@ -369,7 +384,7 @@
                 </div>
                 <!-- конец инфоблок-->
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-6 col-xs-6 col-xxs-12">
                 <!-- блок с доп параметрами и ценой-->
                 <div class="border-panel">
                   <div class="cart__form-body">
