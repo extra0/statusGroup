@@ -1727,7 +1727,7 @@
 				font-size: 14px;
 				color: #000;
 				font-weight: 600;
-				padding: 20px;
+				padding: 20px 3px;
 				position: relative;
 				@include transition(all 0.2s ease-in-out);
 				&:focus,
@@ -1756,7 +1756,7 @@
 				&.current {
 					display: block;
 				}
-				& > * {
+				& > *:not(.row) {
 					font-size: 16px;
 					font-family: $mss;
 					margin: 0 0 13px;
@@ -1775,6 +1775,7 @@
 				&-seo-text {
 					color: #7a7d80;
 					font-family: $main_font;
+					margin: 0 0 10px;
 					a {
 						color: #7a7d80;
 						border-bottom: 1px dotted;
@@ -1788,7 +1789,6 @@
 					}
 				}
 				&-prop {
-					max-height: 365px;
 					&-list {
 						list-style-type: none;
 						padding: 0;
@@ -1836,22 +1836,11 @@
 					margin: auto;
 				}
 				&-testimonial {
-					padding: 0 0 20px 0;
-					margin-bottom: 20px;
-					&:not(:last-child) {
-						border-bottom: 1px solid #eee;	
-					}
 					&-name {
 						font-size: 18px;
 						font-weight: bold;
 						margin: 0 0 10px;
-					}
-					&-date {
-						font-family: $mss;
 						display: inline-block;
-						margin-left: 10px;
-						font-size: 14px;
-						font-weight: normal;
 					}
 					&-text {
 						line-height: 20px;
@@ -1859,7 +1848,29 @@
 						font-family: $mss;
 						font-size: 16px;
 					}
-					&-link {}
+					&-rating {
+						display: inline-block;
+						vertical-align: top;
+						margin: 0 0 0 10px;
+						img {
+							margin-right: 3px;
+						}
+					}
+				}
+				&-table {
+					border: none;
+					table-layout: fixed;
+					td {
+						padding: 5px 14px 5px 5px;
+					}
+					td:first-child {
+						color: #737373;
+						// width: 30%;
+						text-align: right;
+					}
+					td:last-child {
+						color: #000;
+					}
 				}
 			}
 		}

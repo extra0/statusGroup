@@ -3,7 +3,7 @@
 .text-right {text-align: right;}
 
 // отступы
-.m-0 {margin: 0;}
+.m-0 {margin: 0!important;}
 .m-t-10 {margin-top: 10px;}
 .m-t-20 {margin-top: 20px;}
 .m-t-30 {margin-top: 30px;}
@@ -308,6 +308,28 @@
 				&.dashed {
 					border: 1px dashed #ddd;
 				}
+			}
+		}
+	}
+	&-rating {
+		&-block {
+			margin: -27px 0 20px 70px;
+			float: left;
+			&__input {
+				display: none;
+				&:checked ~ label {
+					background: url(../img/star.png) 0 0 no-repeat;	
+				}
+			}
+			&__label {
+				width: 24px;
+				height: 24px;
+				background: url(../img/not-active.png) 0 0 no-repeat;
+				display: inline-block;
+				vertical-align: top;
+				cursor: pointer;
+				float: right;
+				margin-right: 10px;
 			}
 		}
 	}

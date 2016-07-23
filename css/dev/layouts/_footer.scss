@@ -13,7 +13,7 @@
 				position: relative;
 				&:not(:last-child):before {
 					content: '';
-					@include position(absolute, null 20px 10px null);
+					@include position(absolute, 60px 20px null null);
 					width: 1px;
 					height: 80px;
 					background: #dddddd;

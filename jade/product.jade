@@ -119,6 +119,8 @@ block content
 					li.product__tab-list-item
 						a.product__tab-list-link(href="#!") Доставка и оплата
 					li.product__tab-list-item
+						a.product__tab-list-link(href="#!") Состав комплекта
+					li.product__tab-list-item
 						a.product__tab-list-link(href="#!") Отзывы
 				.product__tab-content.js-tab-content
 					// описание товара
@@ -131,17 +133,28 @@ block content
 					// конец описание товара
 					// характеристики
 					.product__tab-content-block
-						p.product__tab-content-block-title Технические характеристики Конференц кресло CA1316C bm
-						table
-							- for (i=1;i<=6; i++) {
+						.border-panel
+							p.product__tab-content-block-title Технические характеристики Конференц кресло CA1316C bm
+							table.product__tab-content-block-table
 								tr
-									td Название характеристики #{i}
-									td значение характеристики #{i}
-							- }
+									td Типоразмер
+									td AAA
+								tr
+									td Тип
+									td Аккумуляторы
+								tr
+									td Количество в упаковке
+									td 4 
+								tr
+									td Емкость
+									td 1900
+								tr
+									td Гарантия
+									td 14
 					// конец характеристики
 					// материал товара
 					.product__tab-content-block
-						.product__tab-content-block-prop.js-custom-scroll
+						.product__tab-content-block-prop
 							- for (z=1;z<=2; z++) {
 								.product__tab-content-block-prop-title-wrap
 									- if (z==1) {
@@ -189,21 +202,26 @@ block content
 								p Посетив наш мебельный центр и оплатив на месте понравившуюся продукцию;
 								p Водителю-экспедитору или курьеру по факту доставки. При предварительном согласование с менеджером нашей компании;
 					// конец доставка и оплата
+					// состав комплекта
+					.product__tab-content-block
+					// конец состав комплекта
 					// отзывы
 					.product__tab-content-block
-						.border-panel
-							.row
-								.col-md-8.col-sm-7
-									p.subtitle Отзывы покупателей о Fury Lux
-									p Отзывов еще нет. Оставьте отзыв первым!!!
-									- for (i=1; i<=4; i++) {
+						.row
+							.col-sm-7
+								- for (i=1; i<=4; i++) {
+									.border-panel.m-b-20
 										.product__tab-content-block-testimonial
-											p.product__tab-content-block-testimonial-name Илья,
-												span.product__tab-content-block-testimonial-date 1#{i}.02.2016
+											p.product__tab-content-block-testimonial-name Илья
+											.product__tab-content-block-testimonial-rating
+												img(src="img/mini-star.png", alt="rating")
+												img(src="img/mini-star.png", alt="rating")
+												img(src="img/mini-star.png", alt="rating")
+												img(src="img/mini-star.png", alt="rating")
 											p.product__tab-content-block-testimonial-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non provident facere libero dolor incidunt eligendi, delectus corporis praesentium autem sed.
-											//- a.product__tab-content-block-testimonial-link(href="#!") Ответить
-									-}
-								.col-md-4.col-sm-5
+								-}
+							.col-sm-5
+								.border-panel
 									p.subtitle Оставить отзыв
 									form(action="#!")
 										.form-group
@@ -219,7 +237,14 @@ block content
 												span.color-ruby  *
 											textarea.form-control(rows="3" placeholder="Напишите отзыв" required)
 										.form-group
-											button.btn.btn-block(type="submit") Написать
+											label.form-label Оценка
+											.form-rating-block
+												- for (i=1; i<=5; i++) {
+													input.form-rating-block__input(type="radio" name="rating" id="star-#{i}")
+													label.form-rating-block__label(for="star-#{i}")
+												-}
+										.form-group
+											button.btn.btn-block(type="submit") Отправить
 					// конец отзывы
 				// конец блок с табами
 			// блок поделиться
