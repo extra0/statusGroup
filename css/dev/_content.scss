@@ -408,6 +408,8 @@
 	&__block {
 		border: 1px solid #ddd;
 		@include transition(all 0.2s ease-in-out);
+		max-width: 370px;
+		margin: 0 auto 10px auto;
 		&:hover {
 			border: 1px solid $ruby;
 			box-shadow: 0px 0px 3px $ruby;
@@ -986,6 +988,7 @@
 		background-size: 100% 100%;
 		padding: 19px 19px 15px 19px;
 		margin-bottom: 30px;
+		max-width: 300px;
 		&-img {
 			float: left;
 		}
@@ -1006,6 +1009,7 @@
 
 	// шоурум
 	&__showroom {
+		max-width: 300px;
 		border: 1px solid $ruby;
 		padding: 19px 19px 16px 19px;
 		@include clearfix;

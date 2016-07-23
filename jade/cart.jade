@@ -58,9 +58,9 @@ block content
 											p.cart__table-header-title.visible-xs Количество
 											.form-input-counter
 												label.form-input-counter__label шт
-												button.form-input-counter__changer.up(data-val="1" item-changer)
+												button.form-input-counter__changer.up(data-val="1" item-changer type="button")
 												input.form-input-counter__input.js-only-number(type="text" value="1" maxlength="3" item-max-val="#{i}" item-val item-total-cost)
-												button.form-input-counter__changer.down(data-val="-1" item-changer)
+												button.form-input-counter__changer.down(data-val="-1" item-changer type="button")
 									.col-sm-6.col-xs-6.col-xxs-12
 										p.cart__table-header-title.visible-xs Цена
 										p.cart__table-body-prod-price.js-replace-number(item-cost="#{k*12100}") #{k*12100} ₴

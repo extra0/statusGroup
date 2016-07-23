@@ -1080,6 +1080,7 @@
 				&-link {
 					padding: 20px 5px;
 					font-size: 12px;
+					letter-spacing: 0px;
 				}
 			}
 		}
@@ -1433,6 +1434,9 @@
 		&__tab-content-block-prop-list-item {
 			width: 11.6%;
 		}
+		&__tab-list-link {
+			padding: 20px 5px;
+		}
 	}
 }
 @media (min-width: 768px) {
@@ -1462,10 +1466,141 @@
 		width: 1470px;
 		padding: 0;
 	}
+	.header {
+		&__top {
+			&-menu {
+				&-item {
+					&:not(:last-child) {
+						margin-right: 55px;
+					}
+				}
+			}
+			&-address {
+				&-block {
+					margin: -14px 20px;
+				}
+			}
+			&-phone {
+				&-block {
+					&:before {
+						left: 81px;
+					}
+				}
+			}
+		}
+		&__bottom {
+			&-menu {
+				margin-left: -192px;
+				&-item {
+					padding: 31px 0px 31px 111px;
+				}
+			}
+		}
+		&.count-cat-4 {
+			.header__bottom-menu-link {
+				letter-spacing: 4px;
+			    font-size: 18px;
+			}
+		}
+		&.count-cat-5 {
+			.header__bottom-menu-link {
+				letter-spacing: 2px;
+			    font-size: 18px;
+			}
+			.header__bottom-menu {
+				margin-right: -130px;
+			}
+			.header__bottom-menu-item {
+			    padding: 31px 0px 31px 39px;
+			}
+		}
+	}
+	.product-section{
+		&__block {
+			flex-basis: 23%;
+			&.x-2 {
+				flex-basis: 35.4%;
+			}
+		}
+		&.filter-edit {
+			.product-section__block {
+				flex-basis: 30.6%;
+				&.x-2 {
+					flex-basis: 47.1%;
+				}
+			}
+		}
+	}
+	.form {
+		&-input {
+			&-counter {
+				&__input {
+					width: 100%;
+				}
+				&__label {
+					left: 100px;
+				}
+			}
+		}
+	}
+	.cause {
+		&__block {
+			background-position: -120px center;
+		}
+	}
 }
 @media (min-width: 1800px) {
 	.container {
-		width: 17700px;
+		width: 1770px;
 		padding: 0;
+	}
+	.product-section {
+		&__block {
+		    flex-basis: 18.35%;
+		    &.x-2 {
+		    	flex-basis: 23.5%;
+		    }
+		}
+	}
+	.header {
+		&__top {
+			&-address {
+				&-block {
+				    margin: -14px 50px;
+				}
+			}
+			&-phone {
+				&-block {
+					&:before {
+					    left: 151px;
+					}
+				}
+			}
+		}
+		&__bottom {
+			&-menu {
+				&-item {
+					padding: 31px 0px 31px 154px;
+				}
+			}
+		}
+		&.count-cat-4 {
+			.header__bottom-menu {
+			    margin-right: -178px;
+			    margin-left: -266px;
+			}
+			.header__bottom-menu-item {
+			    padding: 31px 0px 31px 90px;
+			}
+		}
+		&.count-cat-5 {
+			.header__bottom-menu {
+			    margin-right: -18px;
+			    margin-left: -266px;
+			}
+			.header__bottom-menu-item {
+			    padding: 31px 0px 31px 90px;
+			}
+		}
 	}
 }

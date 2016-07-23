@@ -88,9 +88,9 @@ block content
 										label.form-label Количество
 										.form-input-counter(item-parent)
 											label.form-input-counter__label шт
-											button.form-input-counter__changer.up(data-val="1" item-changer)
+											button.form-input-counter__changer.up(data-val="1" item-changer type="button")
 											input.form-input-counter__input.js-only-number(type="text" value="1" maxlength="3" item-max-val="#{i}" item-val item-total-cost)
-											button.form-input-counter__changer.down(data-val="-1" item-changer)
+											button.form-input-counter__changer.down(data-val="-1" item-changer type="button")
 							button.btn.btn-block.product__btn-submit(type="submit") Добавить в корзину
 							p.product__stock-text в Наличии
 							p.product__stock-address г. Одесса, б. Лидерсовский, 5
@@ -113,6 +113,8 @@ block content
 					li.product__tab-list-item
 						a.product__tab-list-link.current(href="#!") Описание
 					li.product__tab-list-item
+						a.product__tab-list-link(href="#!") Характеристики
+					li.product__tab-list-item
 						a.product__tab-list-link(href="#!") Материалы и цвета
 					li.product__tab-list-item
 						a.product__tab-list-link(href="#!") Доставка и оплата
@@ -127,6 +129,16 @@ block content
 						p Каркас конференц кресла, выполненный в виде боковых трапеций и перекладин, на которые опирается сиденье, изготовлен из массива древесины, благодаря чему изделие может «похвастаться» не только высокой прочностью, но и престижным видом.
 						p.product__tab-content-block-seo-text Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, Донецк, Харьков, Днепропетровск, Луганск, <a href="#!">Одесса</a> и другие города Украины
 					// конец описание товара
+					// характеристики
+					.product__tab-content-block
+						p.product__tab-content-block-title Технические характеристики Конференц кресло CA1316C bm
+						table
+							- for (i=1;i<=6; i++) {
+								tr
+									td Название характеристики #{i}
+									td значение характеристики #{i}
+							- }
+					// конец характеристики
 					// материал товара
 					.product__tab-content-block
 						.product__tab-content-block-prop.js-custom-scroll
@@ -177,7 +189,7 @@ block content
 								p Посетив наш мебельный центр и оплатив на месте понравившуюся продукцию;
 								p Водителю-экспедитору или курьеру по факту доставки. При предварительном согласование с менеджером нашей компании;
 					// конец доставка и оплата
-					// отзвыв 
+					// отзывы
 					.product__tab-content-block
 						.border-panel
 							.row
@@ -196,12 +208,15 @@ block content
 									form(action="#!")
 										.form-group
 											label.form-label Представьтесь
+												span.color-ruby  *
 											input.form-control(type="text" placeholder="Введите имя" required)
 										.form-group
 											label.form-label Email
+												span.color-ruby  *
 											input.form-control(type="email" placeholder="Введите email" required)
 										.form-group
 											label.form-label Ваш отзыв
+												span.color-ruby  *
 											textarea.form-control(rows="3" placeholder="Напишите отзыв" required)
 										.form-group
 											button.btn.btn-block(type="submit") Написать

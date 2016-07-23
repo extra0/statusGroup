@@ -710,9 +710,9 @@
                           <label class="form-label">Количество</label>
                           <div item-parent class="form-input-counter">
                             <label class="form-input-counter__label">шт</label>
-                            <button data-val="1" item-changer class="form-input-counter__changer up"></button>
+                            <button data-val="1" item-changer type="button" class="form-input-counter__changer up"></button>
                             <input type="text" value="1" maxlength="3" item-max-val="5" item-val item-total-cost class="form-input-counter__input js-only-number">
-                            <button data-val="-1" item-changer class="form-input-counter__changer down"></button>
+                            <button data-val="-1" item-changer type="button" class="form-input-counter__changer down"></button>
                           </div>
                         </div>
                       </div>
@@ -738,6 +738,7 @@
               <!-- блок с табами	-->
               <ul class="product__tab-list js-tab-nav">
                 <li class="product__tab-list-item"><a href="#!" class="product__tab-list-link current">Описание</a></li>
+                <li class="product__tab-list-item"><a href="#!" class="product__tab-list-link">Характеристики</a></li>
                 <li class="product__tab-list-item"><a href="#!" class="product__tab-list-link">Материалы и цвета</a></li>
                 <li class="product__tab-list-item"><a href="#!" class="product__tab-list-link">Доставка и оплата</a></li>
                 <li class="product__tab-list-item"><a href="#!" class="product__tab-list-link">Отзывы</a></li>
@@ -752,6 +753,37 @@
                   <p class="product__tab-content-block-seo-text">Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, Донецк, Харьков, Днепропетровск, Луганск, <a href="#!">Одесса</a> и другие города Украины</p>
                 </div>
                 <!-- конец описание товара-->
+                <!-- характеристики-->
+                <div class="product__tab-content-block">
+                  <p class="product__tab-content-block-title">Технические характеристики Конференц кресло CA1316C bm</p>
+                  <table>
+                    <tr>
+                      <td>Название характеристики 1</td>
+                      <td>значение характеристики 1</td>
+                    </tr>
+                    <tr>
+                      <td>Название характеристики 2</td>
+                      <td>значение характеристики 2</td>
+                    </tr>
+                    <tr>
+                      <td>Название характеристики 3</td>
+                      <td>значение характеристики 3</td>
+                    </tr>
+                    <tr>
+                      <td>Название характеристики 4</td>
+                      <td>значение характеристики 4</td>
+                    </tr>
+                    <tr>
+                      <td>Название характеристики 5</td>
+                      <td>значение характеристики 5</td>
+                    </tr>
+                    <tr>
+                      <td>Название характеристики 6</td>
+                      <td>значение характеристики 6</td>
+                    </tr>
+                  </table>
+                </div>
+                <!-- конец характеристики-->
                 <!-- материал товара-->
                 <div class="product__tab-content-block">
                   <div class="product__tab-content-block-prop js-custom-scroll">
@@ -949,7 +981,7 @@
                   </div>
                 </div>
                 <!-- конец доставка и оплата-->
-                <!-- отзвыв -->
+                <!-- отзывы-->
                 <div class="product__tab-content-block">
                   <div class="border-panel">
                     <div class="row">
@@ -977,15 +1009,15 @@
                         <p class="subtitle">Оставить отзыв</p>
                         <form action="#!">
                           <div class="form-group">
-                            <label class="form-label">Представьтесь</label>
+                            <label class="form-label">Представьтесь<span class="color-ruby"> *</span></label>
                             <input type="text" placeholder="Введите имя" required class="form-control">
                           </div>
                           <div class="form-group">
-                            <label class="form-label">Email</label>
+                            <label class="form-label">Email<span class="color-ruby"> *</span></label>
                             <input type="email" placeholder="Введите email" required class="form-control">
                           </div>
                           <div class="form-group">
-                            <label class="form-label">Ваш отзыв</label>
+                            <label class="form-label">Ваш отзыв<span class="color-ruby"> *</span></label>
                             <textarea rows="3" placeholder="Напишите отзыв" required class="form-control"></textarea>
                           </div>
                           <div class="form-group">

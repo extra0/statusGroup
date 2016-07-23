@@ -64,6 +64,7 @@ perspective effects (not including the modals and the overlay).
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
+	max-height: 100vh;
 }
 
 .md-content h3 {
