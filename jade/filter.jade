@@ -14,6 +14,7 @@ block content
 		.row
 			.col-md-3.col-sm-4
 				// фильтр
+				button.btn.m-b-20.visible-xs.js-collapse-trigger(type="button") Фильтр
 				.filter__sidebar
 					p.subtitle Фильтр
 					.form-group
@@ -38,6 +39,7 @@ block content
 						label.form-checkbox-label.custom-img(for="in-stock") Есть на складе
 				// конец фильтр
 				// каталог меню сайтбара
+				button.btn.m-b-20.visible-xs.js-collapse-trigger(type="button") Меню
 				.sidebar__menu.m-b-30
 					- for (i=1; i<=3; i++) {
 						p.subtitle Офисная мебль
@@ -74,9 +76,6 @@ block content
 			.col-md-9.col-sm-8
 				// фильтр
 				.filter__block
-					.filter__block-result
-						p.filter__block-text Всего
-						span.filter__block-count 23 товара
 					.filter__block-sorting
 						p.filter__block-text Показать
 						span.filter__block-sorting-current.js-drop-trigger Без фильтра
@@ -85,6 +84,9 @@ block content
 							span.filter__block-sorting-val.js-drop-val Старые
 							span.filter__block-sorting-val.js-drop-val Цена по возрастанию
 							span.filter__block-sorting-val.js-drop-val Цена по убыванию
+					.filter__block-result
+						p.filter__block-text Всего
+						span.filter__block-count 23 товара
 				// конец фильтра
 				// каталог товаров
 				.product-section.filter-edit

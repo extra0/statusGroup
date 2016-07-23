@@ -15,6 +15,11 @@ $(function() {
 		}
 	});
 
+	// collapse
+	$('.js-collapse-trigger').on('click', function(){
+		$(this).next().slideToggle(200);
+	});
+
 	// разделяем числа на разряды
 	function numberWithCommas(x) {
 		return x.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1,");

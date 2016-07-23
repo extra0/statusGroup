@@ -1543,6 +1543,7 @@
 		display: inline-block;
 		padding: 20px 0;
 		position: relative;
+		margin-bottom: 20px;
 		&:before {
 			content: '';
 			@include position(absolute, 0 0 0 0);
@@ -1569,6 +1570,7 @@
 		@include align-items(center);
 		border: 1px solid #eee;
 		padding: 25px;
+		clear: both;
 		&-block {
 			flex-basis: 30%;
 			&:nth-child(2) {
@@ -1883,6 +1885,7 @@
 		margin-bottom: 31px;
 		&-result {
 			float: right;
+			margin-top: -21px;
 		}
 		&-text {
 			color: #9fa0a1;

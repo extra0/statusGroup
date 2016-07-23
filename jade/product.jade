@@ -27,7 +27,7 @@ block content
 								a.product__thumb-link.js-fancybox(class="fancybox.iframe fancybox-thumb" href="https://www.youtube.com/embed/kSQIxJerjX0" rel="thumb" title="Заголовок видео")
 									div
 										img.product__thumb-video-img(src="img/video.png", alt="video img")
-										span.product__thumb-video-text Видео
+										span.product__thumb-video-text.hidden-xxs Видео
 							- }
 						- }
 					a.js-fancybox(href="img/content/main-img.png" rel="thumb" itemprop="image" title="Заголовок главного изображения")
@@ -59,10 +59,10 @@ block content
 					.product__params(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
 						form(action="#!")
 							.row
-								.col-sm-6
+								.col-sm-6.col-xxs-12.col-xs-6
 									span.product-section__block-status.waiting.js-tooltip(data-title="Вы можете сделать заказ. Наш менеджер свяжется с вами и уточнит сроки. Обычно это занимает не более недели.") ожидается
-								.col-sm-6
-									.text-right
+								.col-sm-6.col-xxs-12.col-xs-6
+									.text-right.xxs-text-left
 										span.cart__table-body-prod-articul АР098С1
 							br
 							.form-group
