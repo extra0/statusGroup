@@ -145,6 +145,38 @@ $(function() {
 		
 	});
 
+	// определяем мобильный ли браузер
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
+
+	if (isMobile.any()) {
+		$('.header__bottom-menu-link').on('click', function(){
+			if (!$(this).hasClass('mob-active')) {
+				$('.header__bottom-menu-link').removeClass('mob-active');
+				$(this).addClass('mob-active');
+				return false;
+			}
+		});
+	}
+
 	// определяем текущий день и активируем нужный день в графике работы
 	var date = new Date(),
 		cDay = date.getDay();
