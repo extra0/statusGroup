@@ -7,16 +7,17 @@ header.header
 	.header__top
 		.container
 			.row
-				.col-md-6.col-sm-7
+				.col-md-6.col-sm-7.col-xs-9.col-xxs-2
 					// меню
+					button.header__top-menu-mob-btn.visible-xxs.js-mob-trigger(type="button")
 					ul.header__top-menu-list
 						each item in headerMenu
 							li.header__top-menu-item
 								a.header__top-menu-link(href="#!") #{item}
 					// конец меню
-				.col-md-6.col-sm-5
+				.col-md-6.col-sm-5.col-xs-3.col-xxs-10
 					.row
-						.col-sm-6.hidden-sm
+						.col-sm-6.hidden-sm.hidden-xs
 							// адрес
 							.header__top-address-block
 								p.header__top-address-text Киев, ул. Семьи Сосниных 3
@@ -25,25 +26,27 @@ header.header
 									p.header__top-address-text Вс.: 
 										span.color-red Выходной
 							// конец адрес
-						.col-sm-12.col-md-6
+						.col-sm-12.col-md-6.col-xs-12.col-xxs-offset-4.col-xxs-8
 							// телефоны
 							.header__top-phone-block
 								a.header__top-phone(href="tel:+38#{phone1}") #{phone1}
 								a.header__top-phone(href="tel:+38#{phone2}") #{phone2}
 							// конец телефоны
 							// поиск
-							button.header__top-search.js-search-trigger(type="button")
+							button.header__top-search.js-search-trigger.visible-xxs(type="button")
 							// конец 
 	// конец верхняя часть header
 	// нижняя часть header
 	.header__bottom
 		.container
 			.row
-				.col-md-3.col-sm-2
-					a(href="/")
+				.col-md-3.col-sm-2.col-xs-5
+					a.header__bottom-logo(href="/")
 						img(src="img/logo.png", alt="Статус групп")
-				.col-md-7.col-sm-8
+				.col-md-7.col-sm-8.col-xs-2
 					// меню каталога
+					button.header__bottom-menu-mob-btn.js-mob-trigger.visible-xs(type="button") 
+						span Каталог
 					.header__bottom-menu
 						ul.header__bottom-menu-list
 							li.header__bottom-menu-item
@@ -72,16 +75,16 @@ header.header
 								.header__dropdown-block(style="background:#f5f7f9 url(../img/content/drop-bg.jpg) center right no-repeat;")
 									block drop
 					// конец меню каталога
-				.col-sm-2
+				.col-sm-2.col-xs-5
 					// блок поиска
 					.header__bottom-search
-						button.header__bottom-search-btn.js-search-trigger(type="button")
+						button.header__bottom-search-btn.js-search-trigger.hidden-xxs(type="button")
 					// конец блок поиска
 					// блок корзины
 					.header__bottom-basket
 						a.header__bottom-basket-img-link(href="#!")
 							span.header__bottom-basket-count 12
-						p.header__bottom-basket-price.js-replace-number.hidden-sm 12480 ₴
-						a.header__bottom-basket-link.hidden-sm(href="#!") Оформить
+						p.header__bottom-basket-price.js-replace-number.hidden-sm.hidden-xxs 12480 ₴
+						a.header__bottom-basket-link.hidden-sm.hidden-xxs(href="#!") Оформить
 					// конец блок корзины
 	// конец нижняя часть header

@@ -23,6 +23,13 @@ $(function() {
 		$(this).html(numberWithCommas($(this).html()));
 	});
 
+	// показываем меню на мобильном
+	$('.js-mob-trigger').on('click', function(){
+		$(this).toggleClass('active');
+		$(this).next().toggleClass('active');
+		$(this).next().slideToggle(300);
+	});
+
 	// collapse block
 	$('.js-slide-trigger').on('click', function() {
 		$(this).parent().find('.js-slide-anchor').toggleClass('active');
@@ -97,8 +104,10 @@ $(function() {
 		targetVal = $('.js-drop-val');
 
 	trigger.on('click', function(){
-		$(this).next().slideToggle(300);
-		$(this).addClass('active');
+		if (!trigger.hasClass('active')) {
+			$(this).next().slideToggle(300);
+			$(this).addClass('active');
+		}
 	});
 	targetVal.on('click', function(){
 		targetVal.removeClass('active');

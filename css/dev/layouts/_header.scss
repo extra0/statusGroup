@@ -60,6 +60,39 @@
 					@include hoverlink;
 				}
 			}
+			&-mob-btn {
+				width: 30px;
+				height: 30px;
+				border-top: 2px solid #7a7d80!important;
+				position: relative;
+				display: none;
+				&:before,
+				&:after {
+					content: '';
+					@include position(absolute, null null null 0);
+					width: 100%;
+					height: 2px;
+					background: #7a7d80;
+					@include transition(all 0.2s ease-in-out);
+				}
+				&:before {
+					top: 6px;
+				}
+				&:after {
+					top: 14px;
+				}
+				&.active {
+					border: 2px solid transparent!important;
+					&:before {
+						top: 6px;
+						@include transform(rotate(45deg));
+					}
+					&:after {
+						top: 6px;
+						@include transform(rotate(-45deg));
+					}
+				}
+			}
 		}
 		// адрес
 		&-address {
@@ -168,6 +201,26 @@
 			margin-left: -117px;
 			position: relative;
 			z-index: 2;
+			&-mob-btn {
+				@extend .header__top-menu-mob-btn;
+				top: 32px;
+				font-size: 16px;
+				left: -10px;
+				color: #7a7d80;
+				* {
+					position: relative;
+					top: -7px;
+					left: 32px;
+					text-transform: uppercase;
+					font-weight: 700;
+				}
+				&.active {
+					* {
+						top: -6px;
+						left: 30px;
+					}
+				}
+			}
 			&-list {
 				list-style-type: none;
 				padding: 0;
@@ -177,6 +230,7 @@
 				display: inline-block;
 				position: relative;
 				padding: 31px 0px 31px 41px;
+				&.active,
 				&:hover {
 					.header__dropdown-block {
 						max-height: 2000px;
@@ -307,8 +361,11 @@
 					padding-left: 44px;
 					&:before {
 						content: '';
-						@include position(absolute, 0 -21px 0 null);
-						@include triangle(42px, $ruby, right)
+						@include position(absolute, 0 -16px 0 null);
+						background: url('../img/menu-arrow.png') no-repeat 0 0;
+						width: 17px;
+						height: 100%;
+						background-size: 100% 100%;
 					}
 				}
 			}
