@@ -1,7 +1,7 @@
 // компонент поиска
 include components/_m-search
 // конец компонент поиска
-header.header
+header.header.count-cat-5
 	// когда в меню категорий товара больше 3 позиций в списке, то добавляем к header класс .count-cat-4 или .count-cat-5 для 4 и 5 соответственно пунктов меню (на больше не предусматривалось)
 	// верхняя часть header
 	.header__top
@@ -51,28 +51,28 @@ header.header
 						ul.header__bottom-menu-list
 							li.header__bottom-menu-item
 								a.header__bottom-menu-link(href="/product.html") Офисная мебель
-								.header__dropdown-block(style="background:#f5f7f9 url(img/content/drop-bg.jpg) no-repeat;")
+								.header__dropdown-block(style="background-image: url(img/content/drop-bg.jpg);")
 									block drop
 										ul.header__dropdown-menu
 											- for (i=1; i<=7; i++) {
-												li.header__dropdown-menu-item
+												li.header__dropdown-menu-item(data-img="img/content/drop-bg#{i%2 ? '' : 2}.jpg")
 													a.header__dropdown-menu-link(href="#!") Кабинеты руководителя
 											- }
 							li.header__bottom-menu-item
 								a.header__bottom-menu-link(href="/about.html") Офисные кресла
-								.header__dropdown-block(style="background:#f5f7f9 url(img/content/drop-bg2.jpg) no-repeat;")
+								.header__dropdown-block(style="background-image: url(img/content/drop-bg2.jpg);")
 									block drop
 							li.header__bottom-menu-item
-								a.header__bottom-menu-link(href="#!") Стол и стул
-								.header__dropdown-block(style="background:#f5f7f9 url(img/content/drop-bg.jpg) no-repeat;")
+								a.header__bottom-menu-link(href="#!") Мебель HoReCa
+								.header__dropdown-block(style="background-image: url(img/content/drop-bg.jpg);")
 									block drop
-							//- li.header__bottom-menu-item
-								a.header__bottom-menu-link(href="#!") Детская мебель
-								.header__dropdown-block(style="background:#f5f7f9 url(img/content/drop-bg.jpg) no-repeat;")
+							li.header__bottom-menu-item
+								a.header__bottom-menu-link(href="#!") Стулья
+								.header__dropdown-block(style="background-image: url(img/content/drop-bg.jpg);")
 									block drop
-							//- li.header__bottom-menu-item
-								a.header__bottom-menu-link(href="#!") Мебель для дома
-								.header__dropdown-block(style="background:#f5f7f9 url(img/content/drop-bg.jpg) no-repeat;")
+							li.header__bottom-menu-item
+								a.header__bottom-menu-link(href="#!") Столы
+								.header__dropdown-block(style="background-image: url(img/content/drop-bg.jpg);")
 									block drop
 					// конец меню каталога
 				.col-sm-2.col-xs-5

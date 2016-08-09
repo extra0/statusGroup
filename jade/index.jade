@@ -26,25 +26,36 @@ block content
 			.col-sm-12.hidden-xs
 				// секция с категориями продуктов
 				.category-flex.count-block-5
-					- for (i=1; i<=5; i++) {
-						.category-flex__block(style="background: url(img/content/cat-bg.jpg) center right no-repeat;")
-							p.category-flex__block-title Офисная мебель
-							ul.category-flex__block-menu
-								li.category-flex__block-menu-item
-									a.category-flex__block-menu-link(href="#!") Кабинеты руководителя
-								li.category-flex__block-menu-item
-									a.category-flex__block-menu-link(href="#!") Конференц столы
-								li.category-flex__block-menu-item
-									a.category-flex__block-menu-link(href="#!") Мягкая мебель для офиса
-								li.category-flex__block-menu-item
-									a.category-flex__block-menu-link(href="#!") Оперативная мебель
-								li.category-flex__block-menu-item
-									a.category-flex__block-menu-link(href="#!") Столы для офиса
-								li.category-flex__block-menu-item
-									a.category-flex__block-menu-link(href="#!") Аксессуары для офиса
-								li.category-flex__block-menu-item
-									a.category-flex__block-menu-link(href="#!") Опоры для офисных столов
-					- }
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-1.jpg) center right no-repeat;")
+						p.category-flex__block-title Офисная мебель
+							block menuW
+								ul.category-flex__block-menu
+									li.category-flex__block-menu-item
+										a.category-flex__block-menu-link(href="#!") Кабинеты руководителя
+									li.category-flex__block-menu-item
+										a.category-flex__block-menu-link(href="#!") Конференц столы
+									li.category-flex__block-menu-item
+										a.category-flex__block-menu-link(href="#!") Мягкая мебель для офиса
+									li.category-flex__block-menu-item
+										a.category-flex__block-menu-link(href="#!") Оперативная мебель
+									li.category-flex__block-menu-item
+										a.category-flex__block-menu-link(href="#!") Столы для офиса
+									li.category-flex__block-menu-item
+										a.category-flex__block-menu-link(href="#!") Аксессуары для офиса
+									li.category-flex__block-menu-item
+										a.category-flex__block-menu-link(href="#!") Опоры для офисных столов
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-2.jpg) center right no-repeat;")
+						p.category-flex__block-title Офисные кресла
+						block menuW
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-3.jpg) center right no-repeat;")
+						p.category-flex__block-title Мебель HoReCa
+						block menuW
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-4.jpg) center right no-repeat;")
+						p.category-flex__block-title Стулья
+						block menuW
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-5.jpg) center right no-repeat;")
+						p.category-flex__block-title Столы
+						block menuW
 				// конец секция с категориями продуктов
 		.row
 			.col-sm-12

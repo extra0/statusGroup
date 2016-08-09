@@ -41,8 +41,11 @@ block content
 									span.product-section__block-badge-name Италия
 								div
 									span.product-section__block-badge-name Акция
-							.product-section__block-link-wrap										
-								a.product-section__block-link-spin.js-rotate-init.js-fancybox(href="#modal-spin")
+							.product-section__block-link-wrap
+								div									
+									a.product-section__block-badge-name.triangle.js-rotate-init.js-fancybox(href="#modal-spin")
+										img(src="img/s-360.png", alt="")
+										| Круговой обзор							
 					// конец блок с превью
 					script.
 						$(function(){
@@ -55,14 +58,14 @@ block content
 						    $(".product__spritespin").spritespin({
 								// путь к галереи фоток для 360
 								source: [
-								"/img/content/img-01.jpg",
-								"/img/content/img-02.jpg",
-								"/img/content/img-01.jpg",
-								"/img/content/img-02.jpg",
-								"/img/content/img-01.jpg",
-								"/img/content/img-02.jpg",
-								"/img/content/img-01.jpg",
-								"/img/content/img-02.jpg",
+									"/img/content/img-01.jpg",
+									"/img/content/img-02.jpg",
+									"/img/content/img-01.jpg",
+									"/img/content/img-02.jpg",
+									"/img/content/img-01.jpg",
+									"/img/content/img-02.jpg",
+									"/img/content/img-01.jpg",
+									"/img/content/img-02.jpg",
 								],
 								animate: false,
 								width   : 500,  // width in pixels of the window/frame

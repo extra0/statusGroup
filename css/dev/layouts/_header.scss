@@ -14,11 +14,12 @@
 			display: none;
 		}
 		.header__bottom-menu-item {
-			padding: 33px 0px 34px 39px;
+			padding: 31px 0px 32px 39px;
 		}
 		.header__bottom-menu-link {
 			letter-spacing: 0px;
-			font-size: 14px;
+			// font-size: 14px;
+			font-size: 17px;
 		}
 		.header__bottom-menu {
 			margin-right: -70px;
@@ -235,7 +236,6 @@
 					.header__dropdown-block {
 						max-height: 2000px;
 						padding: 25px 0 45px 0;
-						background-position: 100% center!important;
 					}
 					.header__bottom-menu-link {
 						color: $ruby;
@@ -246,7 +246,7 @@
 				&:nth-child(5) {
 					.header__dropdown-block {
 						left: auto;
-						right: -100px;	
+						right: -170px;	
 					}
 				}
 			}
@@ -342,8 +342,18 @@
 			box-shadow:0 1px 2px rgba(0,0,0,.1);
 			max-height: 0;
 			overflow: hidden;
-			@include transition(all 0.2s ease-in-out);
-			background-position: 200% center!important;
+			@include transition(all 0.4s 0.1s ease-in-out);
+			background-position: 100% center;
+			background-color: #f5f7f9;
+			background-repeat: no-repeat;
+			&.slideIn {
+				animation: slideIn 0.3s ease;
+				-webkit-animation: slideIn 0.3s ease;
+			}
+			&.slideOut {
+				animation: slideOut 0.3s ease;
+				-webkit-animation: slideOut 0.3s ease;
+			}
 		}
 		&-menu {
 			list-style-type: none;
@@ -380,5 +390,38 @@
 				}
 			}
 		}
+	}
+}
+@-webkit-keyframes (slideIn) {
+	0% {
+		background-position: 200% center;
+	}
+	100% {
+		background-position: 100% center;
+	}
+}
+@keyframes (slideIn) {
+	0% {
+		background-position: 200% center;
+	}
+	100% {
+		background-position: 100% center;
+	}
+}
+
+@-webkit-keyframes (slideOut) {
+	0% {
+		background-position: 100% center;
+	}
+	100% {
+		background-position: 200% center;
+	}
+}
+@keyframes (slideOut) {
+	0% {
+		background-position: 100% center;
+	}
+	100% {
+		background-position: 200% center;
 	}
 }

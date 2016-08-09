@@ -46,6 +46,15 @@ $(function() {
 		}
 	});
 
+	// замена фона блока в выпадающем меню
+	$('.header__dropdown-menu-item').hover(function(){
+		$('.header__dropdown-block').addClass('slideOut');
+		$(this).parents('.header__dropdown-block').css({'background-image':'url('+ $(this).attr('data-img') +')'});
+		setTimeout(function(){
+			$('.header__dropdown-block').addClass('slideIn');
+			$('.header__dropdown-block').removeClass('slideOut');
+		},300);
+	});
 
 	// слайдер цены
 	var min = $('[range-min]'),

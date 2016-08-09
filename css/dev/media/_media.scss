@@ -947,7 +947,7 @@
 		overflow: hidden;
 		&__top {
 			&-flex {
-				margin-left: 70px;
+				// margin-left: 70px;
 				margin-right: -70px;
 				@include flex-wrap(wrap);
 				&-block {
@@ -1319,9 +1319,13 @@
 					}
 				}
 				&:nth-child(3) {
+					left: 20px;
 					&:before {
-					 	right: -25px!important;
+					 	right: 0px!important;
 					}
+				}
+				&:nth-child(2) {
+				    flex-basis: 40%;
 				}
 			}
 		}
