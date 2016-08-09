@@ -1083,7 +1083,7 @@
 	&__tags {
 		&-section {
 			@extend .sidebar__menu;
-			max-height: 185px;
+			max-height: 180px;
 			position: relative;
 			overflow: hidden;
 			@include transition(all 0.2s ease-in-out);
@@ -1123,7 +1123,7 @@
 				font-size: 14px;
 				border-bottom: 1px dotted #cecece;
 				position: absolute;
-				bottom: 30px;
+				bottom: 20px;
 				left: 25px;
 				z-index: 30;
 				&:hover,
@@ -1136,7 +1136,7 @@
 					border-bottom: 1px dotted transparent;
 				}
 				&.active {
-					bottom: 7px;
+					bottom: 10px;
 				}
 			}
 		}
@@ -1152,19 +1152,22 @@
 			border-bottom: 1px solid $ruby;
 			font-family: $mss;
 			color: #323334;
+			display: inline-block;
+			line-height: 16px;
+			margin-bottom: -1px;
 			@include transition(all 0.2s ease-in-out);
 			&:first-child {
 				padding-left: 25px;
 			}
 			&:after {
-				content: '';
-				background: url(../img/tags-arrow.png) 0 0 no-repeat;
-				width: 5px;
-				height: 26px;
-				z-index: 10;
-				@include position(absolute, -1px -5px null null);
-				@include transition(all 0.2s ease-in-out);
-			}
+					content: '';
+					background: url(../img/tags-arrow.png) 0 0 no-repeat;
+					width: 5px;
+					height: 26px;
+					z-index: 10;
+					@include position(absolute, null -5px -1px null);
+					@include transition(all 0.2s ease-in-out);
+				}
 			&.current,
 			&:hover,
 			&:focus {
@@ -1985,6 +1988,19 @@
 		}
 	}
 	// конец блок поделиться 
+	// 360
+	&__spritespin {
+		cursor: pointer;
+		&-zoom {
+			background: url(../img/magnifier.png) 0 0 no-repeat;
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			&.active {
+				background: url(../img/magnifier-minus.png) 0 0 no-repeat;
+			}
+		}
+	}
 }
 // конец страница товара
 

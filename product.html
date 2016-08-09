@@ -659,39 +659,48 @@
                     </div>
                     <div class="product-section__block-link-wrap">										<a href="#modal-spin" class="product-section__block-link-spin js-rotate-init js-fancybox"></a></div>
                   </div></a>
-                <!-- подключение 360 галереи-->
-                <link href="css/img-rotator.css" rel="stylesheet" media="all">
-                <script src="js/imagerotator.js" type="text/javascript"></script>
-                <script language="javascript" type="text/javascript">
-                  $(function(){
-                  	//- $('.js-rotate-init').click(function () {
-                  
-                  		 $("#ImgRotator").html('<div class="gallery_main_table"><div id="wr360PlayerId" class="wr360_player"></div></div>');
-                  
-                  
-                  		 //- jQuery('#wr360PlayerId2').rotator({
-                  			//- licenseFileURL: '/license.txt',
-                  			//- configFileURL: '/for-image-rotator.xml',
-                  			//- graphicsPath: '/img',
-                  			//- responsiveBaseWidth: 760,
-                  			//- responsiveMinHeight: 350,
-                  			//- apiReadyCallback: function(api){apiObj = api;}
-                  		 //- });
-                  
-                  
-                  
-                  				 _imageRotator.settings.licenseFileURL   = '/license.txt';
-                  				 _imageRotator.settings.configFileURL  = "/for-image-rotator.xml";
-                  				 _imageRotator.settings.graphicsPath   = "/img";
-                  				_imageRotator.settings.responsiveBaseWidth = 450;
-                  				_imageRotator.settings.responsiveBaseHeight = 450;
-                  
-                  				 _imageRotator.runImageRotator("wr360PlayerId");
-                  	//- });
-                  });
-                </script>
-                <div id="ImgRotator"></div>
                 <!-- конец блок с превью-->
+                <script>
+                  $(function(){
+                      $('.product__spritespin-zoom').click(function(e){
+                  		e.preventDefault();
+                  		$(this).toggleClass('active');
+                  		$('.product__spritespin').spritespin('api').toggleZoom();
+                      });
+                  
+                      $(".product__spritespin").spritespin({
+                  		// путь к галереи фоток для 360
+                  		source: [
+                  		"/img/content/img-01.jpg",
+                  		"/img/content/img-02.jpg",
+                  		"/img/content/img-01.jpg",
+                  		"/img/content/img-02.jpg",
+                  		"/img/content/img-01.jpg",
+                  		"/img/content/img-02.jpg",
+                  		"/img/content/img-01.jpg",
+                  		"/img/content/img-02.jpg",
+                  		],
+                  		animate: false,
+                  		width   : 500,  // width in pixels of the window/frame
+                  		height  : 500,  // height in pixels of the window/frame
+                  		sizeMode: 'fit',
+                  		sense: -1,
+                  		mods: [
+                  		  // change frame on mouse move
+                  		  'drag',
+                  		  // enable zoom module
+                  		  // toggle zoom with double click or use the API object
+                  		  'zoom',
+                  		  // display module
+                  		  '360'
+                  		]
+                      });
+                    });
+                </script>
+                <div id="modal-spin" class="modal">
+                  <div class="product__spritespin"></div><br>
+                  <div class="text-center"><a href="javascript:void(0);" class="product__spritespin-zoom"></a></div>
+                </div>
                 <!-- блок с приемуществами-->
                 <div class="product__advantage">
                   <div class="product__advantage-block"><img src="img/p-advant-1.png" alt="advantages" class="product__advantage-block-img">
@@ -1020,7 +1029,7 @@
                     <div class="product__tab-composition-block">
                       <div class="row">
                         <div class="col-sm-4 col-xs-3 col-xxs-12"><a href="#!">
-                            <div class="product__tab-composition-img-holder"><img src="img/content/comp-1.jpg" alt="" class="product__tab-composition-img"></div></a></div>
+                            <div class="product__tab-composition-img-holder"><img src="img/content/comp-01.jpg" alt="" class="product__tab-composition-img"></div></a></div>
                         <div class="col-sm-8 col-xs-9 col-xxs-12">
                           <div class="product__tab-composition-description">
                             <p class="product__tab-composition-title">Шкаф Cody Black</p>
@@ -1033,7 +1042,7 @@
                     <div class="product__tab-composition-block">
                       <div class="row">
                         <div class="col-sm-4 col-xs-3 col-xxs-12"><a href="#!">
-                            <div class="product__tab-composition-img-holder"><img src="img/content/comp-2.jpg" alt="" class="product__tab-composition-img"></div></a></div>
+                            <div class="product__tab-composition-img-holder"><img src="img/content/comp-02.jpg" alt="" class="product__tab-composition-img"></div></a></div>
                         <div class="col-sm-8 col-xs-9 col-xxs-12">
                           <div class="product__tab-composition-description">
                             <p class="product__tab-composition-title">Шкаф Cody Black</p>
@@ -1046,7 +1055,7 @@
                     <div class="product__tab-composition-block">
                       <div class="row">
                         <div class="col-sm-4 col-xs-3 col-xxs-12"><a href="#!">
-                            <div class="product__tab-composition-img-holder"><img src="img/content/comp-3.jpg" alt="" class="product__tab-composition-img"></div></a></div>
+                            <div class="product__tab-composition-img-holder"><img src="img/content/comp-03.jpg" alt="" class="product__tab-composition-img"></div></a></div>
                         <div class="col-sm-8 col-xs-9 col-xxs-12">
                           <div class="product__tab-composition-description">
                             <p class="product__tab-composition-title">Шкаф Cody Black</p>

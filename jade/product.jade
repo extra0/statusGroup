@@ -43,41 +43,48 @@ block content
 									span.product-section__block-badge-name Акция
 							.product-section__block-link-wrap										
 								a.product-section__block-link-spin.js-rotate-init.js-fancybox(href="#modal-spin")
-					// подключение 360 галереи
-					
-					//- .modal#modal-spin
-					
-					link(href="css/img-rotator.css" rel="stylesheet" media="all")
-					script(src="js/imagerotator.js" type="text/javascript")
-					script(language="javascript" type="text/javascript").
-						$(function(){
-							//- $('.js-rotate-init').click(function () {
-
-								 $("#ImgRotator").html('<div class="gallery_main_table"><div id="wr360PlayerId" class="wr360_player"></div></div>');
-
-
-								 //- jQuery('#wr360PlayerId2').rotator({
-									//- licenseFileURL: '/license.txt',
-									//- configFileURL: '/for-image-rotator.xml',
-									//- graphicsPath: '/img',
-									//- responsiveBaseWidth: 760,
-									//- responsiveMinHeight: 350,
-									//- apiReadyCallback: function(api){apiObj = api;}
-								 //- });
-
-
-
-										 _imageRotator.settings.licenseFileURL   = '/license.txt';
-										 _imageRotator.settings.configFileURL  = "/for-image-rotator.xml";
-										 _imageRotator.settings.graphicsPath   = "/img";
-										_imageRotator.settings.responsiveBaseWidth = 450;
-										_imageRotator.settings.responsiveBaseHeight = 450;
-
-										 _imageRotator.runImageRotator("wr360PlayerId");
-							//- });
-						});
-					#ImgRotator
 					// конец блок с превью
+					script.
+						$(function(){
+						    $('.product__spritespin-zoom').click(function(e){
+								e.preventDefault();
+								$(this).toggleClass('active');
+								$('.product__spritespin').spritespin('api').toggleZoom();
+						    });
+
+						    $(".product__spritespin").spritespin({
+								// путь к галереи фоток для 360
+								source: [
+								"/img/content/img-01.jpg",
+								"/img/content/img-02.jpg",
+								"/img/content/img-01.jpg",
+								"/img/content/img-02.jpg",
+								"/img/content/img-01.jpg",
+								"/img/content/img-02.jpg",
+								"/img/content/img-01.jpg",
+								"/img/content/img-02.jpg",
+								],
+								animate: false,
+								width   : 500,  // width in pixels of the window/frame
+								height  : 500,  // height in pixels of the window/frame
+								sizeMode: 'fit',
+								sense: -1,
+								mods: [
+								  // change frame on mouse move
+								  'drag',
+								  // enable zoom module
+								  // toggle zoom with double click or use the API object
+								  'zoom',
+								  // display module
+								  '360'
+								]
+						    });
+						  });
+					.modal#modal-spin
+						.product__spritespin
+						br
+						.text-center
+							a.product__spritespin-zoom(href="javascript:void(0);")
 					// блок с приемуществами
 					.product__advantage
 						.product__advantage-block
@@ -250,7 +257,7 @@ block content
 										.col-sm-4.col-xs-3.col-xxs-12
 											a(href="#!")
 												.product__tab-composition-img-holder
-													img.product__tab-composition-img(src="img/content/comp-#{i}.jpg", alt="")
+													img.product__tab-composition-img(src="img/content/comp-0#{i}.jpg", alt="")
 										.col-sm-8.col-xs-9.col-xxs-12
 											.product__tab-composition-description
 												p.product__tab-composition-title Шкаф Cody Black
