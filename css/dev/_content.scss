@@ -9,6 +9,7 @@
 		flex-basis: 23%;
 		@include display(flex);
 		@include align-items(center);
+		@include align-content(center);
 		&:last-child {
 			.advantages__block-text {
 				border-right: none;
@@ -215,6 +216,7 @@
 		}
 		&-img {
 			&-wrap {
+				position: relative;
 				@include display(flex);
 				@include align-items(flex-start);
 				@include justify-content(center);
@@ -314,6 +316,26 @@
 			    	border-left: 10px solid #c1372a;
 			    	border-top: 0px solid transparent;
 			    }
+			}
+		}
+		&-link {
+			&-wrap {
+				@include position(absolute, 25px 15px null null);
+				text-align: center;
+			}
+			&-spin {
+				display: block;
+				width: 50px;
+				height: 37px;
+				margin: 0 auto 10px auto;
+				background: url(../img/rotate.svg) 0 0 no-repeat;
+			}
+			&-video {
+				display: block;
+				width: 33px;
+				height: 43px;
+				margin: 0 auto 10px auto;
+				background: url(../img/video.svg) 0 0 no-repeat;
 			}
 		}
 	}
@@ -440,6 +462,16 @@
 		}
 		&-description {
 			padding: 26px 28px;
+		}
+	}
+}
+.seo-text {
+	&__wrap {
+		max-height: 145px;
+		overflow: hidden;
+		@include transition(all 0.2s ease-in-out);
+		&.active {
+			max-height: 20000px;
 		}
 	}
 }
@@ -1684,6 +1716,19 @@
 			margin: -3px 0 20px 0;
 			line-height: normal;
 		}
+		&-diller {
+			margin:-20px 0 20px 3px;
+			font-size: 15px;
+			color: #111;
+			font-weight: bold;
+			* {
+				color: #111;
+				font-size: 13px;
+				display: inline-block;
+				margin-left: 6px;
+				font-weight: normal;
+			}
+		}
 	}
 	// конец цены в товаре
 	&__btn-submit {
@@ -1764,13 +1809,13 @@
 					line-height: 25px;
 				}
 				&-title {
-					font-weight: bold;
-					font-family: $main_font;
-					letter-spacing: 1px;
-					line-height: normal;
-					font-size: 20px;
-					margin: 0 0 16px;
-					color: #424548;
+					font-weight: bold!important;
+					font-family: $main_font!important;
+					letter-spacing: 1px!important;
+					line-height: normal!important;
+					font-size: 20px!important;
+					margin: 0 0 16px!important;
+					color: #424548!important;
 				}
 				&-seo-text {
 					color: #7a7d80;
@@ -1778,17 +1823,20 @@
 					margin: 0 0 10px;
 					a {
 						color: #7a7d80;
-						border-bottom: 1px dotted;
+						border-bottom: 1px solid rgba(122, 125, 128, 0.41);;
 						@include transition(all 0.2s ease-in-out);
 						&:focus,
 						&:hover {
 							color: $ruby;
 							text-decoration: none;
-							border-bottom: 1px dotted $ruby;
+							border-bottom: 1px solid $ruby;
 						}
 					}
 				}
 				&-prop {
+					&.js-custom-scroll {
+						max-height: 300px;	
+					}
 					&-list {
 						list-style-type: none;
 						padding: 0;
@@ -1871,6 +1919,54 @@
 					td:last-child {
 						color: #000;
 					}
+				}
+			}
+		}
+		&-composition {
+			&-section {
+				@include display(flex);
+				@include flex-wrap(wrap);
+				@include justify-content(space-between);
+			}
+			&-block {
+				border: 1px solid #eee;
+				padding: 20px;
+				flex-basis: 32%;
+				margin: 0 0 30px;
+				@include transition(all 0.2s ease-in-out);
+				&:hover {
+					border: 1px solid $ruby;
+					box-shadow: 0 0 3px $ruby;
+				}
+			}
+			&-title {
+				margin: 10px 0 0 0;
+				color: #454051;
+				font-family: $ar;
+				font-size: 18px;
+			}
+			&-parametrs {
+				color: #a8a6ac;
+				margin: 0;
+				font-size: 12px;
+				font-family: $mss;
+			}
+			&-price {
+				color: $ruby;
+				font-size: 20px;
+				font-weight: bold;
+				margin: 0;
+			}
+			&-img-holder,
+			&-description {
+				@include display(flex);
+				@include flex-wrap(wrap);
+				@include align-items(center);
+				@include justify-content(center);
+			}
+			&-description {
+				* {
+					flex-basis: 100%;
 				}
 			}
 		}
@@ -2015,7 +2111,33 @@
 	background: none;
 	border: none;
 	@include position(absolute, 7px 40px null null);
-	@extend .cart__table-body-prod-delete;
+	border: none;
+	background: none;
+	width: 20px;
+	height: 20px;
+	margin: 43px 0 0 -10px;
+	text-align: center;
+	&:before,
+	&:after {
+		content: '';
+		@include position(absolute, 0 null null 0);
+		width: 20px;
+		height: 3px;
+		background: #cbcbcb;
+		@include transition(all 0.2s ease-in-out);
+	}
+	&:before {
+		@include transform(rotate(45deg));
+	}
+	&:after {
+		@include transform(rotate(-45deg));
+	}
+	&:hover {
+		&:before,
+		&:after {
+			background: #a7a7a7;
+		}
+	}
 }
 .md-map-wrap {
 	width: 100%;

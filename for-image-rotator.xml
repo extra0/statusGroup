@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>    <config>
+      <settings>
+               <preloader image="img/about-img.png" />
+       
+        <userInterface showZoomButtons="true" showToolTips="false" showHotspotsButton="false" showFullScreenButton="false" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="#FFFFFF" toolbarHoverColor="#808285" toolbarForeColor="#A7A9AE" toolbarBackAlpha="0" toolbarAlpha="1" flashEmbedFonts="true" showProgressNumbers="true" progressLoopColor="#e8e8e8" progressNumColor="#949494"/>
+        <control dragSpeed="0.37" maxZoom="200" maxZoomFullScreen="200" fullScreenStretch="100" doubleClickZooms="true" disableMouseControl="false" reverseScroll="false"/>
+        <rotation firstImage="2" rotate="endless" rotatePeriod="5" bounce="false" rotateDirection="1" forceDirection="false"/>
+      </settings>
+      <hotspots />
+      <images>
+        <image src="img/about-img.png" />
+        <image src="img/advant-2.png" />
+        <image src="img/about-img.png" />
+      </images>
+    </config>

@@ -5,9 +5,6 @@ $(function() {
 		prevEffect	: 'none',
 		nextEffect	: 'none',
 		helpers	: {
-			title	: {
-				type: 'outside'
-			},
 			thumbs	: {
 				width	: 80,
 				height	: 80

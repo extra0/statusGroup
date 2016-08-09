@@ -69,7 +69,7 @@ block content
 								a.sidebar__tags-link(href="#!") Офисная
 							.sidebar__tags-row
 								span.sidebar__tags-link.current Стоимость
-								a.sidebar__tags-link(href="#!") До 5000 грн.
+								a.sidebar__tags-link(href="#!") Офисная и какая то еще мебель
 						- }
 					a.sidebar__tags-block-trigger.js-tag-slide(href="javascript:void(0)") Развернуть
 				// конец теги
@@ -95,6 +95,9 @@ block content
 							a.product-section__block-link(href="#!")
 								.product-section__block-img-wrap
 									img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
+									.product-section__block-link-wrap										
+										a.product-section__block-link-spin(href="product.html")
+										a.product-section__block-link-video(href="product.html")
 								.product-section__block-description
 									p.product-section__block-name Cody black
 									.product-section__block-price
@@ -113,6 +116,9 @@ block content
 							a.product-section__block-link(href="#!")
 								.product-section__block-img-wrap
 									img.product-section__block-img(src="img/content/img-large.png", alt="product")
+									.product-section__block-link-wrap										
+										a.product-section__block-link-spin(href="product.html")
+										a.product-section__block-link-video(href="product.html")
 								.product-section__block-description
 									p.product-section__block-name Cody black
 									.product-section__block-price
@@ -131,10 +137,13 @@ block content
 				// seo текст
 				.seo-text
 					.border-panel.m-b-20
-						p.product__tab-content-block-title Конференц кресло CA1316C bm
-						p Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании.
-						p При изготовлении офисного кресла использована эко кожа и массив древесины, – такие материалы сегодня считаются самыми лучшими в производстве мебели премиум класса. Эко кожа обладает множеством преимуществ перед натуральной кожей, к примеру, простотой в уходе, стойкостью к истиранию и растяжениям. 
-						p Каркас конференц кресла, выполненный в виде боковых трапеций и перекладин, на которые опирается сиденье, изготовлен из массива древесины, благодаря чему изделие может «похвастаться» не только высокой прочностью, но и престижным видом.
+						.seo-text__wrap.js-slide-anchor
+							p.product__tab-content-block-title Конференц кресло CA1316C bm
+							p Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании.
+							p При изготовлении офисного кресла использована эко кожа и массив древесины, – такие материалы сегодня считаются самыми лучшими в производстве мебели премиум класса. Эко кожа обладает множеством преимуществ перед натуральной кожей, к примеру, простотой в уходе, стойкостью к истиранию и растяжениям. 
+							p Каркас конференц кресла, выполненный в виде боковых трапеций и перекладин, на которые опирается сиденье, изготовлен из массива древесины, благодаря чему изделие может «похвастаться» не только высокой прочностью, но и престижным видом.
+						a.seo-description__trigger.js-slide-trigger(href="javascript:void(0);" style="margin: 20px 0 0 0;") Показать еще
 					.border-panel.m-b-20
-						p.product__tab-content-block-seo-text.m-0 Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, Донецк, Харьков, Днепропетровск, Луганск, <a href="#!">Одесса</a> и другие города Украины
+						p.product__tab-content-block-seo-text.m-0 Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, <a href="#!">Донецк</a>, <a href="#!">Харьков</a>, <a href="#!">Днепропетровск</a>, <a href="#!">Луганск</a>, <a href="#!">Одесса</a> и другие города Украины
+
 				// конец seo текст

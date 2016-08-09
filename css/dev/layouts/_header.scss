@@ -235,9 +235,18 @@
 					.header__dropdown-block {
 						max-height: 2000px;
 						padding: 25px 0 45px 0;
+						background-position: 100% center!important;
 					}
 					.header__bottom-menu-link {
 						color: $ruby;
+					}
+				}
+				&:nth-child(3),
+				&:nth-child(4),
+				&:nth-child(5) {
+					.header__dropdown-block {
+						left: auto;
+						right: -100px;	
 					}
 				}
 			}
@@ -296,12 +305,12 @@
 				color: #7a7d80;
 				letter-spacing: 1px;
 				font-size: 11px;
-				border-bottom: 1px dotted;
+				border-bottom: 1px solid rgba(50, 51, 52, 0.3);
 				@include transition(all 0.2s ease-in-out);
 				&:focus,
 				&:hover {
 					color: #323334;
-					border-bottom: 1px dotted #323334;
+					border-bottom: 1px solid #323334;
 					text-decoration: none;
 				}
 			}
@@ -334,6 +343,7 @@
 			max-height: 0;
 			overflow: hidden;
 			@include transition(all 0.2s ease-in-out);
+			background-position: 200% center!important;
 		}
 		&-menu {
 			list-style-type: none;

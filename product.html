@@ -9,7 +9,7 @@
     <!-- main stylesheet-->
     <link href="css/styles.css" rel="stylesheet" media="all">
     <!-- jQuery-->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
     <!-- OpenGraph-->
     <meta property="og:locale" content="ru_RU">
     <meta property="og:type" content="website">
@@ -567,7 +567,7 @@
                 <div class="header__bottom-menu">
                   <ul class="header__bottom-menu-list">
                     <li class="header__bottom-menu-item"><a href="/product.html" class="header__bottom-menu-link">Офисная мебель</a>
-                      <div style="background:#f5f7f9 url(img/content/drop-bg.jpg) center right no-repeat;" class="header__dropdown-block">
+                      <div style="background:#f5f7f9 url(img/content/drop-bg.jpg) no-repeat;" class="header__dropdown-block">
                         <ul class="header__dropdown-menu">
                           <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
                           <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
@@ -580,7 +580,7 @@
                       </div>
                     </li>
                     <li class="header__bottom-menu-item"><a href="/about.html" class="header__bottom-menu-link">Офисные кресла</a>
-                      <div style="background:#f5f7f9 url(img/content/drop-bg2.jpg) center right no-repeat;" class="header__dropdown-block">
+                      <div style="background:#f5f7f9 url(img/content/drop-bg2.jpg) no-repeat;" class="header__dropdown-block">
                         <ul class="header__dropdown-menu">
                           <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
                           <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
@@ -593,7 +593,7 @@
                       </div>
                     </li>
                     <li class="header__bottom-menu-item"><a href="#!" class="header__bottom-menu-link">Стол и стул</a>
-                      <div style="background:#f5f7f9 url(img/content/drop-bg.jpg) center right no-repeat;" class="header__dropdown-block">
+                      <div style="background:#f5f7f9 url(img/content/drop-bg.jpg) no-repeat;" class="header__dropdown-block">
                         <ul class="header__dropdown-menu">
                           <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
                           <li class="header__dropdown-menu-item"><a href="#!" class="header__dropdown-menu-link">Кабинеты руководителя</a></li>
@@ -648,16 +648,49 @@
               <!-- изображение товар-->
               <div class="col-md-8 col-sm-7">
                 <!-- блок с превью-->
-                <div class="product__thumb"><a href="img/content/main-img.png" rel="thumb" title="Заголовок для превьюшек" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" title="Заголовок для превьюшек" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" title="Заголовок для превьюшек" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" title="Заголовок для превьюшек" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="https://www.youtube.com/embed/kSQIxJerjX0" rel="thumb" title="Заголовок видео" class="product__thumb-link js-fancybox fancybox.iframe fancybox-thumb">
+                <div class="product__thumb"><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="https://www.youtube.com/embed/kSQIxJerjX0" rel="thumb" class="product__thumb-link js-fancybox fancybox.iframe fancybox-thumb">
                     <div><img src="img/video.png" alt="video img" class="product__thumb-video-img"><span class="product__thumb-video-text hidden-xxs">Видео</span></div></a>
-                </div><a href="img/content/main-img.png" rel="thumb" itemprop="image" title="Заголовок главного изображения" class="js-fancybox">
+                </div><a href="img/content/main-img.png" rel="thumb" itemprop="image" class="js-fancybox">
                   <div class="product__main-img"><img src="img/content/main-img.png" alt="main img">
                     <div class="product-section__block-badge">
                       <div><span class="product-section__block-badge-name">Новинка</span></div>
                       <div><span class="product-section__block-badge-name">Италия</span></div>
                       <div><span class="product-section__block-badge-name">Акция</span></div>
                     </div>
+                    <div class="product-section__block-link-wrap">										<a href="#modal-spin" class="product-section__block-link-spin js-rotate-init js-fancybox"></a></div>
                   </div></a>
+                <!-- подключение 360 галереи-->
+                <link href="css/img-rotator.css" rel="stylesheet" media="all">
+                <script src="js/imagerotator.js" type="text/javascript"></script>
+                <script language="javascript" type="text/javascript">
+                  $(function(){
+                  	//- $('.js-rotate-init').click(function () {
+                  
+                  		 $("#ImgRotator").html('<div class="gallery_main_table"><div id="wr360PlayerId" class="wr360_player"></div></div>');
+                  
+                  
+                  		 //- jQuery('#wr360PlayerId2').rotator({
+                  			//- licenseFileURL: '/license.txt',
+                  			//- configFileURL: '/for-image-rotator.xml',
+                  			//- graphicsPath: '/img',
+                  			//- responsiveBaseWidth: 760,
+                  			//- responsiveMinHeight: 350,
+                  			//- apiReadyCallback: function(api){apiObj = api;}
+                  		 //- });
+                  
+                  
+                  
+                  				 _imageRotator.settings.licenseFileURL   = '/license.txt';
+                  				 _imageRotator.settings.configFileURL  = "/for-image-rotator.xml";
+                  				 _imageRotator.settings.graphicsPath   = "/img";
+                  				_imageRotator.settings.responsiveBaseWidth = 450;
+                  				_imageRotator.settings.responsiveBaseHeight = 450;
+                  
+                  				 _imageRotator.runImageRotator("wr360PlayerId");
+                  	//- });
+                  });
+                </script>
+                <div id="ImgRotator"></div>
                 <!-- конец блок с превью-->
                 <!-- блок с приемуществами-->
                 <div class="product__advantage">
@@ -701,6 +734,7 @@
                       <div class="col-lg-7 col-md-6 col-sm-12">
                         <p class="product__price-old js-replace-number">17480 ₴</p>
                         <p data-price="12480" class="product__price-current js-replace-number"> </p>
+                        <p class="product__price-diller js-replace-number">11123 ₴<span>от 3 шт.</span></p>
                         <!-- Сюда заносим цену актуальную (это для SEO)-->
                         <meta itemprop="price" content="12480.00">
                         <meta itemprop="priceCurrency" content="UAH">
@@ -751,7 +785,7 @@
                   <p>Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании.</p>
                   <p>При изготовлении офисного кресла использована эко кожа и массив древесины, – такие материалы сегодня считаются самыми лучшими в производстве мебели премиум класса. Эко кожа обладает множеством преимуществ перед натуральной кожей, к примеру, простотой в уходе, стойкостью к истиранию и растяжениям. </p>
                   <p>Каркас конференц кресла, выполненный в виде боковых трапеций и перекладин, на которые опирается сиденье, изготовлен из массива древесины, благодаря чему изделие может «похвастаться» не только высокой прочностью, но и престижным видом.</p>
-                  <p class="product__tab-content-block-seo-text">Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, Донецк, Харьков, Днепропетровск, Луганск, <a href="#!">Одесса</a> и другие города Украины</p>
+                  <p class="product__tab-content-block-seo-text">Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, <a href="#!">Донецк</a>, <a href="#!">Харьков</a>, <a href="#!">Днепропетровск</a>, <a href="#!">Луганск</a>, <a href="#!">Одесса</a> и другие города Украины</p>
                 </div>
                 <!-- конец описание товара-->
                 <!-- характеристики-->
@@ -981,7 +1015,49 @@
                 </div>
                 <!-- конец доставка и оплата-->
                 <!-- состав комплекта-->
-                <div class="product__tab-content-block"></div>
+                <div class="product__tab-content-block">
+                  <div class="product__tab-composition-section">
+                    <div class="product__tab-composition-block">
+                      <div class="row">
+                        <div class="col-sm-4 col-xs-3 col-xxs-12"><a href="#!">
+                            <div class="product__tab-composition-img-holder"><img src="img/content/comp-1.jpg" alt="" class="product__tab-composition-img"></div></a></div>
+                        <div class="col-sm-8 col-xs-9 col-xxs-12">
+                          <div class="product__tab-composition-description">
+                            <p class="product__tab-composition-title">Шкаф Cody Black</p>
+                            <p class="product__tab-composition-parametrs">287 x 420 x 590</p>
+                            <p class="product__tab-composition-price">6,100 ₴</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product__tab-composition-block">
+                      <div class="row">
+                        <div class="col-sm-4 col-xs-3 col-xxs-12"><a href="#!">
+                            <div class="product__tab-composition-img-holder"><img src="img/content/comp-2.jpg" alt="" class="product__tab-composition-img"></div></a></div>
+                        <div class="col-sm-8 col-xs-9 col-xxs-12">
+                          <div class="product__tab-composition-description">
+                            <p class="product__tab-composition-title">Шкаф Cody Black</p>
+                            <p class="product__tab-composition-parametrs">287 x 420 x 590</p>
+                            <p class="product__tab-composition-price">12,100 ₴</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product__tab-composition-block">
+                      <div class="row">
+                        <div class="col-sm-4 col-xs-3 col-xxs-12"><a href="#!">
+                            <div class="product__tab-composition-img-holder"><img src="img/content/comp-3.jpg" alt="" class="product__tab-composition-img"></div></a></div>
+                        <div class="col-sm-8 col-xs-9 col-xxs-12">
+                          <div class="product__tab-composition-description">
+                            <p class="product__tab-composition-title">Шкаф Cody Black</p>
+                            <p class="product__tab-composition-parametrs">287 x 420 x 590</p>
+                            <p class="product__tab-composition-price">18,100 ₴</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <!-- конец состав комплекта-->
                 <!-- отзывы-->
                 <div class="product__tab-content-block">
@@ -1130,12 +1206,11 @@
             <div class="footer__top-flex-block hidden-xxs">
               <p class="footer__top-flex-title catalog">Каталог</p>
               <ul class="footer__top-menu">
-                <li class="footer__top-menu-item full-width"><a href="#!" class="footer__top-menu-link">Офисная мебель</a></li>
-                <li class="footer__top-menu-item full-width"><a href="#!" class="footer__top-menu-link">Офисные кресла</a></li>
-                <li class="footer__top-menu-item full-width"><a href="#!" class="footer__top-menu-link">Мебель для дома</a></li>
-                <li class="footer__top-menu-item full-width"><a href="#!" class="footer__top-menu-link">Мягкая мебель</a></li>
-                <li class="footer__top-menu-item full-width"><a href="#!" class="footer__top-menu-link">Мебель для ванной</a></li>
-                <li class="footer__top-menu-item full-width"><a href="#!" class="footer__top-menu-link">Детская мебель</a></li>
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">Офисная мебель</a></li>
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">Офисные кресла</a></li>
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">Мебель HoReCa</a></li>
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">Стулья</a></li>
+                <li class="footer__top-menu-item"><a href="#!" class="footer__top-menu-link">Столы</a></li>
               </ul>
             </div>
             <div class="footer__top-flex-block">
@@ -1159,8 +1234,8 @@
     <!-- враппер для модального-->
     <div class="md-overlay"></div>
     <!-- скрипты -->
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/plugins.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
     <!-- конец скрипты-->
   </body>
 </html>
