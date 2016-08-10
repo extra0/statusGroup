@@ -21,14 +21,18 @@ block content
 				.col-md-8.col-sm-7
 					// блок с превью
 					.product__thumb
-						- for (i=1; i<=4; i++) {
+						- for (i=1; i<=3; i++) {
 							a.product__thumb-link.js-fancybox(href="img/content/main-img.png" rel="thumb" class="fancybox-thumb")
 								img.product__thumb-img(src="img/content/thumb-img.jpg", alt="thumb-img")
-							- if (i == 4) {
+							- if (i == 3) {
 								a.product__thumb-link.js-fancybox(class="fancybox.iframe fancybox-thumb" href="https://www.youtube.com/embed/kSQIxJerjX0" rel="thumb")
 									div
 										img.product__thumb-video-img(src="img/video.png", alt="video img")
 										span.product__thumb-video-text.hidden-xxs Видео
+								a.product__thumb-link.js-fancybox.hidden-xxs(href="#modal-spin")
+									div
+										img.product__thumb-video-img(src="img/s-360-ruby.png", alt="360 img")
+										span.product__thumb-video-text.hidden-xxs Обзор
 							- }
 						- }
 					a.js-fancybox(href="img/content/main-img.png" rel="thumb" itemprop="image")
@@ -40,12 +44,7 @@ block content
 								div
 									span.product-section__block-badge-name Италия
 								div
-									span.product-section__block-badge-name Акция
-							.product-section__block-link-wrap
-								div									
-									a.product-section__block-badge-name.triangle.js-rotate-init.js-fancybox(href="#modal-spin")
-										img(src="img/s-360.png", alt="")
-										| Круговой обзор							
+									span.product-section__block-badge-name Акция						
 					// конец блок с превью
 					script.
 						$(function(){
@@ -58,14 +57,40 @@ block content
 						    $(".product__spritespin").spritespin({
 								// путь к галереи фоток для 360
 								source: [
-									"/img/content/img-01.jpg",
-									"/img/content/img-02.jpg",
-									"/img/content/img-01.jpg",
-									"/img/content/img-02.jpg",
-									"/img/content/img-01.jpg",
-									"/img/content/img-02.jpg",
-									"/img/content/img-01.jpg",
-									"/img/content/img-02.jpg",
+									"img/content/example/rad_zoom_001.jpg",
+									"img/content/example/rad_zoom_002.jpg",
+									"img/content/example/rad_zoom_003.jpg",
+									"img/content/example/rad_zoom_004.jpg",
+									"img/content/example/rad_zoom_005.jpg",
+									"img/content/example/rad_zoom_006.jpg",
+									"img/content/example/rad_zoom_007.jpg",
+									"img/content/example/rad_zoom_008.jpg",
+									"img/content/example/rad_zoom_009.jpg",
+									"img/content/example/rad_zoom_010.jpg",
+									"img/content/example/rad_zoom_011.jpg",
+									"img/content/example/rad_zoom_012.jpg",
+									"img/content/example/rad_zoom_013.jpg",
+									"img/content/example/rad_zoom_014.jpg",
+									"img/content/example/rad_zoom_015.jpg",
+									"img/content/example/rad_zoom_016.jpg",
+									"img/content/example/rad_zoom_017.jpg",
+									"img/content/example/rad_zoom_018.jpg",
+									"img/content/example/rad_zoom_019.jpg",
+									"img/content/example/rad_zoom_020.jpg",
+									"img/content/example/rad_zoom_021.jpg",
+									"img/content/example/rad_zoom_022.jpg",
+									"img/content/example/rad_zoom_023.jpg",
+									"img/content/example/rad_zoom_024.jpg",
+									"img/content/example/rad_zoom_025.jpg",
+									"img/content/example/rad_zoom_026.jpg",
+									"img/content/example/rad_zoom_027.jpg",
+									"img/content/example/rad_zoom_028.jpg",
+									"img/content/example/rad_zoom_029.jpg",
+									"img/content/example/rad_zoom_030.jpg",
+									"img/content/example/rad_zoom_031.jpg",
+									"img/content/example/rad_zoom_032.jpg",
+									"img/content/example/rad_zoom_033.jpg",
+									"img/content/example/rad_zoom_034.jpg",
 								],
 								animate: false,
 								width   : 500,  // width in pixels of the window/frame
@@ -74,7 +99,7 @@ block content
 								sense: -1,
 								mods: [
 								  // change frame on mouse move
-								  'drag',
+								  'move',
 								  // enable zoom module
 								  // toggle zoom with double click or use the API object
 								  'zoom',

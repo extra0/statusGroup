@@ -28,34 +28,68 @@ block content
 				.category-flex.count-block-5
 					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-1.jpg) center right no-repeat;")
 						p.category-flex__block-title Офисная мебель
-							block menuW
-								ul.category-flex__block-menu
-									li.category-flex__block-menu-item
-										a.category-flex__block-menu-link(href="#!") Кабинеты руководителя
-									li.category-flex__block-menu-item
-										a.category-flex__block-menu-link(href="#!") Конференц столы
-									li.category-flex__block-menu-item
-										a.category-flex__block-menu-link(href="#!") Мягкая мебель для офиса
-									li.category-flex__block-menu-item
-										a.category-flex__block-menu-link(href="#!") Оперативная мебель
-									li.category-flex__block-menu-item
-										a.category-flex__block-menu-link(href="#!") Столы для офиса
-									li.category-flex__block-menu-item
-										a.category-flex__block-menu-link(href="#!") Аксессуары для офиса
-									li.category-flex__block-menu-item
-										a.category-flex__block-menu-link(href="#!") Опоры для офисных столов
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Кабинеты руководителя
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Конференц столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Оперативная мебель
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Мягкая мебель для офиса
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Компьютерные столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Офисные столы
 					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-2.jpg) center right no-repeat;")
 						p.category-flex__block-title Офисные кресла
-						block menuW
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Кресла руководителя
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Конференц столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Компьютерное кресло
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Офисные стулья
 					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-3.jpg) center right no-repeat;")
 						p.category-flex__block-title Мебель HoReCa
-						block menuW
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Опоры для столов
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Столешницы верзила
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Барные стулья
+							li.category-flex__block-menu-item
 					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-4.jpg) center right no-repeat;")
 						p.category-flex__block-title Стулья
-						block menuW
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Барные стулья
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Стулья для кухни
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Пластиковые стулья
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Деревянные стулья
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Раскладные стулья
 					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-5.jpg) center right no-repeat;")
 						p.category-flex__block-title Столы
-						block menuW
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Кухонные столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Деревянные столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Пластиковые столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Стеклянные столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Столы трансформеры
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Журнальные столы
 				// конец секция с категориями продуктов
 		.row
 			.col-sm-12
@@ -71,6 +105,15 @@ block content
 								a.product-section__block-link(href="#!")
 									.product-section__block-img-wrap
 										img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
+										.product-section__block-link-wrap				
+											div
+												a.product-section__block-badge-name.triangle(href="product.html")
+													img(src="img/s-360.png", alt="")
+													| Круговой обзор
+											div
+												a.product-section__block-badge-name.triangle(href="product.html")
+													img(src="img/s-video.png", alt="")
+													| Видео обзор
 									.product-section__block-description
 										p.product-section__block-name Cody black
 										.product-section__block-price
@@ -89,6 +132,15 @@ block content
 								a.product-section__block-link(href="#!")
 									.product-section__block-img-wrap
 										img.product-section__block-img(src="img/content/img-large.png", alt="product")
+										.product-section__block-link-wrap				
+											div
+												a.product-section__block-badge-name.triangle(href="product.html")
+													img(src="img/s-360.png", alt="")
+													| Круговой обзор
+											div
+												a.product-section__block-badge-name.triangle(href="product.html")
+													img(src="img/s-video.png", alt="")
+													| Видео обзор
 									.product-section__block-description
 										p.product-section__block-name Cody black
 										.product-section__block-price

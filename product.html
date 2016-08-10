@@ -674,17 +674,15 @@
               <!-- изображение товар-->
               <div class="col-md-8 col-sm-7">
                 <!-- блок с превью-->
-                <div class="product__thumb"><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="https://www.youtube.com/embed/kSQIxJerjX0" rel="thumb" class="product__thumb-link js-fancybox fancybox.iframe fancybox-thumb">
-                    <div><img src="img/video.png" alt="video img" class="product__thumb-video-img"><span class="product__thumb-video-text hidden-xxs">Видео</span></div></a>
+                <div class="product__thumb"><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="img/content/main-img.png" rel="thumb" class="product__thumb-link js-fancybox fancybox-thumb"><img src="img/content/thumb-img.jpg" alt="thumb-img" class="product__thumb-img"></a><a href="https://www.youtube.com/embed/kSQIxJerjX0" rel="thumb" class="product__thumb-link js-fancybox fancybox.iframe fancybox-thumb">
+                    <div><img src="img/video.png" alt="video img" class="product__thumb-video-img"><span class="product__thumb-video-text hidden-xxs">Видео</span></div></a><a href="#modal-spin" class="product__thumb-link js-fancybox hidden-xxs">
+                    <div><img src="img/s-360-ruby.png" alt="360 img" class="product__thumb-video-img"><span class="product__thumb-video-text hidden-xxs">Обзор</span></div></a>
                 </div><a href="img/content/main-img.png" rel="thumb" itemprop="image" class="js-fancybox">
                   <div class="product__main-img"><img src="img/content/main-img.png" alt="main img">
                     <div class="product-section__block-badge">
                       <div><span class="product-section__block-badge-name">Новинка</span></div>
                       <div><span class="product-section__block-badge-name">Италия</span></div>
-                      <div><span class="product-section__block-badge-name">Акция</span></div>
-                    </div>
-                    <div class="product-section__block-link-wrap">
-                      <div>									<a href="#modal-spin" class="product-section__block-badge-name triangle js-rotate-init js-fancybox"><img src="img/s-360.png" alt="">Круговой обзор							</a></div>
+                      <div><span class="product-section__block-badge-name">Акция						</span></div>
                     </div>
                   </div></a>
                 <!-- конец блок с превью-->
@@ -699,14 +697,40 @@
                       $(".product__spritespin").spritespin({
                   		// путь к галереи фоток для 360
                   		source: [
-                  			"/img/content/img-01.jpg",
-                  			"/img/content/img-02.jpg",
-                  			"/img/content/img-01.jpg",
-                  			"/img/content/img-02.jpg",
-                  			"/img/content/img-01.jpg",
-                  			"/img/content/img-02.jpg",
-                  			"/img/content/img-01.jpg",
-                  			"/img/content/img-02.jpg",
+                  			"img/content/example/rad_zoom_001.jpg",
+                  			"img/content/example/rad_zoom_002.jpg",
+                  			"img/content/example/rad_zoom_003.jpg",
+                  			"img/content/example/rad_zoom_004.jpg",
+                  			"img/content/example/rad_zoom_005.jpg",
+                  			"img/content/example/rad_zoom_006.jpg",
+                  			"img/content/example/rad_zoom_007.jpg",
+                  			"img/content/example/rad_zoom_008.jpg",
+                  			"img/content/example/rad_zoom_009.jpg",
+                  			"img/content/example/rad_zoom_010.jpg",
+                  			"img/content/example/rad_zoom_011.jpg",
+                  			"img/content/example/rad_zoom_012.jpg",
+                  			"img/content/example/rad_zoom_013.jpg",
+                  			"img/content/example/rad_zoom_014.jpg",
+                  			"img/content/example/rad_zoom_015.jpg",
+                  			"img/content/example/rad_zoom_016.jpg",
+                  			"img/content/example/rad_zoom_017.jpg",
+                  			"img/content/example/rad_zoom_018.jpg",
+                  			"img/content/example/rad_zoom_019.jpg",
+                  			"img/content/example/rad_zoom_020.jpg",
+                  			"img/content/example/rad_zoom_021.jpg",
+                  			"img/content/example/rad_zoom_022.jpg",
+                  			"img/content/example/rad_zoom_023.jpg",
+                  			"img/content/example/rad_zoom_024.jpg",
+                  			"img/content/example/rad_zoom_025.jpg",
+                  			"img/content/example/rad_zoom_026.jpg",
+                  			"img/content/example/rad_zoom_027.jpg",
+                  			"img/content/example/rad_zoom_028.jpg",
+                  			"img/content/example/rad_zoom_029.jpg",
+                  			"img/content/example/rad_zoom_030.jpg",
+                  			"img/content/example/rad_zoom_031.jpg",
+                  			"img/content/example/rad_zoom_032.jpg",
+                  			"img/content/example/rad_zoom_033.jpg",
+                  			"img/content/example/rad_zoom_034.jpg",
                   		],
                   		animate: false,
                   		width   : 500,  // width in pixels of the window/frame
@@ -715,7 +739,7 @@
                   		sense: -1,
                   		mods: [
                   		  // change frame on mouse move
-                  		  'drag',
+                  		  'move',
                   		  // enable zoom module
                   		  // toggle zoom with double click or use the API object
                   		  'zoom',
@@ -782,7 +806,7 @@
                           <div item-parent class="form-input-counter">
                             <label class="form-input-counter__label">шт</label>
                             <button data-val="1" item-changer type="button" class="form-input-counter__changer up"></button>
-                            <input type="text" value="1" maxlength="3" item-max-val="5" item-val item-total-cost class="form-input-counter__input js-only-number">
+                            <input type="text" value="1" maxlength="3" item-max-val="4" item-val item-total-cost class="form-input-counter__input js-only-number">
                             <button data-val="-1" item-changer type="button" class="form-input-counter__changer down"></button>
                           </div>
                         </div>
