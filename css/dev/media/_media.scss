@@ -533,6 +533,13 @@
 	    margin: 23px 0 0 0px;
 	}
 }
+@media (min-width: 500px) and (max-width: 550px) {
+	.header__top-phone {
+		&:before {
+			display: none;
+		}
+	}
+}
 @media (max-width: 499px) {
 	.hidden-xxs {
 		display: none!important;
@@ -733,6 +740,17 @@
 		&__tab-content-block-prop-list-item {
 		    width: 40%;
 		}
+	}
+	.fancybox-nav span {
+		width: 64px;
+		height: 64px;
+		background-size: 100%;
+	}
+	.fancybox-next span {
+		right: 25px;
+	}
+	.fancybox-prev span {
+		left: 25px;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
