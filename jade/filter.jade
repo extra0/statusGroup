@@ -4,6 +4,7 @@ block append head
 	meta(name="keywords" content="")
 	title Страница каталога
 	- modalProduct = true;
+	- filter = true;
 block content
 	.container
 		.row
@@ -20,12 +21,12 @@ block content
 					.form-group
 						label.form-label Обивка
 						.form-pseudo-select-block.js-material-input
-							span.form-pseudo-select-material-wrap
+							span.form-pseudo-select-material-wrap.md-trigger(data-modal="modal-material")
 							input.form-control.form-pseudo-select.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-material")
 					.form-group
 						label.form-label Каркас
 						.form-pseudo-select-block.js-frame-input
-							span.form-pseudo-select-material-wrap.dashed
+							span.form-pseudo-select-material-wrap.dashed.md-trigger(data-modal="modal-frame")
 							input.form-control.form-pseudo-select.dashed.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-frame")
 					.form-group
 						label.form-label Цена
@@ -158,5 +159,4 @@ block content
 						a.seo-description__trigger.js-slide-trigger(href="javascript:void(0);" style="margin: 20px 0 0 0;") Показать еще
 					.border-panel.m-b-20
 						p.product__tab-content-block-seo-text.m-0 Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, <a href="#!">Донецк</a>, <a href="#!">Харьков</a>, <a href="#!">Днепропетровск</a>, <a href="#!">Луганск</a>, <a href="#!">Одесса</a> и другие города Украины
-
 				// конец seo текст

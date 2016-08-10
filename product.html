@@ -8,8 +8,6 @@
     <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
     <!-- main stylesheet-->
     <link href="css/styles.css" rel="stylesheet" media="all">
-    <!-- jQuery-->
-    <script src="js/jquery.js" type="text/javascript"></script>
     <!-- OpenGraph-->
     <meta property="og:locale" content="ru_RU">
     <meta property="og:type" content="website">
@@ -397,95 +395,6 @@
         <div class="m-b-5"><a href="javascript:void(0);" class="md-stock-address">г. Киев, просп. Московский, 21</a></div>
         <button class="md-close">закрыть</button>
       </div>
-      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-      <script>
-        $(function(){
-        	function init() {
-        		var MapPlaces = new ymaps.Map('modalMap', {
-        			center: offices[0].center,
-        			zoom: 8,
-        			controls: ['zoomControl']
-        		});
-        
-        		for (var i = 0, l = offices.length; i < l; i++) {
-        			createGroup(offices[i]);
-        		}
-        
-        		function createGroup(office) {
-        			collection = new ymaps.GeoObjectCollection(null, {
-        				iconLayout: 'default#image',
-        				iconImageHref: 'img/marker.png',
-        				iconImageSize: [25, 33],
-        				iconImageOffset: [-10, -33]
-        			});
-        
-        			MapPlaces.geoObjects.add(collection);
-        
-        			for (var j = 0, m = office.address.length; j < m; j++) {
-        				createPlacemark(office.address[j], collection);
-        			}
-        		}
-        
-        		function createPlacemark(item, collection) {
-        			placemark = new ymaps.Placemark(item.center, {
-        				balloonContent: item.contacts
-        			});
-        
-        			collection.add(placemark);
-        
-        		}
-        
-        		// изменение города по клику на главной 
-        		$('.md-stock-address').on('click', function(){
-        			var city = $(this).html();
-        			for (var i = 0, l = offices.length; i < l; i++) {
-        				if (city == offices[i].city) {
-        					MapPlaces.panTo(offices[i].center, {
-        						delay: 1500
-        					});
-        				}
-        			}
-        		});
-        
-        		MapPlaces.behaviors.disable('scrollZoom');
-        		MapPlaces.setBounds(MapPlaces.geoObjects);
-        
-        	};
-        
-        	var offices = [
-        		// ВАЖНО ПРОПИСЫВАТЬ названия 1 в 1
-        		{
-        			city: 'с. Чубинское, ул. Киевская, 55',
-        			center: [55.725045, 37.646961],
-        			address: [{
-        				center: [55.725045, 37.646961],
-        			}, ]
-        		}, {
-        			city: 'г. Киев, пер. Бондарский, 3',
-        			center: [59.934439, 30.301115],
-        			address: [{
-        				center: [59.934439, 30.301115],
-        			}, ]
-        		},
-        		{
-        			city: 'г. Киев, ул. С.Скляренко, 13',
-        			center: [53.277283, 83.532717],
-        			address: [{
-        				center: [53.277283, 83.532717],
-        			}, ]
-        		}, {
-        			city: 'г. Киев, просп. Московский, 21',
-        			center: [53.277283, 83.112717],
-        			address: [{
-        				center: [53.277283, 83.112717],
-        			}, ]
-        		}
-        	];
-        
-        	ymaps.ready(init);
-        
-        });
-      </script>
     </div>
     <!-- конец попап с картой-->
     <div class="main-wrapper">
@@ -686,69 +595,6 @@
                     </div>
                   </div></a>
                 <!-- конец блок с превью-->
-                <script>
-                  $(function(){
-                      $('.product__spritespin-zoom').click(function(e){
-                  		e.preventDefault();
-                  		$(this).toggleClass('active');
-                  		$('.product__spritespin').spritespin('api').toggleZoom();
-                      });
-                  
-                      $(".product__spritespin").spritespin({
-                  		// путь к галереи фоток для 360
-                  		source: [
-                  			"img/content/example/rad_zoom_001.jpg",
-                  			"img/content/example/rad_zoom_002.jpg",
-                  			"img/content/example/rad_zoom_003.jpg",
-                  			"img/content/example/rad_zoom_004.jpg",
-                  			"img/content/example/rad_zoom_005.jpg",
-                  			"img/content/example/rad_zoom_006.jpg",
-                  			"img/content/example/rad_zoom_007.jpg",
-                  			"img/content/example/rad_zoom_008.jpg",
-                  			"img/content/example/rad_zoom_009.jpg",
-                  			"img/content/example/rad_zoom_010.jpg",
-                  			"img/content/example/rad_zoom_011.jpg",
-                  			"img/content/example/rad_zoom_012.jpg",
-                  			"img/content/example/rad_zoom_013.jpg",
-                  			"img/content/example/rad_zoom_014.jpg",
-                  			"img/content/example/rad_zoom_015.jpg",
-                  			"img/content/example/rad_zoom_016.jpg",
-                  			"img/content/example/rad_zoom_017.jpg",
-                  			"img/content/example/rad_zoom_018.jpg",
-                  			"img/content/example/rad_zoom_019.jpg",
-                  			"img/content/example/rad_zoom_020.jpg",
-                  			"img/content/example/rad_zoom_021.jpg",
-                  			"img/content/example/rad_zoom_022.jpg",
-                  			"img/content/example/rad_zoom_023.jpg",
-                  			"img/content/example/rad_zoom_024.jpg",
-                  			"img/content/example/rad_zoom_025.jpg",
-                  			"img/content/example/rad_zoom_026.jpg",
-                  			"img/content/example/rad_zoom_027.jpg",
-                  			"img/content/example/rad_zoom_028.jpg",
-                  			"img/content/example/rad_zoom_029.jpg",
-                  			"img/content/example/rad_zoom_030.jpg",
-                  			"img/content/example/rad_zoom_031.jpg",
-                  			"img/content/example/rad_zoom_032.jpg",
-                  			"img/content/example/rad_zoom_033.jpg",
-                  			"img/content/example/rad_zoom_034.jpg",
-                  		],
-                  		animate: false,
-                  		width   : 500,  // width in pixels of the window/frame
-                  		height  : 500,  // height in pixels of the window/frame
-                  		sizeMode: 'fit',
-                  		sense: -1,
-                  		mods: [
-                  		  // change frame on mouse move
-                  		  'move',
-                  		  // enable zoom module
-                  		  // toggle zoom with double click or use the API object
-                  		  'zoom',
-                  		  // display module
-                  		  '360'
-                  		]
-                      });
-                    });
-                </script>
                 <div id="modal-spin" class="modal">
                   <div class="product__spritespin"></div><br>
                   <div class="text-center"><a href="javascript:void(0);" class="product__spritespin-zoom"></a></div>
@@ -780,13 +626,13 @@
                     </div><br>
                     <div class="form-group">
                       <label class="form-label">Обивка</label>
-                      <div class="form-pseudo-select-block js-material-input"><span class="form-pseudo-select-material-wrap"></span>
+                      <div class="form-pseudo-select-block js-material-input"><span data-modal="modal-material" class="form-pseudo-select-material-wrap md-trigger"></span>
                         <input type="text" placeholder="Выбрать" required readonly data-modal="modal-material" class="form-control form-pseudo-select md-trigger">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="form-label">Каркас</label>
-                      <div class="form-pseudo-select-block js-frame-input"><span class="form-pseudo-select-material-wrap dashed"></span>
+                      <div class="form-pseudo-select-block js-frame-input"><span data-modal="modal-frame" class="form-pseudo-select-material-wrap dashed md-trigger"></span>
                         <input type="text" placeholder="Выбрать" required readonly data-modal="modal-frame" class="form-control form-pseudo-select dashed md-trigger">
                       </div>
                     </div>
@@ -1295,8 +1141,164 @@
     <!-- враппер для модального-->
     <div class="md-overlay"></div>
     <!-- скрипты -->
+    <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/plugins.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
+    <!-- инициализация галереи 360-->
+    <script type="text/javascript">
+      $(function(){
+          $('.product__spritespin-zoom').click(function(e){
+      		e.preventDefault();
+      		$(this).toggleClass('active');
+      		$('.product__spritespin').spritespin('api').toggleZoom();
+          });
+      
+          $(".product__spritespin").spritespin({
+      		// путь к галереи фоток для 360
+      		source: [
+      			"img/content/example/rad_zoom_001.jpg",
+      			"img/content/example/rad_zoom_002.jpg",
+      			"img/content/example/rad_zoom_003.jpg",
+      			"img/content/example/rad_zoom_004.jpg",
+      			"img/content/example/rad_zoom_005.jpg",
+      			"img/content/example/rad_zoom_006.jpg",
+      			"img/content/example/rad_zoom_007.jpg",
+      			"img/content/example/rad_zoom_008.jpg",
+      			"img/content/example/rad_zoom_009.jpg",
+      			"img/content/example/rad_zoom_010.jpg",
+      			"img/content/example/rad_zoom_011.jpg",
+      			"img/content/example/rad_zoom_012.jpg",
+      			"img/content/example/rad_zoom_013.jpg",
+      			"img/content/example/rad_zoom_014.jpg",
+      			"img/content/example/rad_zoom_015.jpg",
+      			"img/content/example/rad_zoom_016.jpg",
+      			"img/content/example/rad_zoom_017.jpg",
+      			"img/content/example/rad_zoom_018.jpg",
+      			"img/content/example/rad_zoom_019.jpg",
+      			"img/content/example/rad_zoom_020.jpg",
+      			"img/content/example/rad_zoom_021.jpg",
+      			"img/content/example/rad_zoom_022.jpg",
+      			"img/content/example/rad_zoom_023.jpg",
+      			"img/content/example/rad_zoom_024.jpg",
+      			"img/content/example/rad_zoom_025.jpg",
+      			"img/content/example/rad_zoom_026.jpg",
+      			"img/content/example/rad_zoom_027.jpg",
+      			"img/content/example/rad_zoom_028.jpg",
+      			"img/content/example/rad_zoom_029.jpg",
+      			"img/content/example/rad_zoom_030.jpg",
+      			"img/content/example/rad_zoom_031.jpg",
+      			"img/content/example/rad_zoom_032.jpg",
+      			"img/content/example/rad_zoom_033.jpg",
+      			"img/content/example/rad_zoom_034.jpg",
+      		],
+      		animate: false,
+      		width   : 500,  // width in pixels of the window/frame
+      		height  : 500,  // height in pixels of the window/frame
+      		sizeMode: 'fit',
+      		sense: -1,
+      		mods: [
+      		  // change frame on mouse move
+      		  'move',
+      		  // enable zoom module
+      		  // toggle zoom with double click or use the API object
+      		  'zoom',
+      		  // display module
+      		  '360'
+      		]
+          });
+        });
+      
+    </script>
+    <!-- инициализация яндекс карты-->
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+      	function init() {
+      		var MapPlaces = new ymaps.Map('modalMap', {
+      			center: offices[0].center,
+      			zoom: 8,
+      			controls: ['zoomControl']
+      		});
+      
+      		for (var i = 0, l = offices.length; i < l; i++) {
+      			createGroup(offices[i]);
+      		}
+      
+      		function createGroup(office) {
+      			collection = new ymaps.GeoObjectCollection(null, {
+      				iconLayout: 'default#image',
+      				iconImageHref: 'img/marker.png',
+      				iconImageSize: [25, 33],
+      				iconImageOffset: [-10, -33]
+      			});
+      
+      			MapPlaces.geoObjects.add(collection);
+      
+      			for (var j = 0, m = office.address.length; j < m; j++) {
+      				createPlacemark(office.address[j], collection);
+      			}
+      		}
+      
+      		function createPlacemark(item, collection) {
+      			placemark = new ymaps.Placemark(item.center, {
+      				balloonContent: item.contacts
+      			});
+      
+      			collection.add(placemark);
+      
+      		}
+      
+      		// изменение города по клику на главной 
+      		$('.md-stock-address').on('click', function(){
+      			var city = $(this).html();
+      			for (var i = 0, l = offices.length; i < l; i++) {
+      				if (city == offices[i].city) {
+      					MapPlaces.panTo(offices[i].center, {
+      						delay: 1500
+      					});
+      				}
+      			}
+      		});
+      
+      		MapPlaces.behaviors.disable('scrollZoom');
+      		MapPlaces.setBounds(MapPlaces.geoObjects);
+      
+      	};
+      
+      	var offices = [
+      		// ВАЖНО ПРОПИСЫВАТЬ названия 1 в 1
+      		{
+      			city: 'с. Чубинское, ул. Киевская, 55',
+      			center: [55.725045, 37.646961],
+      			address: [{
+      				center: [55.725045, 37.646961],
+      			}, ]
+      		}, {
+      			city: 'г. Киев, пер. Бондарский, 3',
+      			center: [59.934439, 30.301115],
+      			address: [{
+      				center: [59.934439, 30.301115],
+      			}, ]
+      		},
+      		{
+      			city: 'г. Киев, ул. С.Скляренко, 13',
+      			center: [53.277283, 83.532717],
+      			address: [{
+      				center: [53.277283, 83.532717],
+      			}, ]
+      		}, {
+      			city: 'г. Киев, просп. Московский, 21',
+      			center: [53.277283, 83.112717],
+      			address: [{
+      				center: [53.277283, 83.112717],
+      			}, ]
+      		}
+      	];
+      
+      	ymaps.ready(init);
+      
+      });
+    </script>
     <!-- конец скрипты-->
   </body>
 </html>

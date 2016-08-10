@@ -46,68 +46,6 @@ block content
 								div
 									span.product-section__block-badge-name Акция						
 					// конец блок с превью
-					script.
-						$(function(){
-						    $('.product__spritespin-zoom').click(function(e){
-								e.preventDefault();
-								$(this).toggleClass('active');
-								$('.product__spritespin').spritespin('api').toggleZoom();
-						    });
-
-						    $(".product__spritespin").spritespin({
-								// путь к галереи фоток для 360
-								source: [
-									"img/content/example/rad_zoom_001.jpg",
-									"img/content/example/rad_zoom_002.jpg",
-									"img/content/example/rad_zoom_003.jpg",
-									"img/content/example/rad_zoom_004.jpg",
-									"img/content/example/rad_zoom_005.jpg",
-									"img/content/example/rad_zoom_006.jpg",
-									"img/content/example/rad_zoom_007.jpg",
-									"img/content/example/rad_zoom_008.jpg",
-									"img/content/example/rad_zoom_009.jpg",
-									"img/content/example/rad_zoom_010.jpg",
-									"img/content/example/rad_zoom_011.jpg",
-									"img/content/example/rad_zoom_012.jpg",
-									"img/content/example/rad_zoom_013.jpg",
-									"img/content/example/rad_zoom_014.jpg",
-									"img/content/example/rad_zoom_015.jpg",
-									"img/content/example/rad_zoom_016.jpg",
-									"img/content/example/rad_zoom_017.jpg",
-									"img/content/example/rad_zoom_018.jpg",
-									"img/content/example/rad_zoom_019.jpg",
-									"img/content/example/rad_zoom_020.jpg",
-									"img/content/example/rad_zoom_021.jpg",
-									"img/content/example/rad_zoom_022.jpg",
-									"img/content/example/rad_zoom_023.jpg",
-									"img/content/example/rad_zoom_024.jpg",
-									"img/content/example/rad_zoom_025.jpg",
-									"img/content/example/rad_zoom_026.jpg",
-									"img/content/example/rad_zoom_027.jpg",
-									"img/content/example/rad_zoom_028.jpg",
-									"img/content/example/rad_zoom_029.jpg",
-									"img/content/example/rad_zoom_030.jpg",
-									"img/content/example/rad_zoom_031.jpg",
-									"img/content/example/rad_zoom_032.jpg",
-									"img/content/example/rad_zoom_033.jpg",
-									"img/content/example/rad_zoom_034.jpg",
-								],
-								animate: false,
-								width   : 500,  // width in pixels of the window/frame
-								height  : 500,  // height in pixels of the window/frame
-								sizeMode: 'fit',
-								sense: -1,
-								mods: [
-								  // change frame on mouse move
-								  'move',
-								  // enable zoom module
-								  // toggle zoom with double click or use the API object
-								  'zoom',
-								  // display module
-								  '360'
-								]
-						    });
-						  });
 					.modal#modal-spin
 						.product__spritespin
 						br
@@ -140,12 +78,12 @@ block content
 							.form-group
 								label.form-label Обивка
 								.form-pseudo-select-block.js-material-input
-									span.form-pseudo-select-material-wrap
+									span.form-pseudo-select-material-wrap.md-trigger(data-modal="modal-material")
 									input.form-control.form-pseudo-select.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-material")
 							.form-group
 								label.form-label Каркас
 								.form-pseudo-select-block.js-frame-input
-									span.form-pseudo-select-material-wrap.dashed
+									span.form-pseudo-select-material-wrap.dashed.md-trigger(data-modal="modal-frame")
 									input.form-control.form-pseudo-select.dashed.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-frame")
 							// блок с ценой
 							.row

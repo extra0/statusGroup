@@ -56,32 +56,6 @@ $(function() {
 		},300);
 	});
 
-	// слайдер цены
-	var min = $('[range-min]'),
-		max = $('[range-max]');
-
-	$(".js-range").slider({
-		range: true,
-		min: 1,
-		max: 10000,
-		step: 1,
-		values: [2000, 6000],
-		slide: function(event, ui) {
-			$(this).parents('.js-range-parent').find(min).val(ui.values[0] + ' ₴');
-			$(this).parents('.js-range-parent').find(max).val(ui.values[1] + ' ₴');
-		}
-	});
-
-	min.on('keyup', function() {
-		$(this).parents('.js-range-parent').find('.js-range').slider("values", 0, $(this).val());
-	});
-
-	max.on('keyup', function() {
-		$(this).parents('.js-range-parent').find('.js-range').slider("values", 1, $(this).val());
-	});
-
-	$('.filter__price-range-block-input').on('blur', function() {$(this).val($(this).val() + ' ₴');});
-
 	// кастомный скролл
 	$(".js-custom-scroll").mCustomScrollbar();
 

@@ -102,7 +102,7 @@
 				@include flex-wrap(wrap);
 				@include justify-content(center);
 				&-block {
-					max-width: 240px;
+					max-width: 230px;
 					flex-basis: 100%!important;
 					&:not(:last-child) {
 						&:before {
