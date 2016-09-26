@@ -99,13 +99,15 @@ block content
 							a.product-section__block-link(href="#!")
 								.product-section__block-img-wrap
 									img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
-									.product-section__block-link-wrap										
-										a.product-section__block-badge-name(href="product.html")
-											img(src="img/s-360.png", alt="")
-											| Круговой обзор
-										a.product-section__block-badge-name(href="product.html")
-											img(src="img/s-video.png", alt="")
-											| Видео обзор
+									.product-section__block-link-wrap
+										div										
+											a.product-section__block-badge-name.hidden-xxs(href="product.html")
+												img(src="img/s-360.png", alt="")
+												| Круговой обзор
+										div
+											a.product-section__block-badge-name(href="product.html")
+												img(src="img/s-video.png", alt="")
+												| Видео обзор
 								.product-section__block-description
 									p.product-section__block-name Cody black
 									.product-section__block-price
@@ -126,7 +128,7 @@ block content
 									img.product-section__block-img(src="img/content/img-large.png", alt="product")
 									.product-section__block-link-wrap
 										div									
-											a.product-section__block-badge-name.triangle(href="product.html")
+											a.product-section__block-badge-name.triangle.hidden-xxs(href="product.html")
 												img(src="img/s-360.png", alt="")
 												| Круговой обзор
 										div

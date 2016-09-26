@@ -196,6 +196,7 @@
 		overflow: hidden;
 		padding-bottom: 19px;
 		position: relative;
+		max-width: 273px;
 		@include transition(all 0.2s ease-in-out);
 		&:hover {
 			border: 1px solid $ruby;
@@ -203,6 +204,7 @@
 		}
 		&.x-2 {
 			flex-basis: 34.88%;
+			max-width: 422px;
 		}
 		&-description {
 			padding: 0 20px;
@@ -319,7 +321,7 @@
 			    	content: '';
 			    	@include position(absolute, 0 -10px null null);
 			    	height: 100%;
-			    	border-bottom: 30px solid transparent;
+			    	border-bottom: 37px solid transparent;
 			    	border-left: 10px solid #c1372a;
 			    	border-top: 0px solid transparent;
 			    }

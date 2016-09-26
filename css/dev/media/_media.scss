@@ -1608,7 +1608,7 @@
 	}
 	.product-section{
 		&__block {
-			flex-basis: 23%;
+			flex-basis: 22.3%%;
 			&.x-2 {
 				flex-basis: 35.4%;
 			}
@@ -1640,58 +1640,58 @@
 		}
 	}
 }
-@media (min-width: 1800px) {
-	.container {
-		width: 1770px;
-		padding: 0;
-	}
-	.product-section {
-		&__block {
-		    flex-basis: 18.35%;
-		    &.x-2 {
-		    	flex-basis: 23.5%;
-		    }
-		}
-	}
-	.header {
-		&__top {
-			&-address {
-				&-block {
-				    margin: -14px 50px;
-				}
-			}
-			&-phone {
-				&-block {
-					&:before {
-					    left: 151px;
-					}
-				}
-			}
-		}
-		&__bottom {
-			&-menu {
-				&-item {
-					padding: 31px 0px 31px 154px;
-				}
-			}
-		}
-		&.count-cat-4 {
-			.header__bottom-menu {
-			    margin-right: -178px;
-			    margin-left: -266px;
-			}
-			.header__bottom-menu-item {
-			    padding: 31px 0px 31px 90px;
-			}
-		}
-		&.count-cat-5 {
-			.header__bottom-menu {
-			    margin-right: -18px;
-			    margin-left: -266px;
-			}
-			.header__bottom-menu-item {
-			    padding: 31px 0px 31px 90px;
-			}
-		}
-	}
-}
+// @media (min-width: 1800px) {
+// 	.container {
+// 		width: 1770px;
+// 		padding: 0;
+// 	}
+// 	.product-section {
+// 		&__block {
+// 		    flex-basis: 18.35%;
+// 		    &.x-2 {
+// 		    	flex-basis: 23.5%;
+// 		    }
+// 		}
+// 	}
+// 	.header {
+// 		&__top {
+// 			&-address {
+// 				&-block {
+// 				    margin: -14px 50px;
+// 				}
+// 			}
+// 			&-phone {
+// 				&-block {
+// 					&:before {
+// 					    left: 151px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 		&__bottom {
+// 			&-menu {
+// 				&-item {
+// 					padding: 31px 0px 31px 154px;
+// 				}
+// 			}
+// 		}
+// 		&.count-cat-4 {
+// 			.header__bottom-menu {
+// 			    margin-right: -178px;
+// 			    margin-left: -266px;
+// 			}
+// 			.header__bottom-menu-item {
+// 			    padding: 31px 0px 31px 90px;
+// 			}
+// 		}
+// 		&.count-cat-5 {
+// 			.header__bottom-menu {
+// 			    margin-right: -18px;
+// 			    margin-left: -266px;
+// 			}
+// 			.header__bottom-menu-item {
+// 			    padding: 31px 0px 31px 90px;
+// 			}
+// 		}
+// 	}
+// }
