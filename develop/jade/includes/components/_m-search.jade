@@ -1,0 +1,17 @@
+.morphsearch#morphsearch
+	.container
+		form.morphsearch-form
+			input.morphsearch-input(type='search', placeholder='Поиск ...')
+			button.morphsearch-submit(type='submit') Search
+		.morphsearch-content
+			.dummy-column
+				block product
+				// блок осутствия резульатов
+					<div class="morphsearch-empty__block">
+					  <div class="morphsearch-empty__block-img"></div>
+					  <div>
+					    <p class="morphsearch-empty__block-title">Ничего... Пусто... Ноль...</p>
+					    <p class="morphsearch-empty__block-text">Ничего не найдено. </p>
+					  </div>
+					</div>
+	span.morphsearch-close

@@ -1,0 +1,6 @@
+@include font-face("Open Sans", "../fonts/OpenSans-Regular", normal, normal, $file-formats: ttf woff eot);
+@include font-face("Open Sans", "../fonts/OpenSans-Italic", normal, italic, $file-formats: ttf);
+@include font-face("Open Sans", "../fonts/OpenSans-Bold", bold, normal, $file-formats: ttf woff eot);
+@include font-face("Open Sans", "../fonts/OpenSans-Semibold", 600, normal, $file-formats: ttf);
+@include font-face("Microsoft Sans Serif", "../fonts/micross", normal, normal, $file-formats: ttf);
+@include font-face("PT Sans Caption", "../fonts/PTC75F", bold, normal, $file-formats: ttf);

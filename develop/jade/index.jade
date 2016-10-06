@@ -1,0 +1,228 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Главная страница
+block content
+	.container
+		.row
+			.col-sm-12
+				// блок с приемуществами
+				.advantages
+					.advantages__block
+						img.advantages__block-img(src="img/a-img-1.png", alt="advantages")
+						p.advantages__block-text От заказа до вашей двери не более 48 часов!
+					.advantages__block
+						img.advantages__block-img(src="img/a-img-2.png", alt="advantages")
+						p.advantages__block-text Более 1000 крутых проектов!
+					.advantages__block
+						img.advantages__block-img(src="img/a-img-3.png", alt="advantages")
+						p.advantages__block-text Работаем 20 лет на рынке Украины
+					.advantages__block
+						img.advantages__block-img(src="img/a-img-4.png", alt="advantages")
+						p.advantages__block-text Большой оптовый склад в Киеве!
+				// конец блок с приемуществами
+		.row
+			.col-sm-12.hidden-xs
+				// секция с категориями продуктов
+				.category-flex.count-block-5
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-1.jpg) center right no-repeat;")
+						p.category-flex__block-title Офисная мебель
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Кабинеты руководителя
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Конференц столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Оперативная мебель
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Мягкая мебель для офиса
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Компьютерные столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Офисные столы
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-2.jpg) center right no-repeat;")
+						p.category-flex__block-title Офисные кресла
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Кресла руководителя
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Конференц столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Компьютерное кресло
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Офисные стулья
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-3.jpg) center right no-repeat;")
+						p.category-flex__block-title Мебель HoReCa
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Опоры для столов
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Столешницы верзила
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Барные стулья
+							li.category-flex__block-menu-item
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-4.jpg) center right no-repeat;")
+						p.category-flex__block-title Стулья
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Барные стулья
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Стулья для кухни
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Пластиковые стулья
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Деревянные стулья
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Раскладные стулья
+					.category-flex__block(style="background: #fafafb url(img/content/cat-bg-5.jpg) center right no-repeat;")
+						p.category-flex__block-title Столы
+						ul.category-flex__block-menu
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Кухонные столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Деревянные столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Пластиковые столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Стеклянные столы
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Столы трансформеры
+							li.category-flex__block-menu-item
+								a.category-flex__block-menu-link(href="#!") Журнальные столы
+				// конец секция с категориями продуктов
+		.row
+			.col-sm-12
+				// блок хитов продаж
+				p.title 
+					span Хиты продаж
+				// конец блок хитов продаж
+				// блок с продуктами
+				block product
+					.product-section
+						- for (i=1; i<=5; i++) {
+							.product-section__block
+								a.product-section__block-link(href="#!")
+									.product-section__block-img-wrap
+										img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
+										.product-section__block-link-wrap
+											div
+												a.product-section__block-badge-name.triangle(href="product.html")
+													img(src="img/s-360.png", alt="")
+													| Круговой обзор
+											div
+												a.product-section__block-badge-name.triangle(href="product.html")
+													img(src="img/s-video.png", alt="")
+													| Видео обзор
+									.product-section__block-description
+										p.product-section__block-name Cody black
+										.product-section__block-price
+											span.product-section__block-price-old.js-replace-number #{i*10521}
+											span.product-section__block-price-current.js-replace-number #{i*5521} ₴
+										- if (i == 1) {
+											p.product-section__block-status.in-have в наличии
+										- } else if (i == 2) {
+											p.product-section__block-status.waiting ожидается
+										- } else {
+											p.product-section__block-status.in-product под заказ
+										- }
+						-}
+						- for (i=1; i<=2; i++) {
+							.product-section__block.x-2
+								a.product-section__block-link(href="#!")
+									.product-section__block-img-wrap
+										img.product-section__block-img(src="img/content/img-large.png", alt="product")
+										.product-section__block-link-wrap
+											div
+												a.product-section__block-badge-name.triangle(href="product.html")
+													img(src="img/s-360.png", alt="")
+													| Круговой обзор
+											div
+												a.product-section__block-badge-name.triangle(href="product.html")
+													img(src="img/s-video.png", alt="")
+													| Видео обзор
+									.product-section__block-description
+										p.product-section__block-name Cody black
+										.product-section__block-price
+											span.product-section__block-price-old.js-replace-number #{i*10521}
+											span.product-section__block-price-current.js-replace-number #{i*5521} ₴
+										p.product-section__block-status.in-have в наличии
+									.product-section__block-badge
+										div
+											span.product-section__block-badge-name Новинка
+										div
+											span.product-section__block-badge-name Италия
+										div
+											span.product-section__block-badge-name Акция
+						- }
+				// конец блок с продуктами
+		.row
+			.col-sm-12
+				// как купить
+				p.title 
+					span Как купить?
+				.buy-steps
+					.row
+						.col-md-3.col-sm-6
+							img.buy-steps__line.first.hidden-xs(src="img/first-line.png", alt="line")
+							p.buy-steps__title
+								span.buy-steps__step-count 1
+								| Выбрать
+							ul.buy-steps__list
+								li.buy-steps__list-item выберите товар в каталоге
+								li.buy-steps__list-item укажите материал и цвет выбранной модели
+							p.buy-steps__text-muted Выбор материала, влияет<br>на стоимость товара!
+						.col-md-3.col-sm-6
+							p.buy-steps__title.m-t-45
+								span.buy-steps__step-count 2
+								| Заказать
+							img.buy-steps__line.second.hidden-xs(src="img/second-line.png", alt="line")
+							ul.buy-steps__list
+								li.buy-steps__list-item через форму заказа, на странице выбранного товара
+								li.buy-steps__list-item по телефону:<br><span>(095)</span> 385-01-01; <span>(067)</span> 385-01-01
+						.col-md-3.col-sm-6
+							img.buy-steps__line.last.hidden-xs(src="img/last-line.png", alt="line")
+							p.buy-steps__title
+								span.buy-steps__step-count 3
+								| Оплатить
+							p.buy-steps__text По факту получения счёта с печатью нашей компании, вы имеете возможность оплатить его любым доступным и удобным для Вас способом.
+						.col-md-3.col-sm-6
+							p.buy-steps__title.m-t-20
+								span.buy-steps__step-count 4
+								| Получить
+							ul.buy-steps__list
+								li.buy-steps__list-item самовывоз со склада или центрального офиса
+								li.buy-steps__list-item бесплатная доставка в любой город Украины
+				// конец как купить
+		.row
+			.col-sm-12
+				// новости кампании
+				p.title 
+					span Новости	
+				.news-preview
+					.row
+						- for (i=1;i<=3;i++) {
+							.col-sm-4.col-xs-12
+								.news-preview__block
+									.news-preview__block-img-wrap
+										a(href="#!")
+											img.news-preview__block-img(src="img/content/news-th.jpg", alt="news-preview")
+									.news-preview__block-description
+										p.news-preview__block-text В «Статус Групп» проходят мастер-классы по дизайну
+										p.news-preview__block-date #{i} марта 2016
+						- }
+				// конец новости кампании
+		.row
+			.col-sm-12
+				p.title 
+					span O Статус Групп
+				// SEO текст
+				.seo-description
+					.row
+						.col-md-3.col-sm-4
+							h1.seo-description__title Компания Status group - поставщик офисной мебели, кабинетов руководителя, офисных кресел
+						.col-md-9.col-sm-8
+							.seo-description__block.js-slide-anchor
+								p.seo-description__text Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. Главным отличием компании Статус групп от конкурентов является, то, что у нас вся продукция всегда есть в наличии на нашем оптовом складе. За счёт этого мы производим отгрузку товара покупателю уже в день заказа. Кроме того, для удобства наших клиентов мы построили огромный шоу-рум на более чем 3 000 квадратных метрах, где представлен весь ассортимент нашей продукции. Поэтому выбирать товар вы можете как по электронному каталогу интернет-сайта Status group, так посетив наш шоу-руме в Донецке. Компания Status group является одним из самых крупных украинских импортеров и производителей качественной мебели для офиса и дома. Главным отличием компании Статус групп от конкурентов является, то, что у нас вся продукция всегда есть в наличии на нашем оптовом складе. За счёт этого мы производим отгрузку товара покупателю уже в день заказа. Кроме того, для удобства наших клиентов мы построили огромный шоу-рум на более чем 3 000 квадратных метрах, где представлен весь ассортимент нашей продукции. Поэтому выбирать товар вы можете как по электронному каталогу интернет-сайта Status group, так посетив наш шоу-руме в Донецке. 
+							a.seo-description__trigger.js-slide-trigger(href="javascript:void(0);") Показать еще
+				// конец SEO текст

@@ -1,0 +1,289 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Кресло Fury Lux
+	- modalProduct = true;
+	- prod360 = true;
+block content
+	.container
+		.row
+			.col-sm-12.col-xs-12
+				// хлебные крошки
+				include includes/components/_breadcrumbs
+				// конец хлебные крошки
+		// описание товара
+		div(itemscope itemtype="http://schema.org/Product")
+			h1.title(itemprop="name")
+				span Fury Lux
+			.row
+				// изображение товар
+				.col-md-8.col-sm-7
+					// блок с превью
+					.product__thumb
+						- for (i=1; i<=3; i++) {
+							a.product__thumb-link.js-fancybox(href="img/content/main-img.png" rel="thumb" class="fancybox-thumb")
+								img.product__thumb-img(src="img/content/thumb-img.jpg", alt="thumb-img")
+							- if (i == 3) {
+								a.product__thumb-link.js-fancybox(class="fancybox.iframe fancybox-thumb" href="https://www.youtube.com/embed/kSQIxJerjX0" rel="thumb")
+									div
+										img.product__thumb-video-img(src="img/video.png", alt="video img")
+										span.product__thumb-video-text.hidden-xxs Видео
+								a.product__thumb-link.js-fancybox.hidden-xxs(href="#modal-spin")
+									div
+										img.product__thumb-video-img(src="img/s-360-ruby.png", alt="360 img")
+										span.product__thumb-video-text.hidden-xxs Обзор
+							- }
+						- }
+					a.js-fancybox(href="img/content/main-img.png" rel="thumb" itemprop="image")
+						.product__main-img
+							img(src="img/content/main-img.png", alt="main img")
+							.product-section__block-badge
+								div
+									span.product-section__block-badge-name Новинка
+								div
+									span.product-section__block-badge-name Италия
+								div
+									span.product-section__block-badge-name Акция						
+					// конец блок с превью
+					.modal#modal-spin
+						.product__spritespin
+						br
+						.text-center
+							a.product__spritespin-zoom(href="javascript:void(0);")
+					// блок с приемуществами
+					.product__advantage
+						.product__advantage-block
+							img.product__advantage-block-img(src="img/p-advant-1.png", alt="advantages")
+							p.product__advantage-block-text Доставка и сборка<br>по Киеву бесплатно!
+						.product__advantage-block
+							img.product__advantage-block-img(src="img/p-advant-2.png", alt="advantages")
+							p.product__advantage-block-text Гарантия<br>12 месяцев!
+						.product__advantage-block
+							img.product__advantage-block-img(src="img/p-advant-3.png", alt="advantages")
+							p.product__advantage-block-text Возврат товара<br>в течении 14 дней!
+					// конец блок с приемуществами
+				// конец изображение товар
+				// блок с доп выборами
+				.col-md-4.col-sm-5
+					.product__params(itemprop="offers" itemscope itemtype="http://schema.org/Offer")
+						form(action="#!")
+							.row
+								.col-sm-6.col-xxs-12.col-xs-6
+									span.product-section__block-status.waiting.js-tooltip(data-title="Вы можете сделать заказ. Наш менеджер свяжется с вами и уточнит сроки. Обычно это занимает не более недели.") ожидается
+								.col-sm-6.col-xxs-12.col-xs-6
+									.text-right.xxs-text-left
+										span.cart__table-body-prod-articul АР098С1
+							br
+							.form-group
+								label.form-label Обивка
+								.form-pseudo-select-block.js-material-input
+									span.form-pseudo-select-material-wrap.md-trigger(data-modal="modal-material")
+									input.form-control.form-pseudo-select.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-material")
+							.form-group
+								label.form-label Каркас
+								.form-pseudo-select-block.js-frame-input
+									span.form-pseudo-select-material-wrap.dashed.md-trigger(data-modal="modal-frame")
+									input.form-control.form-pseudo-select.dashed.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-frame")
+							// блок с ценой
+							.row
+								.col-lg-7.col-md-6.col-sm-12
+									p.product__price-old.js-replace-number 17480 ₴
+									p.product__price-current.js-replace-number(data-price="12480") 
+									span.product__price-eu ~ $500, ~ €600
+									// Сюда заносим цену актуальную (это для SEO)
+									meta(itemprop="price" content="12480.00")
+									meta(itemprop="priceCurrency" content="UAH")
+								.col-lg-5.col-md-6.col-sm-12
+									.form-group
+										label.form-label Количество
+										.form-input-counter(item-parent)
+											label.form-input-counter__label шт
+											button.form-input-counter__changer.up(data-val="1" item-changer type="button")
+											input.form-input-counter__input.js-only-number(type="text" value="1" maxlength="3" item-max-val="#{i}" item-val item-total-cost)
+											button.form-input-counter__changer.down(data-val="-1" item-changer type="button")
+										p.product__price-diller.js-replace-number 11123 ₴
+											span от 3 шт.
+							button.btn.btn-block.product__btn-submit(type="submit") Добавить в корзину
+							.product__click-wrap.m-b-20
+								a.product__click.md-trigger(href="javascript:void(0);" data-modal="modal-click") Купить в 1 клик
+							p.product__stock-text в Наличии
+							p.product__stock-address г. Одесса, б. Лидерсовский, 5
+							p.product__stock-address г. Киев, ул. Власова, 27б
+							a.product__stock-map-trigger.md-trigger(data-modal="modal-map" href="javascript:void(0);") Еще 5 складов
+							// конец блок с ценой
+
+							// доп инпуты для данных
+							input(type="hidden" name="material-name")
+							input(type="hidden" name="material-price")
+							input(type="hidden" name="frame-name")
+							input(type="hidden" name="frame-price")
+							input(type="hidden" name="total-price")
+							// конец доп инпуты для данных
+
+				// конец блок с доп выборами
+			.product__description
+				// блок с табами	
+				ul.product__tab-list.js-tab-nav
+					li.product__tab-list-item
+						a.product__tab-list-link.current(href="#!") Описание
+					li.product__tab-list-item
+						a.product__tab-list-link(href="#!") Проекты
+					li.product__tab-list-item
+						a.product__tab-list-link(href="#!") Материалы и цвета
+					li.product__tab-list-item
+						a.product__tab-list-link(href="#!") Доставка и оплата
+					li.product__tab-list-item
+						a.product__tab-list-link(href="#!") Состав комплекта
+					li.product__tab-list-item
+						a.product__tab-list-link(href="#!") Отзывы
+				.product__tab-content.js-tab-content
+					// описание товара
+					.product__tab-content-block.current(itemprop="description")
+						p.product__tab-content-block-title Конференц кресло CA1316C bm
+						p Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании.
+						p При изготовлении офисного кресла использована эко кожа и массив древесины, – такие материалы сегодня считаются самыми лучшими в производстве мебели премиум класса. Эко кожа обладает множеством преимуществ перед натуральной кожей, к примеру, простотой в уходе, стойкостью к истиранию и растяжениям. 
+						p Каркас конференц кресла, выполненный в виде боковых трапеций и перекладин, на которые опирается сиденье, изготовлен из массива древесины, благодаря чему изделие может «похвастаться» не только высокой прочностью, но и престижным видом.
+						p.product__tab-content-block-seo-text Купить конференц кресло СА1316С bm: <a href="#!">Киев</a>, <a href="#!">Донецк</a>, <a href="#!">Харьков</a>, <a href="#!">Днепропетровск</a>, <a href="#!">Луганск</a>, <a href="#!">Одесса</a> и другие города Украины
+					// конец описание товара
+					// Проекты
+					.product__tab-content-block
+						.border-panel
+							.row
+								- for (i=1;i<=3;i++) {
+									.col-sm-4
+										.product__tab-content-article
+											a(href="#!")
+												img.product__tab-content-article-img(src="/img/content/news-th.jpg", alt="")
+												p.product__tab-content-article-title Lorem ipsum dolor sit amet.
+								- }
+					// конец Проекты
+					// материал товара
+					.product__tab-content-block
+						.product__tab-content-block-prop
+							- for (z=1;z<=2; z++) {
+								.product__tab-content-block-prop-title-wrap
+									- if (z==1) {
+										p.product__tab-content-block-prop-title Кожа Люкс
+										p.product__tab-content-block-prop-price 520 ₴
+									- } else {
+										p.product__tab-content-block-prop-title Цвет
+										p.product__tab-content-block-prop-price 100 ₴
+									- }
+								ul.product__tab-content-block-prop-list
+									- for (k=1; k<=5; k++) {
+										- for (i=1; i<=5; i++) {
+											li.product__tab-content-block-prop-list-item
+												img.product__tab-content-block-prop-list-img(src="img/content/m#{i}.jpg", alt="material")
+												p.product__tab-content-block-prop-list-name Серый #{20000 * i}
+										- }
+									- }
+							- }
+					// конец материал товара
+					// доставка и оплата
+					.product__tab-content-block
+						.row
+							.col-sm-2
+								img.product__tab-content-block-img(src="img/d3.png", alt="")
+							.col-sm-10
+								p.subtitle Стоимость доставки
+								p Фирменная продукция торговой марки Status group доставляется по территории Украины совершенно бесплатно!
+								p Продукция наших партнёров доставляется по территории Украины согласно тарифов транспортных перевозчиков.
+								p Более подробно об условиях доставки описано в карточке каждого товара.
+						br
+						.row
+							.col-sm-2
+								img.product__tab-content-block-img(src="img/d1.png", alt="")
+							.col-sm-10
+								p.subtitle Безналичный расчет
+								p Получив счет-фактуру с печатью нашего предприятия по электронной почте или по факсу, осуществить банковский перевод денежных средств на наш расчетный счет. При этом оплату Вы можете производить любым удобным для Вас способом: через расчётный счёт своего предприятия, через отделение любого удобного для Вас банка. После поступления денег на расчетный счет нашего предприятия, мебель будет отправлена нашей службой доставки или компанией грузоперевозчиком (вам сообщают дату прибытия товара и № грузовой накладной.
+								.delivery__pay-block
+									img.delivery__pay-block-img(src="img/payments.png" alt="payments")
+						br
+						.row
+							.col-sm-2
+								img.product__tab-content-block-img(src="img/d2.png", alt="")
+							.col-sm-10
+								p.subtitle Наличный расчет
+								p Посетив наш мебельный центр и оплатив на месте понравившуюся продукцию;
+								p Водителю-экспедитору или курьеру по факту доставки. При предварительном согласование с менеджером нашей компании;
+					// конец доставка и оплата
+					// состав комплекта
+					.product__tab-content-block
+						.product__tab-composition-section
+							- for (i=1; i<=3; i++) {
+								.product__tab-composition-block
+									.row
+										.col-sm-4.col-xs-3.col-xxs-12
+											a(href="#!")
+												.product__tab-composition-img-holder
+													img.product__tab-composition-img(src="img/content/comp-0#{i}.jpg", alt="")
+										.col-sm-8.col-xs-9.col-xxs-12
+											.product__tab-composition-description
+												p.product__tab-composition-title Шкаф Cody Black
+												p.product__tab-composition-parametrs 287 x 420 x 590
+												p.product__tab-composition-price #{i*6},100 ₴
+							- }
+					// конец состав комплекта
+					// отзывы
+					.product__tab-content-block
+						.row
+							.col-sm-7
+								.product__tab-content-block-title Кресло Fury Lux
+									.product__tab-content-block-testimonial-rating
+										img(src="img/mini-star.png", alt="rating")
+										img(src="img/mini-star.png", alt="rating")
+										img(src="img/mini-star.png", alt="rating")
+										img(src="img/mini-star.png", alt="rating")
+										img(src="img/mini-star.png", alt="rating")
+								- for (i=1; i<=4; i++) {
+									.border-panel.m-b-20
+										.product__tab-content-block-testimonial
+											p.product__tab-content-block-testimonial-name Илья
+											.product__tab-content-block-testimonial-rating
+												img(src="img/mini-star.png", alt="rating")
+												img(src="img/mini-star.png", alt="rating")
+												img(src="img/mini-star.png", alt="rating")
+												img(src="img/mini-star.png", alt="rating")
+											p.product__tab-content-block-testimonial-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non provident facere libero dolor incidunt eligendi, delectus corporis praesentium autem sed.
+								-}
+							.col-sm-5
+								.border-panel
+									p.subtitle Оставить отзыв
+									form(action="#!")
+										.form-group
+											label.form-label Представьтесь
+												span.color-ruby  *
+											input.form-control(type="text" placeholder="Введите имя" required)
+										.form-group
+											label.form-label Email
+												span.color-ruby  *
+											input.form-control(type="email" placeholder="Введите email" required)
+										.form-group
+											label.form-label Ваш отзыв
+												span.color-ruby  *
+											textarea.form-control(rows="3" placeholder="Напишите отзыв" required)
+										.form-group
+											label.form-label Оценка
+											.form-rating-block
+												- for (i=1; i<=5; i++) {
+													input.form-rating-block__input(type="radio" name="rating" id="star-#{i}")
+													label.form-rating-block__label(for="star-#{i}")
+												-}
+										.form-group
+											button.btn.btn-block(type="submit") Отправить
+					// конец отзывы
+				// конец блок с табами
+			// блок поделиться
+			.product__share
+				p.product__share-title Поделиться
+				script(type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8")
+				script(type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8")
+				.ya-share2(data-services="vkontakte,facebook,odnoklassniki,moimir,gplus" data-counter="")
+			// поделиться
+		// конец описание товара
+		// похожите товары
+		h2.title
+			span Похожие товары
+		include includes/components/_same-products
+		// конец похожие товары

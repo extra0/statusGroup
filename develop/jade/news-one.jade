@@ -1,0 +1,102 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Страница одной новости
+block content
+	.container
+		.row
+			.col-sm-12.col-xs-12
+				// хлебные крошки
+				include includes/components/_breadcrumbs
+				// конец хлебные крошки
+		h2.title
+			span Новости
+		.row
+			// сайдбар
+			.col-md-3.col-sm-4
+				// меню 
+				button.btn.m-b-20.visible-xs.js-collapse-trigger(type="button") Меню
+				.sidebar__menu
+					p.subtitle Рубрики
+					ul.sidebar__menu-list
+						li.sidebar__menu-list-item
+							span.sidebar__menu-list-link.current Новости
+						li.sidebar__menu-list-item
+							a.sidebar__menu-list-link(href="#!") Реализованные проекты
+						li.sidebar__menu-list-item
+							a.sidebar__menu-list-link(href="#!") Статьи
+				// конец меню
+				// преимущество
+				.sidebar__advantage
+					img.sidebar__advantage-img(src="img/ukr-map.png", alt="ukr map")
+					p.subtitle.sidebar__advantage-title 17 лет<br>Украинское
+					p.sidebar__advantage-text Вот уже 17 лет мы ответственго делаем украинский продукт и даем работу сотням украинцев!
+				// конец преимущество
+				// блок шоурума
+				.sidebar__showroom
+					p.sidebar__showroom-title 3,000 
+						span.sidebar__showroom-title-val м<sup>2</sup>
+					p.sidebar__showroom-undertitle Площадь шоу-рума
+					img.sidebar__showroom-img(src="img/showroom.png", alt="showroom")
+					p.sidebar__showroom-text Это как <span class="color-ruby">4</span><br>теннисных<br>корта!
+				// конец блок шоурума
+			// конец сайдбар
+			// контент
+			.col-md-9.col-sm-8
+				// новость
+				article(itemscope itemtype="http://schema.org/Article")
+					.news-detail
+						h1.news-detail__title(itemprop="name") Выставка в смольном
+						meta(itemprop="inLanguage" content="ru")
+						p.news-detail__date 14 июля 2016
+						img.news-detail__img(src="img/content/news-preview.jpg", alt="img preview")
+						section(itemprop="articleBody")
+							p Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании множеством преимуществ перед.
+							table
+								tr
+									th 001
+									th 002
+								tr
+									td 001
+									td 002
+								tr
+									td 001
+									td 002
+								tr
+									td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque assumenda voluptate pariatur, fuga debitis explicabo esse quam eligendi omnis voluptates voluptatem asperiores, dignissimos, vero, ducimus ipsum eaque quis possimus.
+									td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit consequatur facilis dignissimos voluptatibus accusamus totam quo blanditiis sequi, accusantium dolore aut beatae reprehenderit maxime non a labore quas! Labore, saepe.
+							p Интернет-магазин «Megaroom» радует новинками тех, кто в конце июня все еще на Украине вместо зарубежного побережья! В большей степени новинки будут приятны тем, кто решил посвятить свой летний отпуск обновлению кухни или гостиной. В большей степени новинки будут приятны тем.
+							ol
+								li 0001
+								li 0002
+								li 0003
+								li 0004
+								li 0005
+								li 0006
+							p Предлагаем ознакомиться с кухонными новинками на «Megaroom» - раскладными стульями украинского производителя «Silla». Такой стул является воплощением прочности, тонкого вкуса и удобства использования. При создании этого стула используются лишь натуральные материалы: основание выполнено из массива бука, а сиденье – из влагостойкой фанеры высшего качества. Интернет-магазин «Megaroom» радует новинками тех, кто в конце июня все еще на Украине вместо зарубежного побережья! В большей степени новинки будут приятны тем, кто решил посвятить свой летний отпуск обновлению кухни или гостиной. В большей степени новинки будут приятны тем.
+							ul
+								li 0001
+								li 0002
+								li 0003
+								li 0004
+								li 0005
+								li 0006
+							p Предлагаем ознакомиться с кухонными новинками на «Megaroom» - раскладными стульями украинского производителя «Silla». Такой стул является воплощением прочности, тонкого вкуса и удобства использования. При создании этого стула используются лишь натуральные материалы: основание выполнено из массива бука, а сиденье – из влагостойкой фанеры высшего качества.
+							img(src="img/content/d-img.jpg", alt="img")
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel odio repellendus illum nostrum sit eos. Soluta adipisci suscipit quis incidunt, nihil iusto vero vel blanditiis a? Laborum voluptatum quae ex!
+				// конец новости
+				h2.title
+					span Другие новости
+				// список других новостей
+				.news-list
+					- for (i=1; i<=3; i++) {
+						.news-list__block
+							a(href="#!")
+								p.subtitle Мастера всего мира в одном месте
+							p.news-list__block-text Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании множеством преимуществ перед ...
+							p.news-list__block-date #{i} июля 2016
+					-}
+				// конец список других новостей
+			// конец контент
+			

@@ -1,0 +1,140 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Оформление заказа
+block content
+	.container
+		.row
+			.col-sm-12.col-xs-12
+				// хлебные крошки
+				include includes/components/_breadcrumbs
+				// конец хлебные крошки
+		h2.title
+			span Оформление заказа
+		// таблица с заказом
+		.cart__table
+			.cart__table-header.hidden-xs
+				.row
+					.col-md-5.col-sm-3
+						p.cart__table-header-title Товар
+					.col-sm-3
+						p.cart__table-header-title Материал
+					.col-md-3.col-sm-5
+						.row
+							.col-sm-6
+								p.cart__table-header-title Количество
+							.col-sm-6
+								p.cart__table-header-title Цена
+					.col-sm-1
+						p.cart__table-header-title.t-del Удалить
+			.cart__table-body
+				- for (k=1; k<=3; k++) {
+					// информация 1 товара
+					.cart__table-body-item(item-parent)
+						.row
+							.col-md-5.col-sm-3.col-xs-6.col-xxs-12
+								.row
+									.col-md-3.col-sm-12
+										p.cart__table-header-title.visible-xs Товар
+										a(href="#!")
+											img.cart__table-body-img(src="img/content/cart-img.jpg", alt="Item")
+									.col-md-9.col-sm-12
+										a.cart__table-body-prod-link(href="#!")
+											p.cart__table-body-prod-name Fury Arch Grande
+										p.cart__table-body-prod-articul АР098С1
+
+							.col-sm-3.col-xs-6.col-xxs-12
+								p.cart__table-header-title.visible-xs Материал
+								- for (i=1;i<=2; i++) {
+									.cart__table-body-prod-material-wrap
+										img.cart__table-body-prod-material-img(src="img/content/material.jpg", alt="material")
+										span.cart__table-body-prod-material-name Люкс кожа 
+								- }
+							.col-md-3.col-sm-5.col-xs-12
+								.row
+									.col-sm-6.col-xs-6.col-xxs-12
+										.cart__table-body-prod-counter
+											p.cart__table-header-title.visible-xs Количество
+											.form-input-counter
+												label.form-input-counter__label шт
+												button.form-input-counter__changer.up(data-val="1" item-changer type="button")
+												input.form-input-counter__input.js-only-number(type="text" value="1" maxlength="3" item-max-val="#{i}" item-val item-total-cost)
+												button.form-input-counter__changer.down(data-val="-1" item-changer type="button")
+									.col-sm-6.col-xs-6.col-xxs-12
+										p.cart__table-header-title.visible-xs Цена
+										p.cart__table-body-prod-price.js-replace-number(item-cost="#{k*12100}") #{k*12100} ₴
+							.col-sm-1.col-xs-12.text-center
+								button.cart__table-body-prod-delete.js-item-delete(type="button" item-delete)
+									span.visible-xs Удалить
+					// конец информация 1 товара
+				- }
+				// итоговая сумма по таблице
+				.cart__table-body-total-block
+					.row
+						.col-sm-4.col-sm-offset-8
+							.col-md-9.col-sm-12
+								.row
+									.col-sm-12.col-md-offset-6.col-sm-offset-1
+										p.cart__table-body-total-text Итого
+										p.cart__table-body-total-price.js-replace-number
+											span.js-replace-number(item-total) 12480
+											span.cart__table-body-total-price-currency ₴ 
+				// конец итоговая сумма по таблице
+		// конец таблица с заказом
+		h2.title
+			span Личные данные
+		form(action="#")
+			.flex-section
+				.col-sm-6.col-xs-6.col-xxs-12
+					// инфоблок
+					.border-panel
+						.form-group
+							label.form-label Имя
+							input.form-control(type="text" placeholder="Введите имя" required)
+						.form-group
+							label.form-label Телефон
+							input.form-control(type="tel" placeholder="Введите телефон" required)
+						.form-group
+							label.form-label Город
+							input.form-control(type="text" placeholder="Введите ваш город" required)
+						.form-group
+							label.form-label Email
+							input.form-control(type="text" placeholder="Введите email" required)
+						.form-group
+							label.form-label Комментарий
+							textarea.form-control(rows="3" placeholder="Ваше сообщение" required)
+					// конец инфоблок
+				.col-sm-6.col-xs-6.col-xxs-12
+					// блок с доп параметрами и ценой
+					.border-panel
+						.cart__form-body
+							p.subtitle Доставка
+							.form-group
+								input.form-radio(type="radio" checked name="delivery" id="delivery-1")
+								label.form-radio-label(for="delivery-1") Адресная доставка
+							.form-group
+								input.form-radio(type="radio" name="delivery" id="delivery-2")
+								label.form-radio-label(for="delivery-2") Самовывоз со склада
+							.form-group
+								input.form-radio(type="radio" name="delivery" id="delivery-3")
+								label.form-radio-label(for="delivery-3") Новая Почта
+							br
+							p.subtitle Оплата
+							.form-group
+								input.form-radio(type="radio" checked name="pay" id="pay-1")
+								label.form-radio-label(for="pay-1") Оплата при получении
+							.form-group
+								input.form-radio(type="radio" name="pay" id="pay-2")
+								label.form-radio-label(for="pay-2") На карту Приват Банка
+						.cart__form-footer
+							.row
+								.col-md-5.col-sm-12
+									p.cart__form-footer-text Итого
+									p.cart__form-footer-total-price
+										span.js-replace-number(item-total) 12480
+										span.cart__form-footer-total-price-currency ₴ 
+								.col-md-7.col-sm-12
+									.cart__form-footer-btn-wrap
+										button.btn.cart__form-footer-btn(type="submit") Оформить
+					// конец блок с доп параметрами и ценой

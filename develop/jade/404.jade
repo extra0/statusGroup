@@ -1,0 +1,15 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title 404 страница
+block content
+	.container
+		.error-page
+			img.error-page__img.hidden-xs(src="img/404-img.png", alt="Error IMG")
+			div
+				p.error-page__number 404
+				.error-page__text-block
+					p.error-page__title Страница не найдена
+					p.error-page__text Мы не смогли найти страницу.<br>Проверьте ссылку.
+					a.btn(href="/") на главную

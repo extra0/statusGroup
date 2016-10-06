@@ -1,0 +1,12 @@
+doctype html
+include _vars
+html(lang="ru")
+	include _head
+	body
+		include _modals
+		.main-wrapper
+			include _header
+			.content
+				block content
+			.buffer
+		include _footer

@@ -1,0 +1,100 @@
+- if (modalProduct == true) {
+	// окно выбора материала
+	.md-modal.md-effect-2#modal-material
+		.md-content
+			p.md-title Выбор материала
+			hr
+			.container 
+				.product__tab-content-block-prop.js-custom-scroll
+					- for (z=1;z<=2; z++) {
+						.product__tab-content-block-prop-title-wrap
+							- if (z==1) {
+								p.product__tab-content-block-prop-title Кожа Люкс
+								p.product__tab-content-block-prop-price 520 ₴
+							- } else {
+								p.product__tab-content-block-prop-title Кожа не люкс
+								p.product__tab-content-block-prop-price 100 ₴
+							- }
+						ul.product__tab-content-block-prop-list
+							- for (k=1; k<=5; k++) {
+								- for (i=1; i<=5; i++) {
+									li.product__tab-content-block-prop-list-item
+										img.product__tab-content-block-prop-list-img.js-material(src="img/content/m#{i}.jpg", alt="material" data-price="#{z == 1 ? 520 : 100}")
+										p.product__tab-content-block-prop-list-name Серый #{20000 * i}
+								- }
+							- }
+					- }
+				hr
+				.md-footer
+					.md-footer__total-price
+						span.md-footer__total-text Итого
+						span.md-footer__total-price-val.js-material-price(data-price="0") 0
+						span.md-footer__total-price-currency ₴
+					button.btn.md-button(type="button") Применить
+			button.md-close закрыть
+	// конец окно выбора материала
+
+	// выбор каркаса 
+	.md-modal.md-effect-2#modal-frame
+		.md-content
+			p.md-title Выбор каркаса
+			hr
+			.container 
+				.product__tab-content-block-prop.js-custom-scroll
+					- for (z=1;z<=2; z++) {
+						.product__tab-content-block-prop-title-wrap
+							- if (z==1) {
+								p.product__tab-content-block-prop-title Дерево
+								p.product__tab-content-block-prop-price 333 ₴
+							- } else {
+								p.product__tab-content-block-prop-title Металл
+								p.product__tab-content-block-prop-price 250 ₴
+							- }
+						ul.product__tab-content-block-prop-list
+							- for (k=1; k<=5; k++) {
+								- for (i=1; i<=5; i++) {
+									li.product__tab-content-block-prop-list-item
+										img.product__tab-content-block-prop-list-img.js-frame(src="img/content/m#{i}.jpg", alt="material" data-price="#{z == 1 ? 333 : 250}")
+										p.product__tab-content-block-prop-list-name Серый #{20000 * i}
+								- }
+							- }
+					- }
+				hr
+				.md-footer
+					.md-footer__total-price
+						span.md-footer__total-text Итого
+						span.md-footer__total-price-val.js-frame-price(data-price="0") 0
+						span.md-footer__total-price-currency ₴
+					button.btn.md-button(type="button") Применить
+			button.md-close закрыть
+	// конец выбор каркаса 
+
+	// попап с картой
+	.md-modal.md-effect-2#modal-map
+		.md-content
+			p.md-title Склады
+			.md-map-wrap
+				#modalMap.map
+			.m-b-5
+				a.md-stock-address(href="javascript:void(0);") с. Чубинское, ул. Киевская, 55
+			.m-b-5
+				a.md-stock-address(href="javascript:void(0);") г. Киев, пер. Бондарский, 3
+			.m-b-5
+				a.md-stock-address(href="javascript:void(0);") г. Киев, ул. С.Скляренко, 13
+			.m-b-5
+				a.md-stock-address(href="javascript:void(0);") г. Киев, просп. Московский, 21
+			button.md-close закрыть
+	// конец попап с картой
+
+	// попап с покупкой в 1 клик
+	.md-modal.md-effect-1#modal-click
+		.md-content
+			p.md-title.text-center Купить в 1 клик
+			form(action="#!")
+				.form-group
+					input.form-control.js-only-numbers(type="tel" placeholder="Номер телефона")
+				.text-center
+					button.btn(type="submit") Заказать
+			button.md-close закрыть
+	// конец попап с покупкой в 1 клик
+- }

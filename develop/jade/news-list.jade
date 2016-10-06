@@ -1,0 +1,75 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Страница списка новостей
+block content
+	.container
+		.row
+			.col-sm-12.col-xs-12
+				// хлебные крошки
+				include includes/components/_breadcrumbs
+				// конец хлебные крошки
+		h2.title
+			span Новости
+		.row
+			// сайдбар
+			.col-md-3.col-sm-4
+				// меню 
+				button.btn.m-b-20.visible-xs.js-collapse-trigger(type="button") Меню
+				.sidebar__menu
+					p.subtitle Рубрики
+					ul.sidebar__menu-list
+						li.sidebar__menu-list-item
+							span.sidebar__menu-list-link.current Новости
+						li.sidebar__menu-list-item
+							a.sidebar__menu-list-link(href="#!") Реализованные проекты
+						li.sidebar__menu-list-item
+							a.sidebar__menu-list-link(href="#!") Статьи
+				// конец меню
+				// преимущество
+				.sidebar__advantage
+					img.sidebar__advantage-img(src="img/ukr-map.png", alt="ukr map")
+					p.subtitle.sidebar__advantage-title 17 лет<br>Украинское
+					p.sidebar__advantage-text Вот уже 17 лет мы ответственго делаем украинский продукт и даем работу сотням украинцев!
+				// конец преимущество
+				// блок шоурума
+				.sidebar__showroom
+					p.sidebar__showroom-title 3,000 
+						span.sidebar__showroom-title-val м<sup>2</sup>
+					p.sidebar__showroom-undertitle Площадь шоу-рума
+					img.sidebar__showroom-img(src="img/showroom.png", alt="showroom")
+					p.sidebar__showroom-text Это как <span class="color-ruby">4</span><br>теннисных<br>корта!
+				// конец блок шоурума
+			// конец сайдбар
+			// контент
+			.col-md-9.col-sm-8
+				// список новостей
+				.news-list
+					- for (i=1; i<=3; i++) {
+						.news-list__block
+							a(href="#!")
+								img.news-list__block-img(src="img/content/news-preview.jpg", alt="img preview")
+							p.subtitle Мастера всего мира в одном месте
+							p.news-list__block-text Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании множеством преимуществ перед ...
+							p.news-list__block-date #{i} июля 2016
+					-}
+				// конец список новостей
+				// пагинация
+				.pagination
+					ul.pagination__list
+						- for (i=1; i<=9; i++) {
+							- if (i == 8) {
+								li.pagination__list-item
+									span.pagination__list-devider ...
+							-} else if (i == 9) {
+								li.pagination__list-item
+									span.pagination__list-link.current 13
+							-} else {
+								li.pagination__list-item
+									a.pagination__list-link(href="#!") #{i}
+							-}
+						-}
+				// конец пагинация
+			// конец контент
+			
