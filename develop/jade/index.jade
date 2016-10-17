@@ -119,13 +119,18 @@ block content
 										.product-section__block-price
 											span.product-section__block-price-old.js-replace-number #{i*10521}
 											span.product-section__block-price-current.js-replace-number #{i*5521} ₴
-										- if (i == 1) {
-											p.product-section__block-status.in-have в наличии
-										- } else if (i == 2) {
-											p.product-section__block-status.waiting ожидается
-										- } else {
-											p.product-section__block-status.in-product под заказ
-										- }
+										.row.m-t-20
+											.col-lg-7.col-md-12.col-sm-7.col-xs-7
+												- if (i == 1) {
+													p.product-section__block-status.in-have в наличии
+												- } else if (i == 2) {
+													p.product-section__block-status.waiting ожидается
+												- } else {
+													p.product-section__block-status.in-product под заказ
+												- }
+											.col-lg-5.col-md-12.col-sm-5.text-right.md-text-left.col-xs-5
+												.product__tab-content-block-testimonial-rating(style="margin: -3px 0 0;")
+													span(style="width:100%")
 						-}
 						- for (i=1; i<=2; i++) {
 							.product-section__block.x-2
@@ -146,7 +151,18 @@ block content
 										.product-section__block-price
 											span.product-section__block-price-old.js-replace-number #{i*10521}
 											span.product-section__block-price-current.js-replace-number #{i*5521} ₴
-										p.product-section__block-status.in-have в наличии
+										.row.m-t-20
+											.col-lg-7.col-md-12.col-sm-7.col-xs-7
+												- if (i == 1) {
+													p.product-section__block-status.in-have в наличии
+												- } else if (i == 2) {
+													p.product-section__block-status.waiting ожидается
+												- } else {
+													p.product-section__block-status.in-product под заказ
+												- }
+											.col-lg-5.col-md-12.col-sm-5.text-right.md-text-left.col-xs-5
+												.product__tab-content-block-testimonial-rating(style="margin: -3px 0 0;")
+													span(style="width:100%")
 									.product-section__block-badge
 										div
 											span.product-section__block-badge-name Новинка

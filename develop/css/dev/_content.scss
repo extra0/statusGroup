@@ -180,8 +180,10 @@
 	margin: 0 0 30px -40px;
 	&.filter-edit {
 		margin-bottom: 0;
+		// @include justify-content(space-between);
+		margin: 0 14px 30px -43px;
 		.product-section__block {
-			flex-basis: 30%;
+			flex-basis: 29.8%;
 			&.x-2 {
 				flex-basis: 46.4%;
 			}
@@ -191,10 +193,10 @@
 		border: 1px solid #ddd;
 		border-radius: $br;
 		background: #fff;
-		flex-basis: 22.5%;
-		margin: 0 -13px 30px 40px;
+		flex-basis: 22.2%;
+		margin: 0 -13px 30px 43px;
 		overflow: hidden;
-		padding-bottom: 19px;
+		padding-bottom: 9px;
 		position: relative;
 		max-width: 273px;
 		@include transition(all 0.2s ease-in-out);
@@ -203,11 +205,11 @@
 			box-shadow: 0px 0px 3px $ruby;
 		}
 		&.x-2 {
-			flex-basis: 34.88%;
+			flex-basis: 34.68%;
 			max-width: 422px;
 		}
 		&-description {
-			padding: 0 20px;
+			padding: 0 12px;
 		}
 		&-link {
 			color: inherit;
@@ -241,10 +243,10 @@
 				color: #9fa0a1;
 				display: inline-block;
 				position: relative;
-				font-weight: bold;
+				// font-weight: bold;
 				margin-right: 10px;
 				font-size: 16px;
-				letter-spacing: 2px;
+				// letter-spacing: 1px;
 				&:before {
 					content: '';
 					@include position(absolute, 11px null null 0);
@@ -255,7 +257,7 @@
 				}
 			}
 			&-current {
-				letter-spacing: 2px;
+				letter-spacing: 1px;
 				font-weight: bold;
 				font-size: 16px;
 				color: $ruby;
@@ -273,8 +275,8 @@
 				content: '';
 				@include position(absolute, 0 null null 0);
 				background: url(../img/sprite.png) no-repeat;
-				width: 12px;
-				height: 12px;
+				width: 13px;
+				height: 13px;
 			}
 			&.in-have {
 				color: #169f30;
@@ -321,7 +323,7 @@
 			    	content: '';
 			    	@include position(absolute, 0 -10px null null);
 			    	height: 100%;
-			    	border-bottom: 37px solid transparent;
+			    	border-bottom: 28px solid transparent;
 			    	border-left: 10px solid #c1372a;
 			    	border-top: 0px solid transparent;
 			    }
@@ -1731,10 +1733,10 @@
 		}
 		&-current {
 			color: $ruby;
-			font-size: 38px;
+			font-size: 32px;
 			letter-spacing: 1px;
 			font-weight: bold;
-			margin: -3px 0 8px 0;
+			margin: 3px 0 8px 0;
 			line-height: normal;
 		}
 		&-diller {
@@ -1751,7 +1753,6 @@
 			}
 		}
 		&-eu {
-			font-weight: bold;
 			color: #9fa0a1;
 			font-style: italic;
 			margin-bottom: 10px;
@@ -1927,9 +1928,17 @@
 					&-rating {
 						display: inline-block;
 						vertical-align: top;
-						margin: 0 0 0 10px;
+						margin: 4px 0 0 10px;
+						width: 86px;
+						height: 21px;
 						img {
 							margin-right: 3px;
+						}
+						span {
+							width: 0%;
+							display: block;
+							height: 100%;
+							background: url(../img/mini-star.png) 0 0 repeat-x;
 						}
 					}
 				}
@@ -2212,7 +2221,7 @@
 		@include transition(all 0.2s ease-in-out);
 	}
 	&:before {
-		top: 1px;
+		// top: 1px;
 		@include transform(rotate(45deg));
 	}
 	&:after {

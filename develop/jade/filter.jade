@@ -79,6 +79,7 @@ block content
 				// конец теги
 			.col-md-9.col-sm-8
 				// фильтр
+				h1.title-simple Офисная мебель
 				.filter__block
 					.filter__block-sorting
 						p.filter__block-text Показать
@@ -93,6 +94,7 @@ block content
 						span.filter__block-count 23 товара
 				// конец фильтра
 				// каталог товаров
+				.subtitle-simple Кресла офисные
 				.product-section.filter-edit
 					.product-section__block
 						a.product-section__block-link(href="#!")
@@ -111,13 +113,18 @@ block content
 								p.product-section__block-name Cody black
 								.product-section__block-price
 									span.product-section__block-price-current.js-replace-number от #{i*5521} ₴
-								- if (i == 1) {
-									p.product-section__block-status.in-have в наличии
-								- } else if (i == 2) {
-									p.product-section__block-status.waiting ожидается
-								- } else {
-									p.product-section__block-status.in-product под заказ
-								- }
+								.row.m-t-20
+									.col-lg-7.col-md-12.col-sm-7.col-xs-7
+										- if (i == 1) {
+											p.product-section__block-status.in-have в наличии
+										- } else if (i == 2) {
+											p.product-section__block-status.waiting ожидается
+										- } else {
+											p.product-section__block-status.in-product под заказ
+										- }
+									.col-lg-5.col-md-12.col-sm-5.text-right.md-text-left.col-xs-5
+										.product__tab-content-block-testimonial-rating(style="margin: -3px 0 0;")
+											span(style="width:50%")
 					- for (i=1; i<=5; i++) {
 						.product-section__block
 							a.product-section__block-link(href="#!")
@@ -135,16 +142,23 @@ block content
 								.product-section__block-description
 									p.product-section__block-name Cody black
 									.product-section__block-price
-										span.product-section__block-price-old.js-replace-number #{i*10521}
-										span.product-section__block-price-current.js-replace-number от #{i*5521} ₴
-									- if (i == 1) {
-										p.product-section__block-status.in-have в наличии
-									- } else if (i == 2) {
-										p.product-section__block-status.waiting ожидается
-									- } else {
-										p.product-section__block-status.in-product под заказ
-									- }
+										span.product-section__block-price-old.js-replace-number #{i*110521} ₴
+										span.product-section__block-price-current.js-replace-number от #{i*51521} ₴
+									.row.m-t-20
+										.col-lg-7.col-md-12.col-sm-7.col-xs-7
+											- if (i == 1) {
+												p.product-section__block-status.in-have в наличии
+											- } else if (i == 2) {
+												p.product-section__block-status.waiting ожидается
+											- } else {
+												p.product-section__block-status.in-product под заказ
+											- }
+										.col-lg-5.col-md-12.col-sm-5.text-right.md-text-left.col-xs-5
+											.product__tab-content-block-testimonial-rating(style="margin: -3px 0 0;")
+												span(style="width:50%")
 					-}
+				.subtitle-simple Кабинеты руководителя
+				.product-section.filter-edit
 					- for (i=1; i<=4; i++) {
 						.product-section__block.x-2
 							a.product-section__block-link(href="#!")
@@ -162,9 +176,20 @@ block content
 								.product-section__block-description
 									p.product-section__block-name Cody black
 									.product-section__block-price
-										span.product-section__block-price-old.js-replace-number #{i*10521}
-										span.product-section__block-price-current.js-replace-number #{i*5521} ₴
-									p.product-section__block-status.in-have в наличии
+										span.product-section__block-price-old.js-replace-number #{i*101521} ₴
+										span.product-section__block-price-current.js-replace-number #{i*15521} ₴
+									.row.m-t-20
+										.col-lg-7.col-md-12.col-sm-7.col-xs-7
+											- if (i == 1) {
+												p.product-section__block-status.in-have в наличии
+											- } else if (i == 2) {
+												p.product-section__block-status.waiting ожидается
+											- } else {
+												p.product-section__block-status.in-product под заказ
+											- }
+										.col-lg-5.col-md-12.col-sm-5.text-right.md-text-left.col-xs-5
+											.product__tab-content-block-testimonial-rating(style="margin: -3px 0 0;")
+												span(style="width:100%")
 								.product-section__block-badge
 									div
 										span.product-section__block-badge-name Новинка
@@ -178,7 +203,7 @@ block content
 				.seo-text
 					.border-panel.m-b-20
 						.seo-text__wrap.js-slide-anchor
-							p.product__tab-content-block-title Конференц кресло CA1316C bm
+							h2.product__tab-content-block-title Конференц кресло CA1316C bm
 							p Конференц кресло CA1316C bm матового черного цвета станет отличным выбором для оформления переговорной комнаты в классическом стиле. Эта модель каждой деталью заявляет о престиже окружающей обстановки и авторитетности самой компании.
 							p При изготовлении офисного кресла использована эко кожа и массив древесины, – такие материалы сегодня считаются самыми лучшими в производстве мебели премиум класса. Эко кожа обладает множеством преимуществ перед натуральной кожей, к примеру, простотой в уходе, стойкостью к истиранию и растяжениям. 
 							p Каркас конференц кресла, выполненный в виде боковых трапеций и перекладин, на которые опирается сиденье, изготовлен из массива древесины, благодаря чему изделие может «похвастаться» не только высокой прочностью, но и престижным видом.

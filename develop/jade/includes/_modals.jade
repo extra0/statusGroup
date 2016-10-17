@@ -92,7 +92,9 @@
 			p.md-title.text-center Купить в 1 клик
 			form(action="#!")
 				.form-group
-					input.form-control.js-only-numbers(type="tel" placeholder="Номер телефона")
+					input.form-control.js-only-numbers(type="text" placeholder="Ваше имя" required)
+				.form-group
+					input.form-control.js-only-numbers(type="tel" placeholder="Номер телефона" required)
 				.text-center
 					button.btn(type="submit") Заказать
 			button.md-close закрыть

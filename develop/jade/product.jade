@@ -80,17 +80,17 @@ block content
 								.form-pseudo-select-block.js-material-input
 									span.form-pseudo-select-material-wrap.md-trigger(data-modal="modal-material")
 									input.form-control.form-pseudo-select.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-material")
-							.form-group
-								label.form-label Каркас
-								.form-pseudo-select-block.js-frame-input
-									span.form-pseudo-select-material-wrap.dashed.md-trigger(data-modal="modal-frame")
-									input.form-control.form-pseudo-select.dashed.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-frame")
+							//- .form-group
+							//- 	label.form-label Каркас
+							//- 	.form-pseudo-select-block.js-frame-input
+							//- 		span.form-pseudo-select-material-wrap.dashed.md-trigger(data-modal="modal-frame")
+							//- 		input.form-control.form-pseudo-select.dashed.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-frame")
 							// блок с ценой
 							.row
 								.col-lg-7.col-md-6.col-sm-12
 									p.product__price-old.js-replace-number 17480 ₴
 									p.product__price-current.js-replace-number(data-price="12480") 
-									span.product__price-eu ~ $500, ~ €600
+									span.product__price-eu ≈ $500 или €600
 									// Сюда заносим цену актуальную (это для SEO)
 									meta(itemprop="price" content="12480.00")
 									meta(itemprop="priceCurrency" content="UAH")
@@ -231,20 +231,13 @@ block content
 							.col-sm-7
 								.product__tab-content-block-title Кресло Fury Lux
 									.product__tab-content-block-testimonial-rating
-										img(src="img/mini-star.png", alt="rating")
-										img(src="img/mini-star.png", alt="rating")
-										img(src="img/mini-star.png", alt="rating")
-										img(src="img/mini-star.png", alt="rating")
-										img(src="img/mini-star.png", alt="rating")
+										span(style="width:50%")
 								- for (i=1; i<=4; i++) {
 									.border-panel.m-b-20
 										.product__tab-content-block-testimonial
 											p.product__tab-content-block-testimonial-name Илья
 											.product__tab-content-block-testimonial-rating
-												img(src="img/mini-star.png", alt="rating")
-												img(src="img/mini-star.png", alt="rating")
-												img(src="img/mini-star.png", alt="rating")
-												img(src="img/mini-star.png", alt="rating")
+												span(style="width:75%")
 											p.product__tab-content-block-testimonial-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non provident facere libero dolor incidunt eligendi, delectus corporis praesentium autem sed.
 								-}
 							.col-sm-5

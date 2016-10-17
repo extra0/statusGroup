@@ -47,6 +47,11 @@
 			background: #fcfcfc;
 		}
 	}
+	&-simple {
+		font-weight: normal;
+		font-size: 37px;
+		margin-top: 0;
+	}
 }
 
 .subtitle {
@@ -55,6 +60,11 @@
 	font-size: 20px;
 	letter-spacing: 1px;
 	margin: 0 0 20px;
+	&-simple {
+		font-weight: normal;
+		font-size: 32px;
+		margin: 30px 0 20px;
+	}
 }
 
 // универсальная кнопка
@@ -169,7 +179,7 @@
 					display: none;
 				}
 				&:before {
-					background-position: -48px -143px;
+					background-position: -48px -142px;
 				}
 			}
 		}
@@ -200,9 +210,9 @@
 					display: none;
 				}
 				&:before {
-					background: url('../img/sprite.png') no-repeat -48px -114px;
+					background: url('../img/sprite.png') no-repeat -48px -113px;
 					width: 24px;
-					height: 24px;
+					height: 25px;
 					border-radius: 0px;
 					border: none;
 				}
