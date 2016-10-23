@@ -19,15 +19,21 @@ block content
 				.filter__sidebar
 					p.subtitle Фильтр
 					.form-group
-						label.form-label Обивка
-						.form-pseudo-select-block.js-material-input
-							span.form-pseudo-select-material-wrap.md-trigger(data-modal="modal-material")
-							input.form-control.form-pseudo-select.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-material")
+						label.form-label Материал
+						.form-group
+							- for (i=1;i<=3;i++) {
+								input.form-checkbox(id="material-#{i}" type="checkbox")
+								label.form-checkbox-label.custom-img(for="material-#{i}") Материал #{i}
+								br
+							- }
 					.form-group
-						label.form-label Каркас
-						.form-pseudo-select-block.js-frame-input
-							span.form-pseudo-select-material-wrap.dashed.md-trigger(data-modal="modal-frame")
-							input.form-control.form-pseudo-select.dashed.md-trigger(type="text" placeholder="Выбрать" required readonly data-modal="modal-frame")
+						label.form-label Производитель
+						.form-group
+							- for (i=1;i<=5;i++) {
+								input.form-checkbox(id="production-#{i}" type="checkbox")
+								label.form-checkbox-label.custom-img(for="production-#{i}") Производитель #{i}
+								br
+							- }
 					.form-group
 						label.form-label Цена
 						.filter__price-range-block.js-range-parent
@@ -102,11 +108,11 @@ block content
 								img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
 								.product-section__block-link-wrap
 									div
-										a.product-section__block-badge-name.hidden-xxs(href="product.html")
+										a.product-section__block-badge-name.img.hidden-xxs(href="product.html")
 											img(src="img/s-360.png", alt="")
 											| Круговой обзор
 									div
-										a.product-section__block-badge-name(href="product.html")
+										a.product-section__block-badge-name.img(href="product.html")
 											img(src="img/s-video.png", alt="")
 											| Видео обзор
 							.product-section__block-description
@@ -123,7 +129,7 @@ block content
 											p.product-section__block-status.in-product под заказ
 										- }
 									.col-lg-5.col-md-12.col-sm-5.text-right.md-text-left.col-xs-5
-										.product__tab-content-block-testimonial-rating(style="margin: -3px 0 0;")
+										.product__tab-content-block-testimonial-rating.filter-edit
 											span(style="width:50%")
 					- for (i=1; i<=5; i++) {
 						.product-section__block
@@ -132,11 +138,11 @@ block content
 									img.product-section__block-img(src="img/content/img#{i%2 ? 1 : 2}.jpg", alt="product")
 									.product-section__block-link-wrap
 										div
-											a.product-section__block-badge-name.hidden-xxs(href="product.html")
+											a.product-section__block-badge-name.img.hidden-xxs(href="product.html")
 												img(src="img/s-360.png", alt="")
 												| Круговой обзор
 										div
-											a.product-section__block-badge-name(href="product.html")
+											a.product-section__block-badge-name.img(href="product.html")
 												img(src="img/s-video.png", alt="")
 												| Видео обзор
 								.product-section__block-description
@@ -154,7 +160,7 @@ block content
 												p.product-section__block-status.in-product под заказ
 											- }
 										.col-lg-5.col-md-12.col-sm-5.text-right.md-text-left.col-xs-5
-											.product__tab-content-block-testimonial-rating(style="margin: -3px 0 0;")
+											.product__tab-content-block-testimonial-rating.filter-edit
 												span(style="width:50%")
 					-}
 				.subtitle-simple Кабинеты руководителя
@@ -188,7 +194,7 @@ block content
 												p.product-section__block-status.in-product под заказ
 											- }
 										.col-lg-5.col-md-12.col-sm-5.text-right.md-text-left.col-xs-5
-											.product__tab-content-block-testimonial-rating(style="margin: -3px 0 0;")
+											.product__tab-content-block-testimonial-rating.filter-edit
 												span(style="width:100%")
 								.product-section__block-badge
 									div

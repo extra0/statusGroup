@@ -979,6 +979,9 @@
 			&.x-2 {
 				flex-basis: 45.2%;
 			}
+			&-status {
+				font-size: 10px;
+			}
 		}
 		&.filter-edit {
 			.product-section {
@@ -1187,6 +1190,11 @@
 			&-composition {
 				&-block {
 					flex-basis: 48%;
+				}
+			}
+			&-content-block-testimonial-rating  {
+				&.filter-edit {
+					margin: -3px 0 0 -27px;
 				}
 			}
 		}
@@ -1582,6 +1590,19 @@
 		}
 		&__click {
 			margin: 0 0 0 35px;
+		}
+		&__tab {
+			&-content {
+				&-block {
+					&-testimonial {
+						&-rating  {
+							&.filter-edit {
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

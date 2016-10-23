@@ -186,6 +186,9 @@
 			flex-basis: 29.8%;
 			&.x-2 {
 				flex-basis: 46.4%;
+				.product-section__block-img-wrap {
+					min-height: 270px;
+				}
 			}
 		}
 	}
@@ -326,6 +329,16 @@
 			    	border-bottom: 28px solid transparent;
 			    	border-left: 10px solid #c1372a;
 			    	border-top: 0px solid transparent;
+			    }
+			    &.img {
+			    	&:before {
+			    		content: '';
+			    		@include position(absolute, 0 -10px null null);
+			    		height: 100%;
+			    		border-bottom: 36px solid transparent;
+			    		border-left: 10px solid #c1372a;
+			    		border-top: 0px solid transparent;
+			    	}
 			    }
 			    &.triangle {
 			    	&:before {
@@ -1929,8 +1942,12 @@
 						display: inline-block;
 						vertical-align: top;
 						margin: 4px 0 0 10px;
-						width: 86px;
+						width: 95px;
 						height: 21px;
+						background: url(../img/star-p.png) 0 0 repeat-x;
+						&.filter-edit {
+							margin: -3px 0 0 -20px;
+						}
 						img {
 							margin-right: 3px;
 						}
@@ -1938,7 +1955,14 @@
 							width: 0%;
 							display: block;
 							height: 100%;
-							background: url(../img/mini-star.png) 0 0 repeat-x;
+							background: url(../img/star-active.png) 0 0 repeat-x;
+						}
+						&-text {
+							display: inline-block;
+							font-weight: normal!important;
+							font-size: 14px;
+							margin-left: 7px;
+							letter-spacing: normal;
 						}
 					}
 				}
@@ -2077,6 +2101,28 @@
 		}
 		&-wrap {
 			text-align: center;
+		}
+	}
+	// основной рейтинг товара
+	&__main-rating {
+		width: 160px;
+		height: 30px;
+		margin: 0 auto;
+		text-align: center;
+		overflow: hidden;
+		display: inline-block;
+		background: url(../img/star-lg.png) 0 0 repeat-x;
+		&-item {
+			display: block;
+			height: 100%;
+			background: url(../img/star-lg-active.png) 0 0 repeat-x;
+		}
+		&-wrap {
+			text-align: center;
+			margin: 20px 0 0 0;
+		}
+		&-text {
+			margin: 0;
 		}
 	}
 }

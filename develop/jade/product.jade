@@ -120,7 +120,10 @@ block content
 							input(type="hidden" name="frame-price")
 							input(type="hidden" name="total-price")
 							// конец доп инпуты для данных
-
+					.product__main-rating-wrap
+						.product__main-rating
+							span.product__main-rating-item(style="width: 50%;")
+						p.product__main-rating-text 255 отзыва
 				// конец блок с доп выборами
 			.product__description
 				// блок с табами	
@@ -232,6 +235,7 @@ block content
 								.product__tab-content-block-title Кресло Fury Lux
 									.product__tab-content-block-testimonial-rating
 										span(style="width:50%")
+									.product__tab-content-block-testimonial-rating-text 255 отзыва
 								- for (i=1; i<=4; i++) {
 									.border-panel.m-b-20
 										.product__tab-content-block-testimonial
