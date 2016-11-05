@@ -10,7 +10,7 @@ block content
 				// хлебные крошки
 				include includes/components/_breadcrumbs
 				// конец хлебные крошки
-		h2.title
+		h1.title
 			span Оформление заказа
 		// таблица с заказом
 		.cart__table
@@ -91,16 +91,16 @@ block content
 					.border-panel
 						.form-group
 							label.form-label Имя
-							input.form-control(type="text" placeholder="Введите имя" required)
+							input.form-control.js-only-word(type="text" placeholder="Введите имя" required)
 						.form-group
 							label.form-label Телефон
-							input.form-control(type="tel" placeholder="Введите телефон" required)
+							input.form-control.js-only-numbers(type="tel" placeholder="Введите телефон" required)
 						.form-group
 							label.form-label Город
 							input.form-control(type="text" placeholder="Введите ваш город" required)
 						.form-group
 							label.form-label Email
-							input.form-control(type="text" placeholder="Введите email" required)
+							input.form-control(type="email" placeholder="Введите email" required)
 						.form-group
 							label.form-label Комментарий
 							textarea.form-control(rows="3" placeholder="Ваше сообщение" required)

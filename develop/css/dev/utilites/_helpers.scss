@@ -107,6 +107,31 @@
 .form {
 	&-group {
 		margin-bottom: 16px;
+		&-link {
+		    color: #9fa0a1;
+		    display: inline-block;
+		    margin-top: 10px;
+			text-decoration: none;
+			border-radius: 5px;
+			padding: 5px 12px;
+			border: 1px solid #eee;
+			@include transition(all 0.2s ease-in-out);
+			&:active,
+			&:focus,
+			&:hover {
+				color: $ruby;
+				text-decoration: none;
+			}
+		}
+		&-wrap {
+			max-height: 138px;
+			overflow: hidden;
+			padding: 5px 0;
+			@include transition(all 0.2s ease-in-out);
+			&.active {
+				max-height: 1000px;
+			}
+		}
 	}
 	&-label {
 		display: block;

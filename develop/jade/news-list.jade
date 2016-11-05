@@ -10,7 +10,7 @@ block content
 				// хлебные крошки
 				include includes/components/_breadcrumbs
 				// конец хлебные крошки
-		h2.title
+		h1.title
 			span Новости
 		.row
 			// сайдбар
@@ -47,7 +47,7 @@ block content
 				// список новостей
 				.news-list
 					- for (i=1; i<=3; i++) {
-						.news-list__block
+						article.news-list__block
 							a(href="#!")
 								img.news-list__block-img(src="img/content/news-preview.jpg", alt="img preview")
 							p.subtitle Мастера всего мира в одном месте
