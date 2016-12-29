@@ -353,7 +353,7 @@
 			&__input {
 				display: none;
 				&:checked ~ label {
-					background: url(../img/star.png) 0 0 no-repeat;	
+					background: url(../img/active-star.png) 0 0 no-repeat;	
 				}
 			}
 			&__label {
